@@ -383,6 +383,7 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-numpy-array"><em><strong>Create A NumPy Array</strong></em></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#manipulate-two-dimensional-array"><em><strong>Manipulate Two-Dimensional Array</strong></em></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-dataframe-from-a-two-dimensional-array"><em><strong>Create A DataFrame From A Two-Dimensional Array</strong></em></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#download-data-for-september-2024-from-the-u-s-treasury-and-display-the-values-for-september-12-2024"><em><strong>Download data for September 2024 from the U.S. Treasury and display the values for September 12, 2024.</strong></em></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chapter-one-exercise"><em><strong>Chapter One Exercise</strong></em></a></li>
 </ul>
@@ -436,6 +437,71 @@ document.write(`
 </pre></div>
 </div>
 </div>
+</div>
+</section>
+<section id="create-a-dataframe-from-a-two-dimensional-array">
+<h2><em><strong>Create A DataFrame From A Two-Dimensional Array</strong></em><a class="headerlink" href="#create-a-dataframe-from-a-two-dimensional-array" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Create the two-dimensional array pv_rates from the arrays of rates, future values, and present values.</p></li>
+<li><p>Use the Pandas method DataFrame() with single argment of pv_rates.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Dataframe created with DataFrame() method</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="n">simple_example</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([</span><span class="n">interest_rates</span><span class="p">,</span>
+              <span class="n">future_values</span><span class="p">,</span>
+              <span class="n">present_values</span><span class="p">])</span>
+<span class="n">display</span><span class="p">(</span><span class="n">simple_example</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>0</th>
+      <th>1</th>
+      <th>2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.030000</td>
+      <td>0.050000</td>
+      <td>0.070000</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1.030455</td>
+      <td>1.051271</td>
+      <td>1.072508</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0.970446</td>
+      <td>0.951229</td>
+      <td>0.932394</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 </section>
 <section id="download-data-for-september-2024-from-the-u-s-treasury-and-display-the-values-for-september-12-2024">
@@ -650,6 +716,7 @@ Name: 09/12/2024, dtype: float64
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-numpy-array"><em><strong>Create A NumPy Array</strong></em></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#manipulate-two-dimensional-array"><em><strong>Manipulate Two-Dimensional Array</strong></em></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-dataframe-from-a-two-dimensional-array"><em><strong>Create A DataFrame From A Two-Dimensional Array</strong></em></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#download-data-for-september-2024-from-the-u-s-treasury-and-display-the-values-for-september-12-2024"><em><strong>Download data for September 2024 from the U.S. Treasury and display the values for September 12, 2024.</strong></em></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chapter-one-exercise"><em><strong>Chapter One Exercise</strong></em></a></li>
 </ul>
