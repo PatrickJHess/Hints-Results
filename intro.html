@@ -242,7 +242,7 @@
       
       
       
-      <li><a href="https://github.com/PatrickJHess/Basic-Concepts-Hints--Results" target="_blank"
+      <li><a href="https://github.com/PatrickJHess/Hints-Results" target="_blank"
    class="btn btn-sm btn-source-repository-button dropdown-item"
    title="Source repository"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -259,7 +259,7 @@
       
       
       
-      <li><a href="https://github.com/PatrickJHess/Basic-Concepts-Hints--Results/issues/new?title=Issue%20on%20page%20%2Fintro.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/PatrickJHess/Hints-Results/issues/new?title=Issue%20on%20page%20%2Fintro.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -387,12 +387,19 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="basic-concepts-of-fixed-income-hints-and-results">
 <h1>Basic Concepts Of Fixed Income- <em>Hints</em> And <em>Results</em><a class="headerlink" href="#basic-concepts-of-fixed-income-hints-and-results" title="Link to this heading">#</a></h1>
-<ol class="arabic simple">
-<li><p>This Jupyter book includes hints and expected results for each chapter.</p></li>
-<li><p>Each chapter has two sections referring to a notebook: <em>Hints</em> and <em>Results</em></p></li>
-<li><p>Both notebooks may be downloaded by clicking on the download icon. Once downloaded, the notebooks may be opened with Jupyter Lab or Colab.</p></li>
-<li><p>An executable cell of the notebooks may be copied by moving your cursor to top-right corner of the cell.</p></li>
-</ol>
+<p>This Jupyter book includes hints and expected results for each chapter. Each chapter has two sections referring to a notebook: <em>Hints</em> and <em>Results</em>.</p>
+<p>Beyond simply viewing the notebooks, there are several ways to interact with them:</p>
+<ul class="simple">
+<li><p><em><strong>Download:</strong></em> Each notebook can be downloaded individually.</p></li>
+<li><p><em><strong>Copy Code Cells:</strong></em> Code cells can be copied by hovering the cursor over the upper-right corner.</p></li>
+<li><p><em><strong>Launch Options:</strong></em> Clicking the launch icon provides three choices:</p>
+<ul>
+<li><p><strong>Binder:</strong> Opens the notebook in a new browser tab. Binder launches in under a minute. The current version of Binder used by Financial Python has a limit of 100 simultaneous users.</p></li>
+<li><p><strong>Colab:</strong> This option launches a Colab version of the notebook, bypassing the need for Binder.</p></li>
+<li><p><strong>Live Code:</strong> This option allows users to run any code cell directly within the notebook after it launches (Binder must launch).</p></li>
+</ul>
+</li>
+</ul>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="Chapter_One_Hints_And_Results.html"><em><strong>Chapter One has three main messages:</strong></em></a></li>
@@ -404,7 +411,7 @@ document.write(`
     {
         requestKernel: true,
         binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
+            repo: "PatrickJHess/Hints-Results",
             ref: "master",
         },
         codeMirrorConfig: {
