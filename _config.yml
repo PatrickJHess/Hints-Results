@@ -21,8 +21,8 @@ bibtex_bibfiles:
 
 # Information about where the book exists on the web
 repository:
-  url: https://github.com/PatrickJHess/Basic-Concepts-Hints--Results  # Online location of your book
-  path_to_book: docs  # Optional path to your book, relative to the repository root
+  url: https://github.com/PatrickJHess/Hints-Results  # Online location of your book
+ # path_to_book: docs  # Optional path to your book, relative to the repository root
   branch: master  # Which branch of the repository should be used when creating links (optional)
 
 # Add GitHub buttons to your book
@@ -30,3 +30,12 @@ repository:
 html:
   use_issues_button: true
   use_repository_button: true
+launch_buttons:
+  thebe: true
+  colab_url: "https://colab.research.google.com"
+ # notebook_interface: "jupyterlab"
+  binderhub_url: "https://mybinder.org"
+launch_buttons:
+  thebe: true
+  colab_url: "https://colab.research.google.com"
+  binderhub_url: "https://mybinder.org"
