@@ -1,10 +1,8 @@
 
-## Chapter One has three main messages:
+# Chapter One: Key Takeaways
 
-1. The Pandas and NumPy libraries are crucial for making financial calculations.
+1. **Essential Libraries:** Pandas and NumPy are fundamental for financial calculations.  
+2. **External Data Access:** Financial data can be retrieved from outside sources.  
+3. **Key Financial Metric:** The term structure of interest rates is a crucial financial indicator.
 
-2. Financial data may be accessed from external sources.
-
-3. The term structure of interest rates is a key financial metric.
-
-The first two hints and results repeat some basic concepts of *NumPy* and *Pandas*.  The third one focuses on accessing data from the *U.S. Treasury*. The final one asks you to calculate and graph the term structure of interest rates.
+The first two points reiterate basic concepts of NumPy and Pandas. The third focuses on obtaining data from the U.S. Treasury. The final objective involves calculating and graphing the term structure of interest rates.

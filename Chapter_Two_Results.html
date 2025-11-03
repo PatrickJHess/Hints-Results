@@ -1,0 +1,952 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Chapter Two Expected Results &#8212; Hints &amp; Results</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Chapter_Two_Results';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/Small_Logo.svg" class="logo__image only-light" alt="Hints & Results - Home"/>
+    <script>document.write(`<img src="_static/Small_Logo.svg" class="logo__image only-dark" alt="Hints & Results - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Basic Concepts Of Fixed Income- Hints And Results
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="Chapter_One_Hints_And_Results.html">Chapter One has three main messages:</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Chapter_One_Hints.html">Chapter One Hints</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Chapter_One_Results.html">Chapter One Expected Results</a></li>
+</ul><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/PatrickJHess/Hints-Results/master?urlpath=tree/Chapter_Two_Results.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Binder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Binder logo" src="_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/PatrickJHess/Hints-Results/blob/master/Chapter_Two_Results.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/PatrickJHess/Hints-Results" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/PatrickJHess/Hints-Results/issues/new?title=Issue%20on%20page%20%2FChapter_Two_Results.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Chapter_Two_Results.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Chapter Two Expected Results</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-date">Create A Date</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#get-the-last-day-of-the-month">Get The Last Day Of The Month.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#add-six-months-to-a-date">Add Six Months To A Date</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-number-of-days-between-dates">Calculate Number Of Days Between Dates</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#access-bonds-with-specific-characteristics">Access Bonds With Specific Characteristics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-days-between-coupon-payment-and-settlement-dates">Calculate Days Between Coupon Payment And Settlement Dates</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-a-transaction-price">Calculate A Transaction Price</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-workbook">Create A Workbook</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chapter-two-exercise">Chapter Two Exercise</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="chapter-two-expected-results">
+<h1>Chapter Two Expected Results<a class="headerlink" href="#chapter-two-expected-results" title="Link to this heading">#</a></h1>
+<section id="create-a-date">
+<h2>Create A Date<a class="headerlink" href="#create-a-date" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Create the date object <font color='green'>created_date</font>.</p></li>
+<li><p>Use dot notation to access the attributes.</p></li>
+<li><p>Display results as an f string.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">datetime</span><span class="w"> </span><span class="kn">import</span> <span class="n">date</span>
+<span class="n">vets_day_2025</span><span class="o">=</span><span class="n">date</span><span class="p">(</span><span class="mi">2025</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">11</span><span class="p">)</span>
+<span class="n">year</span><span class="o">=</span><span class="n">vets_day_2025</span><span class="o">.</span><span class="n">year</span>
+<span class="n">month</span><span class="o">=</span><span class="n">vets_day_2025</span><span class="o">.</span><span class="n">month</span>
+<span class="n">day</span><span class="o">=</span><span class="n">vets_day_2025</span><span class="o">.</span><span class="n">day</span>
+<span class="n">display</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Year Attribute </span><span class="si">{</span><span class="n">year</span><span class="si">}</span><span class="s1"> Month Attribute </span><span class="si">{</span><span class="n">month</span><span class="si">}</span><span class="s1">  Day Attribute </span><span class="si">{</span><span class="n">day</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Year Attribute 2025 Month Attribute 11  Day Attribute 11&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="get-the-last-day-of-the-month">
+<h2>Get The Last Day Of The Month.<a class="headerlink" href="#get-the-last-day-of-the-month" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Create date objects: e.g. feb_2024</p></li>
+<li><p>Use <font color='green'>monthrange</font></p></li>
+<li><p>Display results with f string.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">calendar</span>
+<span class="n">feb_2024</span><span class="o">=</span><span class="n">date</span><span class="p">(</span><span class="mi">2024</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">_</span><span class="p">,</span><span class="n">last</span><span class="o">=</span><span class="n">calendar</span><span class="o">.</span><span class="n">monthrange</span><span class="p">(</span><span class="mi">2024</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Last dat if February 2024 </span><span class="si">{</span><span class="n">last</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Last dat if February 2024 29&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="add-six-months-to-a-date">
+<h2>Add Six Months To A Date<a class="headerlink" href="#add-six-months-to-a-date" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Create the data object <font color='green'>jume_2025_last</font></p></li>
+<li><p>Use <font color='green'>relativedelta</font>.to add six months.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="kn">from</span><span class="w"> </span><span class="nn">dateutil.relativedelta</span><span class="w"> </span><span class="kn">import</span> <span class="n">relativedelta</span>
+<span class="k">except</span><span class="p">:</span>
+    <span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>python-dateutil
+    <span class="kn">from</span><span class="w"> </span><span class="nn">dateutil.relativedelta</span><span class="w"> </span><span class="kn">import</span> <span class="n">relativedelta</span>
+<span class="n">june_2025_last</span><span class="o">=</span><span class="n">date</span><span class="p">(</span><span class="mi">2025</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">30</span><span class="p">)</span>
+<span class="n">delta_time</span><span class="o">=</span><span class="n">relativedelta</span><span class="p">(</span><span class="n">months</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;June 30 3025 Plus Six Months </span><span class="si">{</span><span class="n">june_2025_last</span><span class="o">+</span><span class="n">delta_time</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;June 30 3025 Plus Six Months 2025-12-30&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="calculate-number-of-days-between-dates">
+<h2>Calculate Number Of Days Between Dates<a class="headerlink" href="#calculate-number-of-days-between-dates" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Create the data objects <font color='green'>jume_2025_last</font> and <font color='green'>february_2028_last</font></p></li>
+<li><p>Create the date object <font color='green'>date_diff</font> by subtracting <font color='green'>jume_2025_last</font> from <font color='green'>february_2028_last</font></p></li>
+<li><p>Display the <font color='green'>days</font> attribute of <font color='green'>date_diff</font>.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">_</span><span class="p">,</span><span class="n">last_june</span><span class="o">=</span><span class="n">calendar</span><span class="o">.</span><span class="n">monthrange</span><span class="p">(</span><span class="mi">2025</span><span class="p">,</span><span class="mi">6</span><span class="p">)</span>
+<span class="n">_</span><span class="p">,</span><span class="n">last_feb</span><span class="o">=</span><span class="n">calendar</span><span class="o">.</span><span class="n">monthrange</span><span class="p">(</span><span class="mi">2028</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">june_2025_last</span><span class="o">=</span><span class="n">date</span><span class="p">(</span><span class="mi">2025</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="n">last_june</span><span class="p">)</span>
+<span class="n">february_2028_last</span><span class="o">=</span><span class="n">date</span><span class="p">(</span><span class="mi">2028</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="n">last_feb</span><span class="p">)</span>
+<span class="n">date_diff</span><span class="o">=</span><span class="n">february_2028_last</span><span class="o">-</span><span class="n">june_2025_last</span>
+<span class="n">display</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Difference in days </span><span class="si">{</span><span class="n">date_diff</span><span class="o">.</span><span class="n">days</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Difference in days 974&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="access-bonds-with-specific-characteristics">
+<h2>Access Bonds With Specific Characteristics<a class="headerlink" href="#access-bonds-with-specific-characteristics" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Create a list of date objects.</p></li>
+<li><p>After creatibng the DataFrame of 304 bonds, use a the loc attribute to create a DataFrme with maturity dates in the list of data objects.</p></li>
+<li><p>Use the loc attribute of the DataFrame mathcing maturitiesto select those bonds with coupoans greater than 3.5.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
+<span class="n">url</span><span class="o">=</span><span class="s1">&#39;https://www.dropbox.com/scl/fi/lgnaj41bt8o9sv5a63rr1/</span><span class="se">\</span>
+<span class="s1">bond_data_jan21_2025.xlsx?rlkey=twjzkcqo0g2ahvot78518ti4x&amp;st=ihc5feog&amp;dl=1&#39;</span>
+<span class="n">bond_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="s1">&#39;Maturity Date&#39;</span><span class="p">,</span><span class="n">sheet_name</span><span class="o">=</span><span class="s1">&#39;Fidelity Data&#39;</span><span class="p">)</span>
+<span class="n">date_list</span><span class="o">=</span><span class="p">[</span><span class="n">date</span><span class="p">(</span><span class="mi">2025</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">30</span><span class="p">),</span><span class="n">date</span><span class="p">(</span><span class="mi">2025</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">31</span><span class="p">)]</span>
+<span class="n">bond_data</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">date_list</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Description</th>
+      <th>Coupon</th>
+      <th>Price Bid</th>
+      <th>Price Ask</th>
+      <th>Bid Size</th>
+      <th>Ask Size</th>
+    </tr>
+    <tr>
+      <th>Maturity Date</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2025-04-30</th>
+      <td>UNITED STATES TREAS SER BA-2025         3.8750...</td>
+      <td>3.875</td>
+      <td>99.863</td>
+      <td>99.880</td>
+      <td>60000.0</td>
+      <td>60000.0</td>
+    </tr>
+    <tr>
+      <th>2025-04-30</th>
+      <td>UNITED STATES TREAS SER Y-2025          0.3750...</td>
+      <td>0.375</td>
+      <td>98.941</td>
+      <td>98.962</td>
+      <td>60000.0</td>
+      <td>60000.0</td>
+    </tr>
+    <tr>
+      <th>2025-04-30</th>
+      <td>UNITED STATES TREAS SER K-2025          2.8750...</td>
+      <td>2.875</td>
+      <td>99.617</td>
+      <td>99.633</td>
+      <td>10000.0</td>
+      <td>10000.0</td>
+    </tr>
+    <tr>
+      <th>2025-10-31</th>
+      <td>UNITED STATES TREAS 0.25000% 10/31/2025 NOTE</td>
+      <td>0.250</td>
+      <td>96.974</td>
+      <td>96.997</td>
+      <td>8000.0</td>
+      <td>8000.0</td>
+    </tr>
+    <tr>
+      <th>2025-10-31</th>
+      <td>UNITED STATES TREAS SER BJ-2025         5.0000...</td>
+      <td>5.000</td>
+      <td>100.539</td>
+      <td>100.559</td>
+      <td>10000.0</td>
+      <td>10000.0</td>
+    </tr>
+    <tr>
+      <th>2025-10-31</th>
+      <td>UNITED STATES TREAS SER R-2025          3.0000...</td>
+      <td>3.000</td>
+      <td>99.041</td>
+      <td>99.067</td>
+      <td>40000.0</td>
+      <td>40000.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="calculate-days-between-coupon-payment-and-settlement-dates">
+<h2>Calculate Days Between Coupon Payment And Settlement Dates<a class="headerlink" href="#calculate-days-between-coupon-payment-and-settlement-dates" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Create  date objects <font color='green'>last_coupon</font> and <font color='green'>settlement_date</font></p></li>
+<li><p>Create the date object <font color='green'>date_diff</font> by subtracting <font color='green'>last_coupon</font> from <font color='green'>settlement_date</font></p></li>
+<li><p>Display the <font color='green'>days</font> attribute of <font color='green'>date_diff</font>.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">maturity_date</span><span class="o">=</span><span class="n">date</span><span class="p">(</span><span class="mi">2030</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">15</span><span class="p">)</span>
+<span class="n">settlement_date</span><span class="o">=</span><span class="n">date</span><span class="p">(</span><span class="mi">2024</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">_</span><span class="p">,</span><span class="n">last_day</span><span class="o">=</span><span class="n">calendar</span><span class="o">.</span><span class="n">monthrange</span><span class="p">(</span><span class="n">maturity_date</span><span class="o">.</span><span class="n">year</span><span class="p">,</span><span class="n">maturity_date</span><span class="o">.</span><span class="n">month</span><span class="p">)</span>
+<span class="n">isLast</span><span class="o">=</span><span class="n">maturity_date</span><span class="o">.</span><span class="n">day</span><span class="o">==</span><span class="n">last</span>
+<span class="n">last_coupon</span><span class="o">=</span><span class="n">date</span><span class="p">(</span><span class="n">settlement_date</span><span class="o">.</span><span class="n">year</span><span class="p">,</span><span class="n">maturity_date</span><span class="o">.</span><span class="n">month</span><span class="p">,</span><span class="n">maturity_date</span><span class="o">.</span><span class="n">day</span><span class="p">)</span>
+<span class="n">next_coupon</span><span class="o">=</span><span class="n">last_coupon</span><span class="o">+</span><span class="n">relativedelta</span><span class="p">(</span><span class="n">months</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">isLast</span><span class="p">:</span>
+  <span class="n">next_coupon</span><span class="o">=</span><span class="n">date</span><span class="p">(</span><span class="n">next_coupon</span><span class="o">.</span><span class="n">year</span><span class="p">,</span><span class="n">next_coupon</span><span class="o">.</span><span class="n">monht</span><span class="p">,</span><span class="n">last</span><span class="p">)</span>
+<span class="n">time_since</span><span class="o">=</span><span class="n">settlement_date</span><span class="o">-</span><span class="n">last_coupon</span>
+<span class="n">time_between</span><span class="o">=</span><span class="n">next_coupon</span><span class="o">-</span><span class="n">last_coupon</span>
+<span class="n">display</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Days Since </span><span class="si">{</span><span class="n">time_since</span><span class="o">.</span><span class="n">days</span><span class="si">}</span><span class="s1"> Days Between </span><span class="si">{</span><span class="n">time_between</span><span class="o">.</span><span class="n">days</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Days Since 107 Days Between 182&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="calculate-a-transaction-price">
+<h2>Calculate A Transaction Price<a class="headerlink" href="#calculate-a-transaction-price" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Make necessary including module.</p></li>
+<li><p>Create  date objects <font color='green'>maturity_date</font> and <font color='green'>settlement_date</font></p></li>
+<li><p>Pass date objects and coupon to <font color='green'>accrued_interest</font></p></li>
+<li><p>Add accrued interest to clean price</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">types</span><span class="w"> </span><span class="kn">import</span> <span class="n">ModuleType</span>
+<span class="c1"># Define the URL of the Python module to be downloaded from Dropbox.</span>
+<span class="c1"># The &#39;dl=1&#39; parameter in the URL forces a direct download of the file content.</span>
+<span class="n">url</span><span class="o">=</span> <span class="s1">&#39;https://www.dropbox.com/scl/fi/4y5hjxlfphh1ngvbgo77q/</span><span class="se">\</span>
+<span class="s1">module_-basic_concepts_fixed_income.py?rlkey=6oxi7mgka42veaat79hcv8boz&amp;st=87sztshr&amp;dl=1&#39;</span>
+<span class="n">module_name</span><span class="o">=</span><span class="s1">&#39;basic_concepts_fixed_income&#39;</span>
+<span class="c1"># Send an HTTP GET request to the URL and store the server&#39;s response.</span>
+<span class="k">try</span><span class="p">:</span>
+  <span class="n">response</span><span class="o">=</span><span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+  <span class="c1"># Raise an exception for bad status codes (like 404 Not Found)</span>
+  <span class="n">response</span><span class="o">.</span><span class="n">raise_for_status</span><span class="p">()</span>
+  <span class="n">module</span><span class="o">=</span> <span class="n">ModuleType</span><span class="p">(</span><span class="n">module_name</span><span class="p">)</span>
+  <span class="c1">#Code contained in response.text executed</span>
+  <span class="n">exec</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="n">module</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">)</span>
+  <span class="c1"># Module added to sys</span>
+  <span class="n">sys</span><span class="o">.</span><span class="n">modules</span><span class="p">[</span><span class="n">module_name</span><span class="p">]</span><span class="o">=</span><span class="n">module</span>
+<span class="k">except</span> <span class="n">requests</span><span class="o">.</span><span class="n">exceptions</span><span class="o">.</span><span class="n">RequestException</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;❌ Error: Could not fetch module from URL. </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;❌ Error: Failed to execute or import the module. </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Now that &#39;basic_concepts_fixed_income&#39; exists in the notebook, import the specific functions</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">basic_concepts_fixed_income</span><span class="w"> </span><span class="kn">import</span><span class="p">(</span><span class="n">create_workbook</span><span class="p">,</span>
+                                        <span class="n">accrued_interest</span><span class="p">)</span>
+<span class="n">maturity_date</span><span class="o">=</span><span class="n">date</span><span class="p">(</span><span class="mi">2030</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">coupon</span><span class="o">=</span><span class="mi">5</span>
+<span class="n">settkent_date</span><span class="o">=</span><span class="n">date</span><span class="p">(</span><span class="mi">2024</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">accrued</span><span class="o">=</span><span class="n">accrued_interest</span><span class="p">(</span><span class="n">maturity_date</span><span class="p">,</span><span class="n">coupon</span><span class="p">,</span><span class="n">settlement</span><span class="o">=</span><span class="n">settlement_date</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Clean Price </span><span class="si">{</span><span class="mi">95</span><span class="si">}</span><span class="s1"> Accrued Interest </span><span class="si">{</span><span class="n">accrued</span><span class="si">:</span><span class="s1"> .3f</span><span class="si">}</span><span class="s1"> Dirty Price </span><span class="si">{</span><span class="mi">95</span><span class="o">+</span><span class="n">accrued</span><span class="si">:</span><span class="s1"> 3f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">[</span><span class=" -Color -Color-Blue">notice</span><span class=" -Color -Color-Bold">]</span> A new release of pip is available: <span class=" -Color -Color-Red">25.2</span> -&gt; <span class=" -Color -Color-Green">25.3</span>
+<span class=" -Color -Color-Bold">[</span><span class=" -Color -Color-Blue">notice</span><span class=" -Color -Color-Bold">]</span> To update, run: <span class=" -Color -Color-Green">pip install --upgrade pip</span>
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Clean Price 95 Accrued Interest  1.511 Dirty Price  96.510989&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="create-a-workbook">
+<h2>Create A Workbook<a class="headerlink" href="#create-a-workbook" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Use the iloc attribute of the bond_data DataFrame to create a DataFrame with the first ten roww.</p></li>
+<li><p>Use the <font color='green'>create_workbook</font> to create an Excel workbook.</p></li>
+<li><p>Name the sheet and the path. Make sure workbook nane in path ends with .xlsx</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">first_ten_rows</span><span class="o">=</span><span class="n">bond_data</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:</span><span class="mi">10</span><span class="p">]</span>
+<span class="n">create_workbook</span><span class="p">(</span><span class="s1">&#39;First Ten Rows&#39;</span><span class="p">,</span><span class="n">first_ten_rows</span><span class="p">,</span><span class="s1">&#39;Exercise Chapter Two.xlsx&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_21710</span><span class="o">/</span><span class="mf">1418869055.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">first_ten_rows</span><span class="o">=</span><span class="n">bond_data</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:</span><span class="mi">10</span><span class="p">]</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">create_workbook</span><span class="p">(</span><span class="s1">&#39;First Ten Rows&#39;</span><span class="p">,</span><span class="n">first_ten_rows</span><span class="p">,</span><span class="s1">&#39;Exercise Chapter Two.xlsx&#39;</span><span class="p">)</span>
+
+<span class="nn">&lt;string&gt;</span> in <span class="ni">create_workbook</span><span class="nt">(sheet_name, df, save_config)</span>
+
+<span class="ne">AttributeError</span>: &#39;str&#39; object has no attribute &#39;get&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="chapter-two-exercise">
+<h2>Chapter Two Exercise<a class="headerlink" href="#chapter-two-exercise" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Get fresh copy of bond_data from DropBox</p></li>
+<li><p>Use iloc to create the DataFrame <font color='green'>first_100_rows</font></p></li>
+<li><p>Use the Pandas <font color='green'>apply</font> method to update the DataFrame.</p></li>
+<li><p>Create the Excel workbook <font color='green'>first_100_rows.xlsx</font>.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
+<span class="n">url</span><span class="o">=</span><span class="s1">&#39;https://www.dropbox.com/scl/fi/lgnaj41bt8o9sv5a63rr1/</span><span class="se">\</span>
+<span class="s1">bond_data_jan21_2025.xlsx?rlkey=twjzkcqo0g2ahvot78518ti4x&amp;st=ihc5feog&amp;dl=1&#39;</span>
+<span class="n">bond_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="s1">&#39;Maturity Date&#39;</span><span class="p">,</span><span class="n">sheet_name</span><span class="o">=</span><span class="s1">&#39;Fidelity Data&#39;</span><span class="p">)</span>
+<span class="n">first_100_rows</span><span class="o">=</span><span class="n">bond_data</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:</span><span class="mi">100</span><span class="p">]</span>
+<span class="n">first_100_rows</span><span class="p">[</span><span class="s1">&#39;Accrued&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">first_100_rows</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span>
+    <span class="k">lambda</span> <span class="n">row</span><span class="p">:</span> <span class="n">accrued_interest</span><span class="p">(</span>
+        <span class="n">maturity</span><span class="o">=</span><span class="n">row</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>      <span class="c1"># The row&#39;s index label (maturity date) is accessed via .name</span>
+        <span class="n">coupon</span><span class="o">=</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;Coupon&#39;</span><span class="p">],</span>   <span class="c1"># Access the &#39;Coupon&#39; value from the row</span>
+        <span class="n">settlement</span><span class="o">=</span><span class="n">settlement_date</span>   <span class="c1"># Use the globally defined settlement date</span>
+    <span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">create_workbook</span><span class="p">(</span><span class="s1">&#39;First Sheet&#39;</span><span class="p">,</span><span class="n">first_100_rows</span><span class="p">,</span><span class="s1">&#39;first_100_rows.xlsx&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>✅ Successfully wrote and formatted sheet &#39;First Sheet&#39; in &#39;first_100_rows.xlsx&#39;
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipython-input-595886530.py:7: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  first_100_rows[&#39;Accrued&#39;] = first_100_rows.apply(
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "PatrickJHess/Hints-Results",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-date">Create A Date</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#get-the-last-day-of-the-month">Get The Last Day Of The Month.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#add-six-months-to-a-date">Add Six Months To A Date</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-number-of-days-between-dates">Calculate Number Of Days Between Dates</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#access-bonds-with-specific-characteristics">Access Bonds With Specific Characteristics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-days-between-coupon-payment-and-settlement-dates">Calculate Days Between Coupon Payment And Settlement Dates</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-a-transaction-price">Calculate A Transaction Price</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-workbook">Create A Workbook</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chapter-two-exercise">Chapter Two Exercise</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Financial Python
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
