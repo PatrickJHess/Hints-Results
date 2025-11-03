@@ -10,3 +10,7 @@ chapters:
   sections:
   - file: Chapter_One_Hints
   - file: Chapter_One_Results
+- file: Chapter_Two_Hints_Results
+  sections:
+  - file: Chapter_Two_Hints
+  - file: Chapter_Two_Results
