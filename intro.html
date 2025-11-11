@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -394,48 +394,39 @@ document.write(`
 <h1>Basic Concepts Of Fixed Income- <em>Hints</em> And <em>Results</em><a class="headerlink" href="#basic-concepts-of-fixed-income-hints-and-results" title="Link to this heading">#</a></h1>
 <p>This Jupyter book includes hints and expected results for each chapter. Each chapter has two sections referring to a notebook: either <em>Hints</em> or <em>Results</em>.</p>
 <p><strong>Interacting with Jupyter Notebooks</strong></p>
-<p>The Jupyter notebooks can be viewed just as you are viewing this page. The notebooks, however, offers deeper interactive capabilities.  When you navigate to a noebook the upper-right corner of the viewing area shows icons for launching and downloading the notebook.  Downloading needs no elaboration.  The launch icon offers three options:</p>
+<p>Notebook Launch Options</p>
+<p>The launch icon provides three interactive options for notebook documents:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Option</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Interactive Features</p></th>
+<th class="head"><p>Note</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Binder</strong></p></td>
+<td><p>Launches in a new browser tab (typically within a minute) and runs remotely. Supports up to 100 simultaneous users.</p></td>
+<td><p>Execute existing cells, add or modify cells, and download the notebook.</p></td>
+<td><p>The notebook will not be saved or available if saved in this mode.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Colab</strong></p></td>
+<td><p>Offers the quickest and easiest access, not requiring Binder. A Google Drive is unnecessary for launching.</p></td>
+<td><p>Execute cells or make a copy.</p></td>
+<td><p>You must sign in to a Google account to execute cells or make a copy. You can download the notebook without signing into a Google account.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Live Code</strong></p></td>
+<td><p>Requires a Binder launch and is ideal for demonstrations.</p></td>
+<td><p>Run code in existing cells, and alter code in existing cells.</p></td>
+<td><p>You cannot add cells or save results in this mode.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Additional Interactive Features</p>
 <ul class="simple">
-<li><p><strong>Binder:</strong></p>
-<ul>
-<li><p>Launches in a new browser tab, typically within a minute.</p></li>
-<li><p>Supports up to one hundred simultaneous users.</p></li>
-<li><p>Functions like any other Jupyter notebook, but runs remotely.</p></li>
-<li><p>Allows you to:</p>
-<ul>
-<li><p>Execute existing cells.</p></li>
-<li><p>Add or modify cells.</p></li>
-<li><p>Download the notebook.</p></li>
+<li><p><strong>Copying Code:</strong> Any code cell or code block can be copied to the clipboard by moving the cursor to its upper-right corner.</p></li>
 </ul>
-</li>
-<li><p>Note: In this mode the notebook will not be available if saved.</p></li>
-</ul>
-</li>
-<li><p><strong>Colab:</strong></p>
-<ul>
-<li><p>Offers the quickest and easiest access without requiring Binder.</p>
-<ul>
-<li><p>A Google Drive is not necessary for launching.</p></li>
-<li><p>You can download the notebook without signing into a Google account.</p></li>
-</ul>
-</li>
-<li><p>Note: You must sign in to a Google account to execute cells or make a copy.</p></li>
-</ul>
-</li>
-<li><p><strong>Live Code:</strong></p>
-<ul>
-<li><p>Requires a Binder launch and is ideal for demonstrations.</p></li>
-<li><p>Enables you to:</p>
-<ul>
-<li><p>Run code in existing cells.</p></li>
-<li><p>Alter code in existing cells.</p></li>
-</ul>
-</li>
-<li><p>Note: You cannot add cells or save results in this mode.</p></li>
-</ul>
-</li>
-</ul>
-<p><strong>Any code cell in a notebook or code block in a text cell can be copied to the clipboard by moving your cursor to upper-right corner of the code cell or code block.</strong></p>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="Chapter_One_Hints_And_Results.html">Chapter One: Key Takeaways</a></li>
