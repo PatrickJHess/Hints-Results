@@ -5,12 +5,20 @@
 
 format: jb-book
 root: intro
-chapters:
-- file: Chapter_One_Hints_And_Results
-  sections:
-  - file: Chapter_One_Hints
-  - file: Chapter_One_Results
-- file: Chapter_Two_Hints_Results
-  sections:
-  - file: Chapter_Two_Hints
-  - file: Chapter_Two_Results
+parts:
+  - caption: Getting Started
+    chapters:
+    - file: Interacting With Jupyter Books
+  - caption: Chapter One Hints And Results
+    chapters:
+    - file: Chapter_One_Hints
+    - file: Chapter_One_Results
+  - caption: Chapter Two Hints And Results
+    chapters:
+    - file: Chapter_Two_Hints
+    - file: Chapter_Two_Results
+  - caption: Chapter Three Hints And Results
+    chapters:
+    - file: Chapter_Three_Hints
+    - file: Chapter_Three_Results
+ 

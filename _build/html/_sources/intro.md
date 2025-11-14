@@ -1,26 +1,10 @@
-# Basic Concepts Of Fixed Income- *Hints* And *Results*
+# Financial Python
 
-This Jupyter book includes hints and expected results for each chapter. Each chapter has two sections referring to a notebook: either *Hints* or *Results*.
+## Basic Concepts of Fixed Income
 
+### Hints And Expected Results Of Applications And Exercises.
 
+This Jupyter book contains hints and the anticipated outcomes for the applications and chapter exercises found in *Basic Concepts Of Fixed Income*. Both the hints and the expected results are provided as notebooks. The hints notebooks contain only text; the expected results notebooks include both the hints and the final results. Users may find it helpful to insert code cells beneath the hints as they work through the applications and exercises. Alternatively, users can create their own notebook and use the provided results for verification. Guidance on using the notebooks is available under the Getting Started heading.
 
-**Interacting with Jupyter Notebooks**
-
-Notebook Launch Options
-
-The launch icon provides three interactive options for notebook documents:
-
-| Option | Description | Interactive Features | Note |
-| ----- | ----- | ----- | ----- |
-| **Binder** | Launches in a new browser tab (typically within a minute) and runs remotely. Supports up to 100 simultaneous users. | Execute existing cells, add or modify cells, and download the notebook. | The notebook will not be saved or available if saved in this mode. |
-| **Colab** | Offers the quickest and easiest access, not requiring Binder. A Google Drive is unnecessary for launching. | Execute cells or make a copy. | You must sign in to a Google account to execute cells or make a copy. You can download the notebook without signing into a Google account. |
-| **Live Code** | Requires a Binder launch and is ideal for demonstrations. | Run code in existing cells, and alter code in existing cells. | You cannot add cells or save results in this mode. |
-
-Additional Interactive Features
-
-* **Copying Code:** Any code cell or code block can be copied to the clipboard by moving the cursor to its upper-right corner.
-
-
-
-```{tableofcontents}
-```
+#####
+DRAFT CHAPTER FOR PILOT. NOT FOR DISTRIBUTION. This Jupyter Book was prepared by Ken Eades, Professor Emeritus of Business Administration, and Pat Hess, Owner, Perceptum Financial Analytics. Copyright © 2025 by the University of Virginia Darden School Foundation, Charlottesville, VA. All rights reserved. *No part of this publication may be reproduced, stored in a retrieval system, used in a spreadsheet, or transmitted in any form or by any means*&mdash;*electronic, mechanical, photocopying, recording, or otherwise*&mdash;*without the permission of the Darden School Foundation. This publication is protected by copyright and may not be uploaded in whole or part to any AI, large language model, or similar system, or to any related training database.* We welcome your feedback on the *Financial Python* pilot program. For any comments or questions related to the pilot and the *Financial Python* users, [contact sales](mailto:sales@dardenbusinesspublishing.com).

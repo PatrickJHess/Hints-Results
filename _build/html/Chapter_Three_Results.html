@@ -57,9 +57,12 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'Chapter_Three_Results';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Chapter Three Hints" href="Chapter_Three_Hints.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -122,8 +125,6 @@
       
       
       
-        
-      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -175,21 +176,28 @@
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="intro.html">
-                    Basic Concepts Of Fixed Income- Hints And Results
+                    Financial Python
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="Chapter_One_Hints_And_Results.html">Chapter One: Key Takeaways</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Chapter_One_Hints.html">Chapter One Hints</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Chapter_One_Results.html">Chapter One Expected Results</a></li>
-</ul><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="Chapter_Two_Hints_Results.html">Chapter Two: Key Takeaways</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Chapter_Two_Hints.html">Chapter Two Hints</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Chapter_Two_Results.html">Chapter Two Expected Results</a></li>
-</ul><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary>
-</details></li>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Interacting%20With%20Jupyter%20Books.html">Working With Jupyter Books</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Chapter One Hints And Results</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Chapter_One_Hints.html">Chapter One Hints</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Chapter_One_Results.html">Chapter One Expected Results</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Chapter Two Hints And Results</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Chapter_Two_Hints.html">Chapter Two Hints</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Chapter_Two_Results.html">Chapter Two Expected Results</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Chapter Three Hints And Results</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Chapter_Three_Hints.html">Chapter Three Hints</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Chapter Three Results</a></li>
 </ul>
 
     </div>
@@ -452,28 +460,16 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Chapter Three Results</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#application-find-a-holiday"><font color="green">Application: Find a holiday</font></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-payment-date"><font color="green">Calculate Payment Date</font></a></li>
-</ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#application-calculate-payment-dates-and-day-of-the-week-for-five-scheduled-payment-dates"><font color="green">Application: Calculate Payment Dates And Day Of The Week For Five Scheduled Payment Dates</font></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#application-calculate-payment-dates-and-day-of-the-week-for-five-scheduled-payment-dates"><font color="green">Application: Calculate Payment Dates And Day Of The Week For Five Scheduled Payment Dates</font></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#non-settlement-dictionry">non-settlement dictionry</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-adjust-bond-pay-dates-from-basic-concepts-of-fixed-income">import <font color="green">adjust_bond_pay_dates</font> from <em>basic_concepts_of_fixed_income</em></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-pandas-series-of-scheduled-payment-dates">create a Pandas series of scheduled payment dates</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-payments-dates-for-adjust-bond-pay-datess">calculate payments dates for <font color="green">adjust_bond_pay_datess</font></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-payments-dates-with-adjust-bond-pay-dates">calculate payments dates with <font color="green">adjust_bond_pay_dates</font></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-day-of-the-week-with-lambda-function">calculate day of the week with lambda function</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#add-six-months-to-a-date">Add Six Months To A Date</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-number-of-days-between-dates">Calculate Number Of Days Between Dates</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#access-bonds-with-specific-characteristics">Access Bonds With Specific Characteristics</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-days-between-coupon-payment-and-settlement-dates">Calculate Days Between Coupon Payment And Settlement Dates</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-a-transaction-price">Calculate A Transaction Price</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-workbook">Create A Workbook</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chapter-two-exercise">Chapter Two Exercise</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chapter-three-exercise">Chapter Three Exercise</a></li>
 </ul>
-</li>
-</ul>
-
             </nav>
         </div>
     </div>
@@ -592,9 +588,8 @@ document.write(`
 </div>
 </div>
 </section>
-</section>
 <section id="application-calculate-payment-dates-and-day-of-the-week-for-five-scheduled-payment-dates">
-<h1><font color='green'>Application: Calculate Payment Dates And Day Of The Week For Five Scheduled Payment Dates</font><a class="headerlink" href="#application-calculate-payment-dates-and-day-of-the-week-for-five-scheduled-payment-dates" title="Link to this heading">#</a></h1>
+<h2><font color='green'>Application: Calculate Payment Dates And Day Of The Week For Five Scheduled Payment Dates</font><a class="headerlink" href="#application-calculate-payment-dates-and-day-of-the-week-for-five-scheduled-payment-dates" title="Link to this heading">#</a></h2>
 <p>:</p>
 <div style="background-color:LightGray;
     border-left: 12px solid green;
@@ -611,6 +606,7 @@ document.write(`
 <li><p>Calculate payment dates by applying <font color='green'>adjust_bond_pay_date</font> to the Pandas series.</p></li>
 <li><p>Calculate days of the week by applying a lambda function <font color='green'>date_value.weekday()</font></p></li>
 </ul>
+</section>
 <section id="non-settlement-dictionry">
 <h2>non-settlement dictionry<a class="headerlink" href="#non-settlement-dictionry" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
@@ -692,8 +688,8 @@ dtype: object
 </div>
 </div>
 </section>
-<section id="calculate-payments-dates-for-adjust-bond-pay-datess">
-<h2>calculate payments dates for <font color='green'>adjust_bond_pay_datess</font><a class="headerlink" href="#calculate-payments-dates-for-adjust-bond-pay-datess" title="Link to this heading">#</a></h2>
+<section id="calculate-payments-dates-with-adjust-bond-pay-dates">
+<h2>calculate payments dates with <font color='green'>adjust_bond_pay_dates</font><a class="headerlink" href="#calculate-payments-dates-with-adjust-bond-pay-dates" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">adjusted_series</span><span class="o">=</span><span class="n">scheduled_series</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">adjust_bond_pay_dates</span><span class="p">)</span>
@@ -734,60 +730,78 @@ dtype: int64
 </div>
 </div>
 </section>
-<section id="add-six-months-to-a-date">
-<h2>Add Six Months To A Date<a class="headerlink" href="#add-six-months-to-a-date" title="Link to this heading">#</a></h2>
-<ol class="arabic simple">
-<li><p>Create the data object <font color='green'>jume_2025_last</font></p></li>
-<li><p>Use <font color='green'>relativedelta</font>.to add six months.</p></li>
-</ol>
-</section>
-<section id="calculate-number-of-days-between-dates">
-<h2>Calculate Number Of Days Between Dates<a class="headerlink" href="#calculate-number-of-days-between-dates" title="Link to this heading">#</a></h2>
-<ol class="arabic simple">
-<li><p>Create the data objects <font color='green'>jume_2025_last</font> and <font color='green'>february_2028_last</font></p></li>
-<li><p>Create the date object <font color='green'>date_diff</font> by subtracting <font color='green'>jume_2025_last</font> from <font color='green'>february_2028_last</font></p></li>
-<li><p>Display the <font color='green'>days</font> attribute of <font color='green'>date_diff</font>.</p></li>
-</ol>
-</section>
-<section id="access-bonds-with-specific-characteristics">
-<h2>Access Bonds With Specific Characteristics<a class="headerlink" href="#access-bonds-with-specific-characteristics" title="Link to this heading">#</a></h2>
+<section id="chapter-three-exercise">
+<h2>Chapter Three Exercise<a class="headerlink" href="#chapter-three-exercise" title="Link to this heading">#</a></h2>
 <ol class="arabic simple">
 <li><p>Create a list of date objects.</p></li>
-<li><p>After creatibng the DataFrame of 304 bonds, use a the loc attribute to create a DataFrme with maturity dates in the list of data objects.</p></li>
-<li><p>Use the loc attribute of the DataFrame mathcing maturitiesto select those bonds with coupoans greater than 3.5.</p></li>
+<li><p>Create a list of coupon amounts</p></li>
+<li><p>Create a dictionary with keys equal to maturity and values coupon amount</p></li>
+<li><p>Make settlement equal to the date object for January 21<span class="math notranslate nohighlight">\(^{st}\)</span> 2025.</p></li>
+<li><p>Iterate through the dictionary with <font color='green'>items()</font> method of dictionaries.</p></li>
+<li><p>Make the keys, values, and settlement the arguments of <font color='green'>bond_pay_data()</font> and display the results for each iteration.</p></li>
 </ol>
-</section>
-<section id="calculate-days-between-coupon-payment-and-settlement-dates">
-<h2>Calculate Days Between Coupon Payment And Settlement Dates<a class="headerlink" href="#calculate-days-between-coupon-payment-and-settlement-dates" title="Link to this heading">#</a></h2>
-<ol class="arabic simple">
-<li><p>Create  date objects <font color='green'>last_coupon</font> and <font color='green'>settlement_date</font></p></li>
-<li><p>Create the date object <font color='green'>date_diff</font> by subtracting <font color='green'>last_coupon</font> from <font color='green'>settlement_date</font></p></li>
-<li><p>Display the <font color='green'>days</font> attribute of <font color='green'>date_diff</font>.</p></li>
-</ol>
-</section>
-<section id="calculate-a-transaction-price">
-<h2>Calculate A Transaction Price<a class="headerlink" href="#calculate-a-transaction-price" title="Link to this heading">#</a></h2>
-<ol class="arabic simple">
-<li><p>Create  date objects <font color='green'>maturity_date</font> and <font color='green'>settlement_date</font></p></li>
-<li><p>Pass date objects and coupon to <font color='green'>accrued_interest</font></p></li>
-<li><p>Add accrued interest to clean price</p></li>
-</ol>
-</section>
-<section id="create-a-workbook">
-<h2>Create A Workbook<a class="headerlink" href="#create-a-workbook" title="Link to this heading">#</a></h2>
-<ol class="arabic simple">
-<li><p>Use the iloc attribute of the bond_data DataFrame to create a DataFrame with the first ten roww.</p></li>
-<li><p>Use the <font color='green'>create_workbook</font> to create an Excel workbook.</p></li>
-</ol>
-</section>
-<section id="chapter-two-exercise">
-<h2>Chapter Two Exercise<a class="headerlink" href="#chapter-two-exercise" title="Link to this heading">#</a></h2>
-<ol class="arabic simple">
-<li><p>Get fresh copy of bond_data from DropBox</p></li>
-<li><p>Use iloc to create the DataFrame <font color='green'>first_100_rows</font></p></li>
-<li><p>Use the Pandas <font color='green'>apply</font> method to update the DataFrame with <font color='green'>accrured_interest function</font>.</p></li>
-<li><p>Create the Excel workbook <font color='green'>first_100_rows.xlsx</font>.</p></li>
-</ol>
+<p><strong>If you are unfamiliar with the <font color='green'>items()</font> method of dictinaries</strong> <a class="reference external" href="https://patrickjhess.github.io/Introduction-To-Python-For-Financial-Python/Dictionaries.html#the-items-method-equivalent-to-zip-of-keys-and-values">take a look at the background material.</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">basic_concepts_fixed_income</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span><span class="n">bond_pay_data</span><span class="p">)</span>
+<span class="n">settlement</span><span class="o">=</span><span class="n">date</span><span class="p">(</span><span class="mi">2025</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">21</span><span class="p">)</span>
+<span class="n">maturity_dates</span><span class="o">=</span><span class="p">[</span><span class="n">date</span><span class="p">(</span><span class="mi">2028</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">9</span><span class="p">),</span>
+            <span class="n">date</span><span class="p">(</span><span class="mi">2028</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mi">31</span><span class="p">),</span>
+            <span class="n">date</span><span class="p">(</span><span class="mi">2030</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">28</span><span class="p">),</span>
+            <span class="n">date</span><span class="p">(</span><span class="mi">2027</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">),</span>
+            <span class="n">date</span><span class="p">(</span><span class="mi">2029</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">18</span><span class="p">)]</span>
+<span class="n">coupon_amounts</span><span class="o">=</span><span class="p">[</span><span class="mf">1.5</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mf">3.5</span><span class="p">,</span><span class="mf">2.5</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
+<span class="n">pay_data_dict</span><span class="o">=</span><span class="p">{</span><span class="n">maturity</span><span class="p">:</span><span class="n">amount</span> <span class="k">for</span> <span class="n">maturity</span><span class="p">,</span><span class="n">amount</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">maturity_dates</span><span class="p">,</span><span class="n">coupon_amounts</span><span class="p">)}</span>
+<span class="k">for</span> <span class="n">key</span><span class="p">,</span><span class="n">value</span> <span class="ow">in</span> <span class="n">pay_data_dict</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+  <span class="n">display</span><span class="p">(</span><span class="n">bond_pay_data</span><span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="n">value</span><span class="p">,</span><span class="n">settlement</span><span class="o">=</span><span class="n">settlement</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(array([datetime.date(2025, 4, 9), datetime.date(2025, 10, 9),
+        datetime.date(2026, 4, 9), datetime.date(2026, 10, 9),
+        datetime.date(2027, 4, 9), datetime.date(2027, 10, 12),
+        datetime.date(2028, 4, 10), datetime.date(2028, 10, 10)],
+       dtype=object),
+ array([  0.75,   0.75,   0.75,   0.75,   0.75,   0.75,   0.75, 100.75]))
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(array([datetime.date(2025, 6, 30), datetime.date(2025, 12, 31),
+        datetime.date(2026, 6, 30), datetime.date(2026, 12, 31),
+        datetime.date(2027, 6, 30), datetime.date(2028, 1, 3),
+        datetime.date(2028, 6, 30), datetime.date(2029, 1, 2)],
+       dtype=object),
+ array([  2.5,   2.5,   2.5,   2.5,   2.5,   2.5,   2.5, 102.5]))
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(array([datetime.date(2025, 5, 28), datetime.date(2025, 11, 28),
+        datetime.date(2026, 5, 28), datetime.date(2026, 11, 30),
+        datetime.date(2027, 5, 28), datetime.date(2027, 11, 29),
+        datetime.date(2028, 5, 30), datetime.date(2028, 11, 28),
+        datetime.date(2029, 5, 29), datetime.date(2029, 11, 28),
+        datetime.date(2030, 5, 28), datetime.date(2030, 11, 29)],
+       dtype=object),
+ array([  1.75,   1.75,   1.75,   1.75,   1.75,   1.75,   1.75,   1.75,
+          1.75,   1.75,   1.75, 101.75]))
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(array([datetime.date(2025, 4, 10), datetime.date(2025, 10, 10),
+        datetime.date(2026, 4, 10), datetime.date(2026, 10, 13),
+        datetime.date(2027, 4, 12), datetime.date(2027, 10, 12)],
+       dtype=object),
+ array([  1.25,   1.25,   1.25,   1.25,   1.25, 101.25]))
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(array([datetime.date(2025, 2, 18), datetime.date(2025, 8, 18),
+        datetime.date(2026, 2, 18), datetime.date(2026, 8, 18),
+        datetime.date(2027, 2, 18), datetime.date(2027, 8, 18),
+        datetime.date(2028, 2, 18), datetime.date(2028, 8, 18),
+        datetime.date(2029, 2, 20)], dtype=object),
+ array([  2.,   2.,   2.,   2.,   2.,   2.,   2.,   2., 102.]))
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 </section>
 
@@ -821,6 +835,15 @@ dtype: int64
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="Chapter_Three_Hints.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Chapter Three Hints</p>
+      </div>
+    </a>
 </div>
                 </footer>
               
@@ -837,28 +860,16 @@ dtype: int64
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Chapter Three Results</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#application-find-a-holiday"><font color="green">Application: Find a holiday</font></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-payment-date"><font color="green">Calculate Payment Date</font></a></li>
-</ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#application-calculate-payment-dates-and-day-of-the-week-for-five-scheduled-payment-dates"><font color="green">Application: Calculate Payment Dates And Day Of The Week For Five Scheduled Payment Dates</font></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#application-calculate-payment-dates-and-day-of-the-week-for-five-scheduled-payment-dates"><font color="green">Application: Calculate Payment Dates And Day Of The Week For Five Scheduled Payment Dates</font></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#non-settlement-dictionry">non-settlement dictionry</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-adjust-bond-pay-dates-from-basic-concepts-of-fixed-income">import <font color="green">adjust_bond_pay_dates</font> from <em>basic_concepts_of_fixed_income</em></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-pandas-series-of-scheduled-payment-dates">create a Pandas series of scheduled payment dates</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-payments-dates-for-adjust-bond-pay-datess">calculate payments dates for <font color="green">adjust_bond_pay_datess</font></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-payments-dates-with-adjust-bond-pay-dates">calculate payments dates with <font color="green">adjust_bond_pay_dates</font></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-day-of-the-week-with-lambda-function">calculate day of the week with lambda function</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#add-six-months-to-a-date">Add Six Months To A Date</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-number-of-days-between-dates">Calculate Number Of Days Between Dates</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#access-bonds-with-specific-characteristics">Access Bonds With Specific Characteristics</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-days-between-coupon-payment-and-settlement-dates">Calculate Days Between Coupon Payment And Settlement Dates</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-a-transaction-price">Calculate A Transaction Price</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-workbook">Create A Workbook</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chapter-two-exercise">Chapter Two Exercise</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chapter-three-exercise">Chapter Three Exercise</a></li>
 </ul>
-</li>
-</ul>
-
   </nav></div>
 
 </div></div>
