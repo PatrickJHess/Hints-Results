@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -462,9 +462,8 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-date"><font color="green">Create A Date</font></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#get-the-last-day-of-the-month"><font color="green">Get The Last Day Of The Month</font></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#add-six-months-to-a-date"><font color="green">Add Six Months To A Date</font></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-number-of-days-between-dates"><font color="green">Calculate Number Of Days Between Dates</font></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#access-bonds-with-specific-characteristics"><font color="green">Access Bonds With Specific Characteristics</font></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-days-between-coupon-payment-and-settlement-dates"><font color="green">Calculate Days Between Coupon Payment And Settlement Dates</font></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-days-for-accrued-interst"><font color="green">Calculate Days For Accrued Interst</font></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-a-transaction-price"><font color="green">Calculate A Transaction Price</font></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-workbook"><font color="green">Create A Workbook</font></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chapter-two-exercise"><font color="green">Chapter Two Exercise</font></a></li>
@@ -483,7 +482,7 @@ document.write(`
 <h1>Chapter Two Hints<a class="headerlink" href="#chapter-two-hints" title="Link to this heading">#</a></h1>
 <section id="create-a-date">
 <h2><font color='green'>Create A Date</font><a class="headerlink" href="#create-a-date" title="Link to this heading">#</a></h2>
-<div style="background-color:LightGray;
+<div style=
     border-left: 12px solid green;
     font-family: 'Garamond', serif;
     font-size: 17px;
@@ -491,14 +490,14 @@ document.write(`
     padding: 15px">
 <br>
 <ol class="arabic simple">
-<li><p>Create the date object <font color='green'>created_date</font>.</p></li>
+<li><p>Create the date object <font color='green'>vets_day_2025</font>.</p></li>
 <li><p>Use dot notation to access the attributes.</p></li>
 <li><p>Display results as an f string.</p></li>
 </ol>
 </section>
 <section id="get-the-last-day-of-the-month">
 <h2><font color='green'>Get The Last Day Of The Month</font><a class="headerlink" href="#get-the-last-day-of-the-month" title="Link to this heading">#</a></h2>
-<div style="background-color:LightGray;
+<div style=
     border-left: 12px solid green;
     font-family: 'Garamond', serif;
     font-size: 17px;
@@ -513,7 +512,7 @@ document.write(`
 </section>
 <section id="add-six-months-to-a-date">
 <h2><font color='green'>Add Six Months To A Date</font><a class="headerlink" href="#add-six-months-to-a-date" title="Link to this heading">#</a></h2>
-<div style="background-color:LightGray;
+<div style=
     border-left: 12px solid green;
     font-family: 'Garamond', serif;
     font-size: 17px;
@@ -521,28 +520,13 @@ document.write(`
     padding: 15px">
 <br>
 <ol class="arabic simple">
-<li><p>Create the data object <font color='green'>jume_2025_last</font></p></li>
+<li><p>Create the data object <font color='green'>june_2025_last</font></p></li>
 <li><p>Use <font color='green'>relativedelta</font>.to add six months.</p></li>
-</ol>
-</section>
-<section id="calculate-number-of-days-between-dates">
-<h2><font color='green'>Calculate Number Of Days Between Dates</font><a class="headerlink" href="#calculate-number-of-days-between-dates" title="Link to this heading">#</a></h2>
-<div style="background-color:LightGray;
-    border-left: 12px solid green;
-    font-family: 'Garamond', serif;
-    font-size: 17px;
-    line-height: 1.5;
-    padding: 15px">
-<br>
-<ol class="arabic simple">
-<li><p>Create the data objects <font color='green'>jume_2025_last</font> and <font color='green'>february_2028_last</font></p></li>
-<li><p>Create the date object <font color='green'>date_diff</font> by subtracting <font color='green'>jume_2025_last</font> from <font color='green'>february_2028_last</font></p></li>
-<li><p>Display the <font color='green'>days</font> attribute of <font color='green'>date_diff</font>.</p></li>
 </ol>
 </section>
 <section id="access-bonds-with-specific-characteristics">
 <h2><font color='green'>Access Bonds With Specific Characteristics</font><a class="headerlink" href="#access-bonds-with-specific-characteristics" title="Link to this heading">#</a></h2>
-<div style="background-color:LightGray;
+<div style=
     border-left: 12px solid green;
     font-family: 'Garamond', serif;
     font-size: 17px;
@@ -550,14 +534,15 @@ document.write(`
     padding: 15px">
 <br>
 <ol class="arabic simple">
-<li><p>Create a list of date objects.</p></li>
-<li><p>After creatibng the DataFrame of 304 bonds, use a the loc attribute to create a DataFrme with maturity dates in the list of data objects.</p></li>
-<li><p>Use the loc attribute of the DataFrame mathcing maturitiesto select those bonds with coupoans greater than 3.5.</p></li>
+<li><p>Assume that ‘Matrity Date’ column is a Pandas Timestamp equivalent to datetime object.</p></li>
+<li><p>Convert the datetime object to a date object</p></li>
+<li><p>After creating the DataFrame of 304 bonds, use the loc attribute to create a DataFrame with maturity dates in the list of data objects.</p></li>
+<li><p>Use the loc attribute of the DataFrame matching maturities to select those bonds with coupons greater than 3.5.</p></li>
 </ol>
 </section>
-<section id="calculate-days-between-coupon-payment-and-settlement-dates">
-<h2><font color='green'>Calculate Days Between Coupon Payment And Settlement Dates</font><a class="headerlink" href="#calculate-days-between-coupon-payment-and-settlement-dates" title="Link to this heading">#</a></h2>
-<div style="background-color:LightGray;
+<section id="calculate-days-for-accrued-interst">
+<h2><font color='green'>Calculate Days For Accrued Interst</font><a class="headerlink" href="#calculate-days-for-accrued-interst" title="Link to this heading">#</a></h2>
+<div style=
     border-left: 12px solid green;
     font-family: 'Garamond', serif;
     font-size: 17px;
@@ -572,7 +557,7 @@ document.write(`
 </section>
 <section id="calculate-a-transaction-price">
 <h2><font color='green'>Calculate A Transaction Price</font><a class="headerlink" href="#calculate-a-transaction-price" title="Link to this heading">#</a></h2>
-<div style="background-color:LightGray;
+<div style=
     border-left: 12px solid green;
     font-family: 'Garamond', serif;
     font-size: 17px;
@@ -587,7 +572,7 @@ document.write(`
 </section>
 <section id="create-a-workbook">
 <h2><font color='green'>Create A Workbook</font><a class="headerlink" href="#create-a-workbook" title="Link to this heading">#</a></h2>
-<div style="background-color:LightGray;
+<div style=
     border-left: 12px solid green;
     font-family: 'Garamond', serif;
     font-size: 17px;
@@ -601,7 +586,7 @@ document.write(`
 </section>
 <section id="chapter-two-exercise">
 <h2><font color='green'>Chapter Two Exercise</font><a class="headerlink" href="#chapter-two-exercise" title="Link to this heading">#</a></h2>
-<div style="background-color:LightGray;
+<div style=
     border-left: 12px solid green;
     font-family: 'Garamond', serif;
     font-size: 17px;
@@ -684,9 +669,8 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-date"><font color="green">Create A Date</font></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#get-the-last-day-of-the-month"><font color="green">Get The Last Day Of The Month</font></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#add-six-months-to-a-date"><font color="green">Add Six Months To A Date</font></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-number-of-days-between-dates"><font color="green">Calculate Number Of Days Between Dates</font></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#access-bonds-with-specific-characteristics"><font color="green">Access Bonds With Specific Characteristics</font></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-days-between-coupon-payment-and-settlement-dates"><font color="green">Calculate Days Between Coupon Payment And Settlement Dates</font></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-days-for-accrued-interst"><font color="green">Calculate Days For Accrued Interst</font></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-a-transaction-price"><font color="green">Calculate A Transaction Price</font></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-workbook"><font color="green">Create A Workbook</font></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chapter-two-exercise"><font color="green">Chapter Two Exercise</font></a></li>
