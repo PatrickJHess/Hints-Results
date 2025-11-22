@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -550,9 +550,13 @@ document.write(`
     padding: 15px">
 <br>
 <ol class="arabic simple">
-<li><p>Create  date objects <font color='green'>last_coupon</font> and <font color='green'>settlement_date</font></p></li>
-<li><p>Create the date object <font color='green'>date_diff</font> by subtracting <font color='green'>last_coupon</font> from <font color='green'>settlement_date</font></p></li>
-<li><p>Display the <font color='green'>days</font> attribute of <font color='green'>date_diff</font>.</p></li>
+<li><p>Import date from datetime</p></li>
+<li><p>Import  <font color='green'>relativedelta</font> from dateutil</p></li>
+<li><p>Import requests</p></li>
+<li><p>Import  <font color='green'>scheduled_pay_dates</font> from the custom module.</p></li>
+<li><p>Get  <font color='green'>next_coupon_date</font> from <font color='green'>scheduled_pay_dates</font></p></li>
+<li><p>Calculate <font color='green'>last_coupon_date</font> by subtracting six months from <font color='green'>next_coupon_date</font></p></li>
+<li><p>Subtract date objects as needed and display the days attribute.</p></li>
 </ol>
 </section>
 <section id="calculate-a-transaction-price">
@@ -582,10 +586,24 @@ document.write(`
 <ol class="arabic simple">
 <li><p>Use the iloc attribute of the bond_data DataFrame to create a DataFrame with the first ten roww.</p></li>
 <li><p>Use the <font color='green'>create_workbook</font> to create an Excel workbook.</p></li>
+<li><p><font color='green'>save_config</font> defaults to an empty dictionary</p></li>
 </ol>
 </section>
 <section id="chapter-two-exercise">
 <h2><font color='green'>Chapter Two Exercise</font><a class="headerlink" href="#chapter-two-exercise" title="Link to this heading">#</a></h2>
+<div style=
+    border-left: 12px solid green;
+    font-family: 'Garamond', serif;
+    font-size: 17px;
+    line-height: 1.5;
+    padding: 15px">
+<br>
+<ol class="arabic simple">
+<li><p>Get fresh copy of <font color='green'>bond_data</font> from DropBox</p></li>
+<li><p>Use  <font color='green'>iloc</font> with the <font color='green'>copy</font> mehhod to create a DataFrame <font color='green'>first_100_rows</font> unrelated to <font color='green'>bond_data</font>.</p></li>
+<li><p>Use the Pandas <font color='green'>apply</font> method to update the DataFrame with <font color='green'>accrured_interest function</font>.</p></li>
+<li><p>Create the Excel workbook <font color='green'>first_100_rows.xlsx</font>.</p></li>
+</ol>
 <div style=
     border-left: 12px solid green;
     font-family: 'Garamond', serif;

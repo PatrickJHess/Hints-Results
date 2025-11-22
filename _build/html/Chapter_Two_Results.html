@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -779,52 +779,32 @@ document.write(`
     padding: 15px">
 <br>
 <ol class="arabic simple">
-<li><p>Create  date objects <font color='green'>last_coupon</font> and <font color='green'>settlement_date</font></p></li>
-<li><p>Create the date object <font color='green'>date_diff</font> by subtracting <font color='green'>last_coupon</font> from <font color='green'>settlement_date</font></p></li>
-<li><p>Display the <font color='green'>days</font> attribute of <font color='green'>date_diff</font>.</p></li>
+<li><p>Import date from datetime</p></li>
+<li><p>Import  <font color='green'>relativedelta</font> from dateutil</p></li>
+<li><p>Import requests</p></li>
+<li><p>Import  <font color='green'>scheduled_pay_dates</font> from the custom module.</p></li>
+<li><p>Get  <font color='green'>next_coupon_date</font> from <font color='green'>scheduled_pay_dates</font></p></li>
+<li><p>Calculate <font color='green'>last_coupon_date</font> by subtracting six months from <font color='green'>next_coupon_date</font></p></li>
+<li><p>Subtract date objects as needed and display the days attribute.</p></li>
 </ol>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">maturity_date</span><span class="o">=</span><span class="n">date</span><span class="p">(</span><span class="mi">2030</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">15</span><span class="p">)</span>
-<span class="n">settlement_date</span><span class="o">=</span><span class="n">date</span><span class="p">(</span><span class="mi">2024</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">_</span><span class="p">,</span><span class="n">last_day</span><span class="o">=</span><span class="n">calendar</span><span class="o">.</span><span class="n">monthrange</span><span class="p">(</span><span class="n">maturity_date</span><span class="o">.</span><span class="n">year</span><span class="p">,</span><span class="n">maturity_date</span><span class="o">.</span><span class="n">month</span><span class="p">)</span>
-<span class="n">isLast</span><span class="o">=</span><span class="n">maturity_date</span><span class="o">.</span><span class="n">day</span><span class="o">==</span><span class="n">last_day</span>
-<span class="n">last_coupon</span><span class="o">=</span><span class="n">date</span><span class="p">(</span><span class="n">settlement_date</span><span class="o">.</span><span class="n">year</span><span class="p">,</span><span class="n">maturity_date</span><span class="o">.</span><span class="n">month</span><span class="p">,</span><span class="n">maturity_date</span><span class="o">.</span><span class="n">day</span><span class="p">)</span>
-<span class="n">next_coupon</span><span class="o">=</span><span class="n">last_coupon</span><span class="o">+</span><span class="n">relativedelta</span><span class="p">(</span><span class="n">months</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span>
-<span class="k">if</span> <span class="n">isLast</span><span class="p">:</span>
-  <span class="n">next_coupon</span><span class="o">=</span><span class="n">date</span><span class="p">(</span><span class="n">next_coupon</span><span class="o">.</span><span class="n">year</span><span class="p">,</span><span class="n">next_coupon</span><span class="o">.</span><span class="n">monht</span><span class="p">,</span><span class="n">last</span><span class="p">)</span>
-<span class="n">time_since</span><span class="o">=</span><span class="n">settlement_date</span><span class="o">-</span><span class="n">last_coupon</span>
-<span class="n">time_between</span><span class="o">=</span><span class="n">next_coupon</span><span class="o">-</span><span class="n">last_coupon</span>
-<span class="n">display</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Days Since </span><span class="si">{</span><span class="n">time_since</span><span class="o">.</span><span class="n">days</span><span class="si">}</span><span class="s1"> Days Between </span><span class="si">{</span><span class="n">time_between</span><span class="o">.</span><span class="n">days</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Days Since 107 Days Between 182&#39;
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-<section id="calculate-a-transaction-price">
-<h2><font color='green'>Calculate A Transaction Price</font><a class="headerlink" href="#calculate-a-transaction-price" title="Link to this heading">#</a></h2>
-<div style=
-    border-left: 12px solid green;
-    font-family: 'Garamond', serif;
-    font-size: 17px;
-    line-height: 1.5;
-    padding: 15px">
-<br>
-<ol class="arabic simple">
-<li><p>Create  date objects <font color='green'>maturity_date</font> and <font color='green'>settlement_date</font></p></li>
-<li><p>Pass date objects and coupon to <font color='green'>accrued_interest</font></p></li>
-<li><p>Add accrued interest to clean price</p></li>
-</ol>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">datetime</span><span class="w"> </span><span class="kn">import</span> <span class="n">date</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">types</span><span class="w"> </span><span class="kn">import</span> <span class="n">ModuleType</span>
-<span class="c1"># Define the URL of the Python module to be downloaded from Dropbox.</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="kn">from</span><span class="w"> </span><span class="nn">dateutil.relativedelta</span><span class="w"> </span><span class="kn">import</span> <span class="n">relativedelta</span>
+<span class="k">except</span><span class="p">:</span>
+    <span class="o">!</span>pip<span class="w"> </span>-q<span class="w"> </span>install<span class="w"> </span>python-dateutil
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define the URL of the Python module to be downloaded from Dropbox.</span>
 <span class="c1"># The &#39;dl=1&#39; parameter in the URL forces a direct download of the file content.</span>
 <span class="n">url</span><span class="o">=</span> <span class="s1">&#39;https://www.dropbox.com/scl/fi/4y5hjxlfphh1ngvbgo77q/</span><span class="se">\</span>
 <span class="s1">module_-basic_concepts_fixed_income.py?rlkey=6oxi7mgka42veaat79hcv8boz&amp;st=87sztshr&amp;dl=1&#39;</span>
@@ -845,18 +825,67 @@ document.write(`
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;❌ Error: Failed to execute or import the module. </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 
 <span class="c1"># Now that &#39;basic_concepts_fixed_income&#39; exists in the notebook, import the specific functions</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">basic_concepts_fixed_income</span><span class="w"> </span><span class="kn">import</span><span class="p">(</span><span class="n">create_workbook</span><span class="p">,</span>
-                                        <span class="n">accrued_interest</span><span class="p">)</span>
-<span class="n">maturity_date</span><span class="o">=</span><span class="n">date</span><span class="p">(</span><span class="mi">2030</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">15</span><span class="p">)</span>
-<span class="n">coupon</span><span class="o">=</span><span class="mi">5</span>
-<span class="n">settlment_date</span><span class="o">=</span><span class="n">date</span><span class="p">(</span><span class="mi">2024</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">accrued</span><span class="o">=</span><span class="n">accrued_interest</span><span class="p">(</span><span class="n">maturity_date</span><span class="p">,</span><span class="n">coupon</span><span class="p">,</span><span class="n">settlement</span><span class="o">=</span><span class="n">settlement_date</span><span class="p">)</span>
-<span class="n">display</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Clean Price </span><span class="si">{</span><span class="mi">95</span><span class="si">}</span><span class="s1"> Accrued Interest </span><span class="si">{</span><span class="n">accrued</span><span class="si">:</span><span class="s1"> .3f</span><span class="si">}</span><span class="s1"> Dirty Price </span><span class="si">{</span><span class="mi">95</span><span class="o">+</span><span class="n">accrued</span><span class="si">:</span><span class="s1"> 3f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">basic_concepts_fixed_income</span><span class="w"> </span><span class="kn">import</span><span class="p">(</span><span class="n">scheduled_pay_dates</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">maturity</span><span class="o">=</span><span class="n">date</span><span class="p">(</span><span class="mi">2030</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">15</span><span class="p">)</span>
+<span class="n">settlement</span><span class="o">=</span><span class="n">date</span><span class="p">(</span><span class="mi">2024</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">freq</span><span class="o">=</span><span class="mi">12</span><span class="o">//</span><span class="mi">6</span>
+<span class="n">pay_dates</span> <span class="o">=</span> <span class="n">scheduled_pay_dates</span><span class="p">(</span><span class="n">maturity</span><span class="p">,</span> <span class="n">settlement</span><span class="o">=</span><span class="n">settlement</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="n">freq</span><span class="p">)</span>
+<span class="n">pay_dates</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+<span class="n">next_coupon</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">pay_dates</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">d</span> <span class="o">&gt;=</span> <span class="n">settlement</span><span class="p">:</span>
+        <span class="n">next_coupon</span> <span class="o">=</span> <span class="n">d</span>
+        <span class="k">break</span>
+<span class="c1"># not a month end</span>
+<span class="n">num_months</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="mi">12</span> <span class="o">//</span> <span class="n">freq</span><span class="p">)</span>
+<span class="n">prev_coupon</span><span class="o">=</span><span class="n">next_coupon</span><span class="o">-</span><span class="n">relativedelta</span><span class="p">(</span><span class="n">months</span><span class="o">=</span><span class="n">num_months</span><span class="p">)</span>
+<span class="n">days_since</span><span class="o">=</span><span class="p">(</span><span class="n">settlement</span><span class="o">-</span><span class="n">prev_coupon</span><span class="p">)</span><span class="o">.</span><span class="n">days</span>
+<span class="n">days_between</span><span class="o">=</span><span class="p">(</span><span class="n">next_coupon</span><span class="o">-</span><span class="n">prev_coupon</span><span class="p">)</span><span class="o">.</span><span class="n">days</span>
+<span class="n">display</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Days Since Last </span><span class="si">{</span><span class="n">days_since</span><span class="si">}</span><span class="s1">  Days Between </span><span class="si">{</span><span class="n">days_between</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Clean Price 95 Accrued Interest  1.470 Dirty Price  96.469780&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Days Since Last 107  Days Between 182&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="calculate-a-transaction-price">
+<h2><font color='green'>Calculate A Transaction Price</font><a class="headerlink" href="#calculate-a-transaction-price" title="Link to this heading">#</a></h2>
+<div style=
+    border-left: 12px solid green;
+    font-family: 'Garamond', serif;
+    font-size: 17px;
+    line-height: 1.5;
+    padding: 15px">
+<br>
+<ol class="arabic simple">
+<li><p>Create  date objects <font color='green'>maturity_date</font> and <font color='green'>settlement_date</font></p></li>
+<li><p>Import<font color='green'>accrued_interest</font> from the custom module</p></li>
+<li><p>Pass date objects and coupon to <font color='green'>accrued_interest</font></p></li>
+<li><p>Add accrued interest to clean price</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">basic_concepts_fixed_income</span><span class="w"> </span><span class="kn">import</span><span class="p">(</span><span class="n">accrued_interest</span><span class="p">)</span>
+<span class="n">maturity_date</span><span class="o">=</span><span class="n">date</span><span class="p">(</span><span class="mi">2030</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">15</span><span class="p">)</span>
+<span class="n">coupon</span><span class="o">=</span><span class="mi">5</span>
+<span class="n">settlement_date</span><span class="o">=</span><span class="n">date</span><span class="p">(</span><span class="mi">2024</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">accrued</span><span class="o">=</span><span class="n">accrued_interest</span><span class="p">(</span><span class="n">maturity_date</span><span class="p">,</span><span class="n">coupon</span><span class="p">,</span><span class="n">settlement</span><span class="o">=</span><span class="n">settlement_date</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Clean Price </span><span class="si">{</span><span class="mi">95</span><span class="si">}</span><span class="s1"> Accrued Interest </span><span class="si">{</span><span class="n">accrued</span><span class="si">:</span><span class="s1"> .3f</span><span class="si">}</span><span class="s1"> Dirty Price </span><span class="si">{</span><span class="mi">95</span><span class="o">+</span><span class="n">accrued</span><span class="si">:</span><span class="s1"> .3f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Clean Price 95 Accrued Interest  1.470 Dirty Price  96.470&#39;
 </pre></div>
 </div>
 </div>
@@ -874,26 +903,18 @@ document.write(`
 <ol class="arabic simple">
 <li><p>Use the iloc attribute of the bond_data DataFrame to create a DataFrame with the first ten roww.</p></li>
 <li><p>Use the <font color='green'>create_workbook</font> to create an Excel workbook.</p></li>
+<li><p><font color='green'>save_config</font> defaults to an empty dictionary</p></li>
 </ol>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">first_ten_rows</span><span class="o">=</span><span class="n">bond_data</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:</span><span class="mi">10</span><span class="p">]</span>
-<span class="n">create_workbook</span><span class="p">(</span><span class="s1">&#39;First Ten Rows&#39;</span><span class="p">,</span><span class="n">first_ten_rows</span><span class="p">,</span><span class="s1">&#39;Exercise Chapter Two.xlsx&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">basic_concepts_fixed_income</span><span class="w"> </span><span class="kn">import</span><span class="p">(</span><span class="n">create_workbook</span><span class="p">)</span>
+<span class="n">first_ten_rows</span><span class="o">=</span><span class="n">bond_data</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:</span><span class="mi">10</span><span class="p">]</span>
+<span class="n">create_workbook</span><span class="p">(</span><span class="s1">&#39;First Ten Rows&#39;</span><span class="p">,</span><span class="n">first_ten_rows</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_8923</span><span class="o">/</span><span class="mf">1418869055.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">first_ten_rows</span><span class="o">=</span><span class="n">bond_data</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:</span><span class="mi">10</span><span class="p">]</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">create_workbook</span><span class="p">(</span><span class="s1">&#39;First Ten Rows&#39;</span><span class="p">,</span><span class="n">first_ten_rows</span><span class="p">,</span><span class="s1">&#39;Exercise Chapter Two.xlsx&#39;</span><span class="p">)</span>
-
-<span class="nn">&lt;string&gt;</span> in <span class="ni">create_workbook</span><span class="nt">(sheet_name, df, save_config)</span>
-
-<span class="ne">AttributeError</span>: &#39;str&#39; object has no attribute &#39;get&#39;
-</pre></div>
-</div>
+<h3 class="rubric" id="successfully-wrote-and-formatted-sheet-first-ten-rows-in-output-xlsx"><em><strong>✅ Successfully wrote and formatted sheet First Ten Rows in output.xlsx</strong></em></h3>
 </div>
 </div>
 </section>
@@ -907,19 +928,20 @@ document.write(`
     padding: 15px">
 <br>
 <ol class="arabic simple">
-<li><p>Get fresh copy of bond_data from DropBox</p></li>
-<li><p>Use iloc to create the DataFrame <font color='green'>first_100_rows</font></p></li>
+<li><p>Get fresh copy of <font color='green'>bond_data</font> from DropBox</p></li>
+<li><p>Use  <font color='green'>iloc</font> with the <font color='green'>copy</font> mehhod to create a DataFrame <font color='green'>first_100_rows</font> unrelated to <font color='green'>bond_data</font>.</p></li>
 <li><p>Use the Pandas <font color='green'>apply</font> method to update the DataFrame with <font color='green'>accrured_interest function</font>.</p></li>
-<li><p>Create the Excel workbook <font color='green'>first_100_rows.xlsx</font>.</p></li>
 </ol>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
+<span class="n">save_config</span><span class="o">=</span><span class="p">{}</span>
+<span class="n">save_config</span><span class="p">[</span><span class="s1">&#39;file_name&#39;</span><span class="p">]</span><span class="o">=</span><span class="s1">&#39;first_100_rows.xlsx&#39;</span>
 <span class="n">url</span><span class="o">=</span><span class="s1">&#39;https://www.dropbox.com/scl/fi/lgnaj41bt8o9sv5a63rr1/</span><span class="se">\</span>
 <span class="s1">bond_data_jan21_2025.xlsx?rlkey=twjzkcqo0g2ahvot78518ti4x&amp;st=ihc5feog&amp;dl=1&#39;</span>
 <span class="n">bond_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="s1">&#39;Maturity Date&#39;</span><span class="p">,</span><span class="n">sheet_name</span><span class="o">=</span><span class="s1">&#39;Fidelity Data&#39;</span><span class="p">)</span>
-<span class="n">first_100_rows</span><span class="o">=</span><span class="n">bond_data</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:</span><span class="mi">100</span><span class="p">]</span>
+<span class="n">first_100_rows</span><span class="o">=</span><span class="n">bond_data</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:</span><span class="mi">100</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
 <span class="n">first_100_rows</span><span class="p">[</span><span class="s1">&#39;Accrued&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">first_100_rows</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span>
     <span class="k">lambda</span> <span class="n">row</span><span class="p">:</span> <span class="n">accrued_interest</span><span class="p">(</span>
         <span class="n">maturity</span><span class="o">=</span><span class="n">row</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>      <span class="c1"># The row&#39;s index label (maturity date) is accessed via .name</span>
@@ -927,22 +949,12 @@ document.write(`
         <span class="n">settlement</span><span class="o">=</span><span class="n">settlement_date</span>   <span class="c1"># Use the globally defined settlement date</span>
     <span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 
-<span class="n">create_workbook</span><span class="p">(</span><span class="s1">&#39;First Sheet&#39;</span><span class="p">,</span><span class="n">first_100_rows</span><span class="p">,</span><span class="s1">&#39;first_100_rows.xlsx&#39;</span><span class="p">)</span>
+<span class="n">create_workbook</span><span class="p">(</span><span class="s1">&#39;First Sheet&#39;</span><span class="p">,</span><span class="n">first_100_rows</span><span class="p">,</span><span class="n">save_config</span><span class="o">=</span><span class="n">save_config</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>✅ Successfully wrote and formatted sheet &#39;First Sheet&#39; in &#39;first_100_rows.xlsx&#39;
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipython-input-595886530.py:7: SettingWithCopyWarning: 
-A value is trying to be set on a copy of a slice from a DataFrame.
-Try using .loc[row_indexer,col_indexer] = value instead
-
-See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
-  first_100_rows[&#39;Accrued&#39;] = first_100_rows.apply(
-</pre></div>
-</div>
+<h3 class="rubric" id="successfully-wrote-and-formatted-sheet-first-sheet-in-first-100-rows-xlsx"><em><strong>✅ Successfully wrote and formatted sheet First Sheet in first_100_rows.xlsx</strong></em></h3>
 </div>
 </div>
 </section>
