@@ -461,9 +461,9 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#application-find-a-holiday"><font color="green">Application: Find a holiday</font></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-payment-date"><font color="green">Calculate Payment Date</font></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#applications-calculate-payment-date"><font color="green">Applications: Calculate Payment Date</font></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#application-calculate-payment-dates-and-day-of-the-week-for-five-scheduled-payment-dates"><font color="green">Application: Calculate Payment Dates And Day Of The Week For Five Scheduled Payment Dates</font></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#non-settlement-dictionry">non-settlement dictionry</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#non-settlement-dictionary">non-settlement dictionary</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-adjust-bond-pay-dates-from-basic-concepts-of-fixed-income">import <font color="green">adjust_bond_pay_dates</font> from <em>basic_concepts_of_fixed_income</em></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-pandas-series-of-scheduled-payment-dates">create a Pandas series of scheduled payment dates</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-payments-dates-with-adjust-bond-pay-dates">calculate payments dates with <font color="green">adjust_bond_pay_dates</font></a></li>
@@ -494,11 +494,11 @@ document.write(`
 <ol class="arabic simple">
 <li><p>Import and if necessary install holidays</p></li>
 <li><p>Assign USA with dot notation.</p></li>
-<li><p>Use list comprehension with items() method abd condition for values</p></li>
+<li><p>Use list comprehension with items() method and condition for values</p></li>
 </ol>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># holidays not builtin, not builtin, install if  necessary with quiet flag (-q)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># holidays not builtin, install if  necessary with quiet flag (-q)</span>
 <span class="k">try</span><span class="p">:</span>
     <span class="kn">import</span><span class="w"> </span><span class="nn">holidays</span>
 <span class="k">except</span><span class="p">:</span>
@@ -529,8 +529,8 @@ document.write(`
 </div>
 </div>
 </section>
-<section id="calculate-payment-date">
-<h2><font color='green'>Calculate Payment Date</font><a class="headerlink" href="#calculate-payment-date" title="Link to this heading">#</a></h2>
+<section id="applications-calculate-payment-date">
+<h2><font color='green'>Applications: Calculate Payment Date</font><a class="headerlink" href="#applications-calculate-payment-date" title="Link to this heading">#</a></h2>
 <div style="background-color:LightGray;
     border-left: 12px solid green;
     font-family: 'Garamond', serif;
@@ -540,8 +540,8 @@ document.write(`
 <br>
 <ol class="arabic simple">
 <li><p>Import and if necessary install modules</p></li>
-<li><p>Create a dictionary of non settlement days for 2026 and 2028</p></li>
-<li><p>Use while loop to check if dates are in non settlement dictionary or a weekend</p></li>
+<li><p>Create a dictionary of non-settlement days for 2026 and 2028</p></li>
+<li><p>Use while loop to check if dates are in non-settlement dictionary or a weekend</p></li>
 </ol>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -559,7 +559,7 @@ document.write(`
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">non_settlement_2026_2028_us</span><span class="o">=</span><span class="n">holidays</span><span class="o">.</span><span class="n">US</span><span class="p">(</span><span class="n">years</span><span class="o">=</span><span class="p">[</span><span class="mi">2026</span><span class="p">,</span><span class="mi">2028</span><span class="p">])</span>
 <span class="n">non_settlement_2026_2028_us</span><span class="p">[</span><span class="n">easter</span><span class="p">(</span><span class="mi">2026</span><span class="p">)</span><span class="o">-</span><span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="mi">2</span><span class="p">)]</span><span class="o">=</span><span class="s1">&#39;Good Friday&#39;</span>
-<span class="n">non_settlement_2026_2028_us</span><span class="p">[</span><span class="n">easter</span><span class="p">(</span><span class="mi">2027</span><span class="p">)</span><span class="o">-</span><span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="mi">2</span><span class="p">)]</span><span class="o">=</span><span class="s1">&#39;Good Friday&#39;</span>
+<span class="n">non_settlement_2026_2028_us</span><span class="p">[</span><span class="n">easter</span><span class="p">(</span><span class="mi">2028</span><span class="p">)</span><span class="o">-</span><span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="mi">2</span><span class="p">)]</span><span class="o">=</span><span class="s1">&#39;Good Friday&#39;</span>
 </pre></div>
 </div>
 </div>
@@ -573,7 +573,7 @@ document.write(`
   <span class="k">while</span> <span class="n">adjusted_date</span><span class="o">.</span><span class="n">weekday</span><span class="p">()</span><span class="o">&gt;</span><span class="mi">4</span> <span class="ow">or</span> <span class="n">adjusted_date</span> <span class="ow">in</span> <span class="n">non_settlement_2026_2028_us</span><span class="p">:</span>
     <span class="n">adjusted_date</span><span class="o">+=</span><span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">adjusted_date</span><span class="o">.</span><span class="n">year</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">non_settlement_2026_2028_us</span><span class="p">:</span>
-      <span class="n">non_settlement_2026_2028_us</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">years</span><span class="o">=</span><span class="n">date</span><span class="o">.</span><span class="n">years</span><span class="p">)</span>
+      <span class="n">non_settlement_2026_2028_us</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">years</span><span class="o">=</span><span class="n">date</span><span class="o">.</span><span class="n">year</span><span class="p">)</span>
   <span class="n">display</span><span class="p">(</span><span class="n">adjusted_date</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -607,8 +607,8 @@ document.write(`
 <li><p>Calculate days of the week by applying a lambda function <font color='green'>date_value.weekday()</font></p></li>
 </ul>
 </section>
-<section id="non-settlement-dictionry">
-<h2>non-settlement dictionry<a class="headerlink" href="#non-settlement-dictionry" title="Link to this heading">#</a></h2>
+<section id="non-settlement-dictionary">
+<h2>non-settlement dictionary<a class="headerlink" href="#non-settlement-dictionary" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">scheduled_years</span><span class="o">=</span><span class="p">[</span><span class="n">year</span> <span class="k">for</span> <span class="n">year</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2027</span><span class="p">,</span><span class="mi">2031</span><span class="p">)]</span>
@@ -740,7 +740,7 @@ dtype: int64
 <li><p>Iterate through the dictionary with <font color='green'>items()</font> method of dictionaries.</p></li>
 <li><p>Make the keys, values, and settlement the arguments of <font color='green'>bond_pay_data()</font> and display the results for each iteration.</p></li>
 </ol>
-<p><strong>If you are unfamiliar with the <font color='green'>items()</font> method of dictinaries</strong> <a class="reference external" href="https://patrickjhess.github.io/Introduction-To-Python-For-Financial-Python/Dictionaries.html#the-items-method-equivalent-to-zip-of-keys-and-values">take a look at the background material.</a></p>
+<p><strong>If you are unfamiliar with the <font color='green'>items()</font> method of dictionaries</strong> <a class="reference external" href="https://patrickjhess.github.io/Introduction-To-Python-For-Financial-Python/Dictionaries.html#the-items-method-equivalent-to-zip-of-keys-and-values">take a look at the background material.</a></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">basic_concepts_fixed_income</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span><span class="n">bond_pay_data</span><span class="p">)</span>
@@ -861,9 +861,9 @@ dtype: int64
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#application-find-a-holiday"><font color="green">Application: Find a holiday</font></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-payment-date"><font color="green">Calculate Payment Date</font></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#applications-calculate-payment-date"><font color="green">Applications: Calculate Payment Date</font></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#application-calculate-payment-dates-and-day-of-the-week-for-five-scheduled-payment-dates"><font color="green">Application: Calculate Payment Dates And Day Of The Week For Five Scheduled Payment Dates</font></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#non-settlement-dictionry">non-settlement dictionry</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#non-settlement-dictionary">non-settlement dictionary</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-adjust-bond-pay-dates-from-basic-concepts-of-fixed-income">import <font color="green">adjust_bond_pay_dates</font> from <em>basic_concepts_of_fixed_income</em></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-pandas-series-of-scheduled-payment-dates">create a Pandas series of scheduled payment dates</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-payments-dates-with-adjust-bond-pay-dates">calculate payments dates with <font color="green">adjust_bond_pay_dates</font></a></li>
