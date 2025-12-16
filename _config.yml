@@ -3,6 +3,7 @@
 
 title: Hints & Results
 author: Financial Python
+copyright: "2025 by Arbitrage Partners." # This will appear in the footer
 logo: Small_Logo.svg
 
 # Force re-execution of notebooks on each build.

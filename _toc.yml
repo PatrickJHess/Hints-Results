@@ -21,4 +21,8 @@ parts:
     chapters:
     - file: Chapter_Three_Hints
     - file: Chapter_Three_Results
+  - caption: Chapter Four Hints And Results 
+    chapters:
+    - file: Chapter_Four_Hints
+    - file: Chapter_Four_Results
  
