@@ -1,0 +1,1965 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Chapter Four Results &#8212; Hints &amp; Results</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Chapter_Four_Results';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Chapter Four Hints" href="Chapter_Four_Hints.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/Small_Logo.svg" class="logo__image only-light" alt="Hints & Results - Home"/>
+    <script>document.write(`<img src="_static/Small_Logo.svg" class="logo__image only-dark" alt="Hints & Results - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Financial Python
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Interacting%20With%20Jupyter%20Books.html">Working With Jupyter Books</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Chapter One Hints And Results</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Chapter_One_Hints.html">Chapter One Hints</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Chapter_One_Results.html">Chapter One Expected Results</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Chapter Two Hints And Results</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Chapter_Two_Hints.html">Chapter Two Hints</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Chapter_Two_Results.html">Chapter Two Expected Results</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Chapter Three Hints And Results</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Chapter_Three_Hints.html">Chapter Three Hints</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Chapter_Three_Results.html">Chapter Three Results</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Chapter Four Hints And Results</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Chapter_Four_Hints.html">Chapter Four Hints</a></li>
+
+
+
+
+
+
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Chapter Four Results</a></li>
+
+
+
+
+
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/PatrickJHess/Hints-Results/master?urlpath=tree/Chapter_Four_Results.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Binder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Binder logo" src="_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/PatrickJHess/Hints-Results/blob/master/Chapter_Four_Results.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/PatrickJHess/Hints-Results" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/PatrickJHess/Hints-Results/issues/new?title=Issue%20on%20page%20%2FChapter_Four_Results.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Chapter_Four_Results.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Chapter Four Results</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Chapter Four Results</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#application-find-the-rank-of-non-square-two-dimensional-array"><font color="green">Application: Find the rank of non-square two-dimensional array</font></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-numpy">Import numPy</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-two-dimensional-array">Create two-dimensional array</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-rank-with-matrix-rank">Calculate rank with <font color="green">matrix_rank</font></a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#application-determine-unique-payment-dates-for-four-bonds"><font color="green">Application: Determine unique payment dates for four bonds</font></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-date-and-functions-from-custom-module">Import date and functions from custom module</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#assign-the-settlement-date-and-freq-create-the-maturity-dates-and-coupon-iterables">Assign the settlement date and freq. Create the maturity dates and coupon iterables.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-payment-data-list-of-arrays">Create <font color="green">payment_data</font> list of arrays</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#application-determine-the-payoff-matrix-for-four-bonds"><font color="green">Application: Determine the payoff matrix for four bonds</font></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-pandas">Import Pandas</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-create-payoff-matrix-from-basic-concepts-fixed-income">Import <font color="green">create_payoff_matrix</font> from <em>basic_concepts_fixed_income</em></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-payoff-dataframe-with-annual-coupons-and-maturities-of-the-four-bonds">Create payoff DataFrame with annual coupons and maturities of the four bonds</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-payoff-matrix-with-create-payoff-matrix">Create payoff matrix with <font color="green">create_payoff_matrix</font></a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#application-is-the-payoff-matrix-full-column-rank"><font color="green">Application: Is the payoff matrix full column rank?</font></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#change-annual-coupon-of-the-july-31-st-2027-bond-from-0-to-1">Change annual coupon of the July 31<span class="math notranslate nohighlight">\(^{st}\)</span> 2027 bond from 0 to 1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-new-list-of-payment-dates-and-amounts">Calculate new list of payment dates and amounts</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#determine-eight-unique-dates">Determine eight unique dates</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#application-determine-the-payoff-matrix-for-the-first-twenty-bonds-in-bond-data-datafame"><font color="green">Application: Determine the payoff matrix for the first twenty bonds in bond_data DataFame</font></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dowload-excel-workbook">Dowload excel workbook</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-payoff-matrix">Create payoff matrix</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-payoff-dict-dictionary-and-dataframe">Create payoff_dict dictionary and DataFrame</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#chapter-exercise"><span style="text-align: left; color:green; font-family: 'Franklin Gothic Medium', sans-serif; margin-top: 1.0em; margin-bottom: 0em; font-style: italic;">Chapter Exercise</span></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Dowload Excel workbook</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-transaction-prices">Create transaction prices</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Create payoff matrix</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#estimate-zero-prices-with-lstsq">Estimate zero prices with <font color="green">lstsq</font></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#use-loc-to-create-a-dataframe-from-list-of-dates">Use <font color="green">loc</font> to create a Dataframe from list of dates</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-annualized-forward-rates">Calculate annualized forward rates</a></li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="chapter-four-results">
+<h1>Chapter Four Results<a class="headerlink" href="#chapter-four-results" title="Link to this heading">#</a></h1>
+</section>
+<section id="application-find-the-rank-of-non-square-two-dimensional-array">
+<h1><font color='green'>Application: Find the rank of non-square two-dimensional array</font><a class="headerlink" href="#application-find-the-rank-of-non-square-two-dimensional-array" title="Link to this heading">#</a></h1>
+<div style="background-color:LightGray;
+    border-left: 12px solid green;
+    font-family: 'Garamond', serif;
+    font-size: 17px;
+    line-height: 1.5;
+    padding: 15px">
+<br>
+<ol class="arabic simple">
+<li><p>Import and if necessary install numpy as np</p></li>
+<li><p>Create the NumPy two-dimensional array <font color='green'>matrix_2_by_3</font></p></li>
+<li><p>Determine the rank with <font color='green'>matrix_rank</font> function.</p></li>
+</ol>
+<section id="import-numpy">
+<h2>Import numPy<a class="headerlink" href="#import-numpy" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Need to import NumPy</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+
+<span class="c1"># install if necessary</span>
+<span class="k">except</span><span class="p">:</span>
+    <span class="o">!</span>pip<span class="w"> </span>-q<span class="w"> </span>install<span class="w"> </span>numpy
+    <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="create-two-dimensional-array">
+<h2>Create two-dimensional array<a class="headerlink" href="#create-two-dimensional-array" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">matrix_2_by_3</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">5</span><span class="p">],</span>
+                        <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">102</span><span class="p">,</span><span class="mi">25</span><span class="p">]])</span>
+<span class="n">display</span><span class="p">(</span><span class="n">matrix_2_by_3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[  1,  10,   5],
+       [  2, 102,  25]])
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="calculate-rank-with-matrix-rank">
+<h2>Calculate rank with <font color='green'>matrix_rank</font><a class="headerlink" href="#calculate-rank-with-matrix-rank" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rank_matrix_2_by_3</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">matrix_rank</span><span class="p">(</span><span class="n">matrix_2_by_3</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">rank_matrix_2_by_3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="application-determine-unique-payment-dates-for-four-bonds">
+<h1><font color='green'>Application: Determine unique payment dates for four bonds</font><a class="headerlink" href="#application-determine-unique-payment-dates-for-four-bonds" title="Link to this heading">#</a></h1>
+<div style="background-color:LightGray;
+    border-left: 12px solid green;
+    font-family: 'Garamond', serif;
+    font-size: 17px;
+    line-height: 1.5;
+    padding: 15px">
+<br>
+<ol class="arabic simple">
+<li><p>Import date from datetime</p></li>
+<li><p>Import <font color='green'>bond_pay_data</font> and <font color='green'>unique_pay_dates</font> from <em>basic_concepts_of_fixed_income</em> module.</p></li>
+<li><p>Create two iterables (in this example lists)  <font color='green'>maturity_dates</font> and <font color='green'>annual_coupons</font></p></li>
+<li><p>Create the <font color='green'>payment_date</font> list of NumPy arrays.</p></li>
+<li><p>Calculate the unique dates (<font color='green'>columns</font>) with <font color='green'>unique_pay_dates</font>.</p></li>
+</ol>
+<section id="import-date-and-functions-from-custom-module">
+<h2>Import date and functions from custom module<a class="headerlink" href="#import-date-and-functions-from-custom-module" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">datetime</span><span class="w"> </span><span class="kn">import</span> <span class="n">date</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">requests</span><span class="o">,</span><span class="w"> </span><span class="nn">sys</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">types</span><span class="w"> </span><span class="kn">import</span> <span class="n">ModuleType</span>
+<span class="c1"># Define the URL of the Python module to be downloaded from Dropbox.</span>
+<span class="c1"># The &#39;dl=1&#39; parameter in the URL forces a direct download of the file content.</span>
+<span class="n">url</span><span class="o">=</span> <span class="s1">&#39;https://www.dropbox.com/scl/fi/4y5hjxlfphh1ngvbgo77q/</span><span class="se">\</span>
+<span class="s1">module_-basic_concepts_fixed_income.py?rlkey=6oxi7mgka42veaat79hcv8boz&amp;st=87sztshr&amp;dl=1&#39;</span>
+<span class="n">module_name</span><span class="o">=</span><span class="s1">&#39;basic_concepts_fixed_income&#39;</span>
+<span class="c1"># Send an HTTP GET request to the URL and store the server&#39;s response.</span>
+<span class="k">try</span><span class="p">:</span>
+  <span class="n">response</span><span class="o">=</span><span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+  <span class="c1"># Raise an exception for bad status codes (like 404 Not Found)</span>
+  <span class="n">response</span><span class="o">.</span><span class="n">raise_for_status</span><span class="p">()</span>
+  <span class="n">module</span><span class="o">=</span> <span class="n">ModuleType</span><span class="p">(</span><span class="n">module_name</span><span class="p">)</span>
+  <span class="c1">#Code contained in response.text executed</span>
+  <span class="n">exec</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="n">module</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">)</span>
+  <span class="c1"># Module added to sys</span>
+  <span class="n">sys</span><span class="o">.</span><span class="n">modules</span><span class="p">[</span><span class="n">module_name</span><span class="p">]</span><span class="o">=</span><span class="n">module</span>
+<span class="k">except</span> <span class="n">requests</span><span class="o">.</span><span class="n">exceptions</span><span class="o">.</span><span class="n">RequestException</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;❌ Error: Could not fetch module from URL. </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;❌ Error: Failed to execute or import the module. </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Now that &#39;basic_concepts_fixed_income&#39; exists in the notebook, import the specific functions</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">basic_concepts_fixed_income</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span><span class="n">bond_pay_data</span><span class="p">,</span>
+                                         <span class="n">unique_pay_dates</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="assign-the-settlement-date-and-freq-create-the-maturity-dates-and-coupon-iterables">
+<h2>Assign the settlement date and freq. Create the maturity dates and coupon iterables.<a class="headerlink" href="#assign-the-settlement-date-and-freq-create-the-maturity-dates-and-coupon-iterables" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">settlement</span><span class="o">=</span><span class="n">date</span><span class="p">(</span><span class="mi">2025</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">21</span><span class="p">)</span>
+<span class="n">freq</span><span class="o">=</span><span class="mi">2</span>
+<span class="n">maturity_dates</span><span class="o">=</span><span class="p">[</span><span class="n">date</span><span class="p">(</span><span class="mi">2025</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">31</span><span class="p">),</span>
+               <span class="n">date</span><span class="p">(</span><span class="mi">2027</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">31</span><span class="p">),</span>
+               <span class="n">date</span><span class="p">(</span><span class="mi">2025</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">28</span><span class="p">),</span>
+               <span class="n">date</span><span class="p">(</span><span class="mi">2025</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">31</span><span class="p">)]</span>
+<span class="n">annual_coupons</span><span class="o">=</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="create-payment-data-list-of-arrays">
+<h2>Create <font color='green'>payment_data</font> list of arrays<a class="headerlink" href="#create-payment-data-list-of-arrays" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><font color='green'>payment_data[0]</font> array of dates</p></li>
+<li><p><font color='green'>payment_data[1]</font> array of payments</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">payment_data</span><span class="o">=</span><span class="p">[</span><span class="n">bond_pay_data</span><span class="p">(</span><span class="n">maturity</span><span class="p">,</span><span class="n">coupon</span><span class="p">,</span><span class="n">settlement</span><span class="o">=</span><span class="n">settlement</span><span class="p">,</span><span class="n">freq</span><span class="o">=</span><span class="n">freq</span><span class="p">)</span>
+              <span class="k">for</span> <span class="n">maturity</span><span class="p">,</span><span class="n">coupon</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">maturity_dates</span><span class="p">,</span><span class="n">annual_coupons</span><span class="p">)]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">columns</span><span class="o">=</span><span class="n">unique_pay_dates</span><span class="p">(</span><span class="n">payment_data</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">columns</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{datetime.date(2025, 1, 31): 0,
+ datetime.date(2025, 2, 28): 1,
+ datetime.date(2025, 9, 2): 2,
+ datetime.date(2027, 8, 2): 3}
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="application-determine-the-payoff-matrix-for-four-bonds">
+<h1><font color='green'>Application: Determine the payoff matrix for four bonds</font><a class="headerlink" href="#application-determine-the-payoff-matrix-for-four-bonds" title="Link to this heading">#</a></h1>
+<div style="background-color:LightGray;
+    border-left: 12px solid green;
+    font-family: 'Garamond', serif;
+    font-size: 17px;
+    line-height: 1.5;
+    padding: 15px">
+<br>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Maturity</p></th>
+<th class="head"><p>Coupon</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>   January 31<span class="math notranslate nohighlight">\(^{st}\)</span> 2025</p></td>
+<td><p>   2.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>   July 31<span class="math notranslate nohighlight">\(^{st}\)</span> 2027</p></td>
+<td><p>   0.00</p></td>
+</tr>
+<tr class="row-even"><td><p>   February 28<span class="math notranslate nohighlight">\(^{th}\)</span> 2035</p></td>
+<td><p>   4.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>   August 31<span class="math notranslate nohighlight">\(^{st}\)</span> 2027</p></td>
+<td><p>   5.00</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<ol class="arabic simple">
+<li><p>Import and if necessary install pandas as pd</p></li>
+<li><p>Import <font color='green'>create_payoff_matrix</font> from <em>basic_concepts_of_fixed_income</em> module.</p></li>
+<li><p>Create the DataFrame <font color='green'>df_four_bonds</font></p></li>
+<li><p>Create <font color='green'>payoff_matrix</font> with <font color='green'>create_payoff_matrix</font> function</p></li>
+</ol>
+<section id="import-pandas">
+<h2>Import Pandas<a class="headerlink" href="#import-pandas" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Need to import Pandas</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+
+<span class="c1"># install if necessary</span>
+<span class="k">except</span><span class="p">:</span>
+    <span class="o">!</span>pip<span class="w"> </span>-q<span class="w"> </span>install<span class="w"> </span>pandas
+    <span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="import-create-payoff-matrix-from-basic-concepts-fixed-income">
+<h2>Import <font color='green'>create_payoff_matrix</font> from <em>basic_concepts_fixed_income</em><a class="headerlink" href="#import-create-payoff-matrix-from-basic-concepts-fixed-income" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">basic_concepts_fixed_income</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span><span class="n">create_payoff_matrix</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="create-payoff-dataframe-with-annual-coupons-and-maturities-of-the-four-bonds">
+<h2>Create payoff DataFrame with annual coupons and maturities of the four bonds<a class="headerlink" href="#create-payoff-dataframe-with-annual-coupons-and-maturities-of-the-four-bonds" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_four_bonds</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;Coupon&#39;</span><span class="p">:</span><span class="n">annual_coupons</span><span class="p">},</span><span class="n">index</span><span class="o">=</span><span class="n">maturity_dates</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="create-payoff-matrix-with-create-payoff-matrix">
+<h2>Create payoff matrix with <font color='green'>create_payoff_matrix</font><a class="headerlink" href="#create-payoff-matrix-with-create-payoff-matrix" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">payoff_matrix</span><span class="o">=</span><span class="n">create_payoff_matrix</span><span class="p">(</span><span class="n">df_four_bonds</span><span class="p">,</span><span class="n">settlement</span><span class="o">=</span><span class="n">settlement</span><span class="p">,</span><span class="n">freq</span><span class="o">=</span><span class="n">freq</span><span class="p">)</span>
+<span class="n">payoff_matrix</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(array([[101. ,   0. ,   0. ,   0. ],
+        [  0. ,   0. ,   0. , 100. ],
+        [  0. , 102. ,   0. ,   0. ],
+        [  0. ,   2.5, 102.5,   0. ]]),
+ [datetime.date(2025, 1, 31),
+  datetime.date(2025, 2, 28),
+  datetime.date(2025, 9, 2),
+  datetime.date(2027, 8, 2)])
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="application-is-the-payoff-matrix-full-column-rank">
+<h1><font color='green'>Application: Is the payoff matrix full column rank?</font><a class="headerlink" href="#application-is-the-payoff-matrix-full-column-rank" title="Link to this heading">#</a></h1>
+<p>Settlement date January 21<span class="math notranslate nohighlight">\(^{st}\)</span> 2025 and semi-annual coupons.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Maturity</p></th>
+<th class="head"><p>Coupon</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>   January 31<span class="math notranslate nohighlight">\(^{st}\)</span> 2025</p></td>
+<td><p>   2.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>   July 31<span class="math notranslate nohighlight">\(^{st}\)</span> 2027</p></td>
+<td><p>   1.00</p></td>
+</tr>
+<tr class="row-even"><td><p>   Febuary 28<span class="math notranslate nohighlight">\(^{th}\)</span> 2035</p></td>
+<td><p>   4.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>   August 31<span class="math notranslate nohighlight">\(^{st}\)</span> 2027</p></td>
+<td><p>   5.00</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<br>
+<p>Notice that the July 31<span class="math notranslate nohighlight">\(^{st}\)</span> 2027 bond is now a coupon bond with five payment dates.  Confirm this with the <font color='green'>unique_pay_dates</font>.  The rank is the minimum of the number of columns or rows.  Four bonds is not enough to estimate eight zero prices.</p>
+<section id="change-annual-coupon-of-the-july-31-st-2027-bond-from-0-to-1">
+<h2>Change annual coupon of the July 31<span class="math notranslate nohighlight">\(^{st}\)</span> 2027 bond from 0 to 1<a class="headerlink" href="#change-annual-coupon-of-the-july-31-st-2027-bond-from-0-to-1" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">annual_coupons</span><span class="o">=</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="calculate-new-list-of-payment-dates-and-amounts">
+<h2>Calculate new list of payment dates and amounts<a class="headerlink" href="#calculate-new-list-of-payment-dates-and-amounts" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">payment_data</span><span class="o">=</span><span class="p">[</span><span class="n">bond_pay_data</span><span class="p">(</span><span class="n">maturity</span><span class="p">,</span><span class="n">coupon</span><span class="p">,</span><span class="n">settlement</span><span class="o">=</span><span class="n">settlement</span><span class="p">,</span><span class="n">freq</span><span class="o">=</span><span class="n">freq</span><span class="p">)</span>
+              <span class="k">for</span> <span class="n">maturity</span><span class="p">,</span><span class="n">coupon</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">maturity_dates</span><span class="p">,</span><span class="n">annual_coupons</span><span class="p">)]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="determine-eight-unique-dates">
+<h2>Determine eight unique dates<a class="headerlink" href="#determine-eight-unique-dates" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">columns</span><span class="o">=</span><span class="n">unique_pay_dates</span><span class="p">(</span><span class="n">payment_data</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">columns</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{datetime.date(2025, 1, 31): 0,
+ datetime.date(2025, 2, 28): 1,
+ datetime.date(2025, 7, 31): 2,
+ datetime.date(2025, 9, 2): 3,
+ datetime.date(2026, 2, 2): 4,
+ datetime.date(2026, 7, 31): 5,
+ datetime.date(2027, 2, 1): 6,
+ datetime.date(2027, 8, 2): 7}
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="application-determine-the-payoff-matrix-for-the-first-twenty-bonds-in-bond-data-datafame">
+<h1><font color='green'>Application: Determine the payoff matrix for the first twenty bonds in bond_data DataFame</font><a class="headerlink" href="#application-determine-the-payoff-matrix-for-the-first-twenty-bonds-in-bond-data-datafame" title="Link to this heading">#</a></h1>
+<ol class="arabic simple">
+<li><p>Download the Excel workbook from DropBox and create a DataFrame from first twenty rows.</p></li>
+<li><p>Use <font color='green'>create_payoff_matrix</font> function to create <font color='green'>payoff_dict</font> dictionary from zipped dates and transposed columns.</p></li>
+<li><p>Create a DataFrame from <font color='green'>payoff_dict</font></p></li>
+</ol>
+<section id="dowload-excel-workbook">
+<h2>Dowload excel workbook<a class="headerlink" href="#dowload-excel-workbook" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#The full file path.</span>
+<span class="n">url</span><span class="o">=</span><span class="s1">&#39;https://www.dropbox.com/scl/fi/lgnaj41bt8o9sv5a63rr1/</span><span class="se">\</span>
+<span class="s1">bond_data_jan21_2025.xlsx?rlkey=twjzkcqo0g2ahvot78518ti4x&amp;st=ihc5feog&amp;dl=1&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Attempting to load data from: </span><span class="si">{</span><span class="n">url</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1">#Load the data from Excel, using the first column as the index.</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">bond_data_20</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="s1">&#39;Maturity Date&#39;</span><span class="p">,</span><span class="n">sheet_name</span><span class="o">=</span><span class="s1">&#39;Fidelity Data&#39;</span><span class="p">)[:</span><span class="mi">20</span><span class="p">]</span>
+
+<span class="k">except</span> <span class="ne">FileNotFoundError</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">ERROR: File not found.&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Please check that the &#39;folder&#39; and &#39;file&#39; variables are spelled correctly&#39;</span><span class="se">\</span>
+<span class="s2">&#39; and that the file exists in that location.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Attempting to load data from: https://www.dropbox.com/scl/fi/lgnaj41bt8o9sv5a63rr1/bond_data_jan21_2025.xlsx?rlkey=twjzkcqo0g2ahvot78518ti4x&amp;st=ihc5feog&amp;dl=1
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="create-payoff-matrix">
+<h2>Create payoff matrix<a class="headerlink" href="#create-payoff-matrix" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">settlement</span><span class="o">=</span><span class="n">date</span><span class="p">(</span><span class="mi">2025</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">21</span><span class="p">)</span>
+<span class="n">freq</span><span class="o">=</span><span class="mi">2</span>
+<span class="n">payoff_matrix_20</span><span class="o">=</span><span class="n">create_payoff_matrix</span><span class="p">(</span><span class="n">bond_data_20</span><span class="p">,</span><span class="n">settlement</span><span class="o">=</span><span class="n">settlement</span><span class="p">,</span><span class="n">freq</span><span class="o">=</span><span class="n">freq</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="create-payoff-dict-dictionary-and-dataframe">
+<h2>Create payoff_dict dictionary and DataFrame<a class="headerlink" href="#create-payoff-dict-dictionary-and-dataframe" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">payoff_dict</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">payoff_matrix_20</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="n">payoff_matrix_20</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">T</span> <span class="p">))</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">payoff_dict</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>2025-01-28</th>
+      <th>2025-01-30</th>
+      <th>2025-01-31</th>
+      <th>2025-02-04</th>
+      <th>2025-02-06</th>
+      <th>2025-02-11</th>
+      <th>2025-02-13</th>
+      <th>2025-02-18</th>
+      <th>2025-02-20</th>
+      <th>2025-02-25</th>
+      <th>2025-02-27</th>
+      <th>2025-02-28</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>100.0</td>
+      <td>0.0</td>
+      <td>0.0000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0000</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0.0</td>
+      <td>100.0</td>
+      <td>0.0000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0000</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>100.6875</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0000</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>102.0625</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0000</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>101.2500</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0000</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0000</td>
+      <td>100.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0000</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0000</td>
+      <td>0.0</td>
+      <td>100.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0000</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>100.0</td>
+      <td>0.0</td>
+      <td>0.0000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0000</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>100.0</td>
+      <td>0.0000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0000</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>100.0000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0000</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>100.0000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0000</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>100.7500</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0000</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>103.8125</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0000</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>100.0000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0000</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>101.0000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0000</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>100.0000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0000</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0000</td>
+      <td>100.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0000</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0000</td>
+      <td>0.0</td>
+      <td>100.0</td>
+      <td>0.0</td>
+      <td>0.0000</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>100.0</td>
+      <td>0.0000</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>100.5625</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+</section>
+<section id="chapter-exercise">
+<h1><span style="text-align: left; color:green; font-family: 'Franklin Gothic Medium', sans-serif; margin-top: 1.0em; margin-bottom: 0em; font-style: italic;">Chapter Exercise</span><a class="headerlink" href="#chapter-exercise" title="Link to this heading">#</a></h1>
+<p><span style="text-align: left; color:green; font-family: 'Franklin Gothic Medium', sans-serif; margin-top: 0; margin-bottom: 0.5em; font-style: italic;"><big>Using the term structure calculated with 304 bonds</big></font></span></p>
+<p>Calculate the forward rates for the following dates.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Start Date</p></th>
+<th class="head"><p>End Date</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>   January 28<span class="math notranslate nohighlight">\(^{th}\)</span> 2025</p></td>
+<td><p>   February 2<span class="math notranslate nohighlight">\(^{nd}\)</span> 2026</p></td>
+</tr>
+<tr class="row-odd"><td><p>   February 2<span class="math notranslate nohighlight">\(^{nd}\)</span> 2026</p></td>
+<td><p>   February 1<span class="math notranslate nohighlight">\(^{st}\)</span> 2027</p></td>
+</tr>
+<tr class="row-even"><td><p>   February 1<span class="math notranslate nohighlight">\(^{st}\)</span> 2027</p></td>
+<td><p>   February 1<span class="math notranslate nohighlight">\(^{st}\)</span> 2028</p></td>
+</tr>
+<tr class="row-odd"><td><p>   January 31<span class="math notranslate nohighlight">\(^{st}\)</span> 2028</p></td>
+<td><p>   January 31<span class="math notranslate nohighlight">\(^{st}\)</span> 2030</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<ol class="arabic simple">
+<li><p>Download Excel workbook from Dropbox</p></li>
+<li><p>Create the transaction prices with <font color='green'>accrued_interest</font> function</p></li>
+<li><p>Create the payoff matrix with <font color='green'>create_payoff_matrix</font>.</p></li>
+<li><p>Estimate the zero prices with <font color='green'>lsqt</font> function of linalg module of NumPy.</p></li>
+<li><p>Create a list of unique dates sequential lists from the start and end dates.</p></li>
+<li><p>Locate the zero prices for the unique dates and calculate forward rates as the negative of the difference in the natural log of zero prices.</p></li>
+</ol>
+<section id="id1">
+<h2>Dowload Excel workbook<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#The full file path.</span>
+<span class="n">url</span><span class="o">=</span><span class="s1">&#39;https://www.dropbox.com/scl/fi/lgnaj41bt8o9sv5a63rr1/</span><span class="se">\</span>
+<span class="s1">bond_data_jan21_2025.xlsx?rlkey=twjzkcqo0g2ahvot78518ti4x&amp;st=ihc5feog&amp;dl=1&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Attempting to load data from: </span><span class="si">{</span><span class="n">url</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1">#Load the data from Excel, using the first column as the index.</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">bond_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="s1">&#39;Maturity Date&#39;</span><span class="p">,</span><span class="n">sheet_name</span><span class="o">=</span><span class="s1">&#39;Fidelity Data&#39;</span><span class="p">)</span>
+
+
+<span class="k">except</span> <span class="ne">FileNotFoundError</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">ERROR: File not found.&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Please check that the &#39;folder&#39; and &#39;file&#39; variables are spelled correctly&#39;</span><span class="se">\</span>
+<span class="s2">&#39; and that the file exists in that location.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Attempting to load data from: https://www.dropbox.com/scl/fi/lgnaj41bt8o9sv5a63rr1/bond_data_jan21_2025.xlsx?rlkey=twjzkcqo0g2ahvot78518ti4x&amp;st=ihc5feog&amp;dl=1
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="n">bond_data</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Description</th>
+      <th>Coupon</th>
+      <th>Price Bid</th>
+      <th>Price Ask</th>
+      <th>Bid Size</th>
+      <th>Ask Size</th>
+    </tr>
+    <tr>
+      <th>Maturity Date</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2025-01-28</th>
+      <td>UNITED STATES TREAS BILLS ZERO CPN       0.000...</td>
+      <td>0.000</td>
+      <td>99.929</td>
+      <td>99.930</td>
+      <td>100000.0</td>
+      <td>100000.0</td>
+    </tr>
+    <tr>
+      <th>2025-01-30</th>
+      <td>UNITED STATES TREAS BILLS ZERO CPN       0.000...</td>
+      <td>0.000</td>
+      <td>99.906</td>
+      <td>99.907</td>
+      <td>40000.0</td>
+      <td>40000.0</td>
+    </tr>
+    <tr>
+      <th>2025-01-31</th>
+      <td>UNITED STATES TREAS SER U-2025          1.3750...</td>
+      <td>1.375</td>
+      <td>99.921</td>
+      <td>99.934</td>
+      <td>60000.0</td>
+      <td>60000.0</td>
+    </tr>
+    <tr>
+      <th>2025-01-31</th>
+      <td>UNITED STATES TREAS SER AW-2025         4.1250...</td>
+      <td>4.125</td>
+      <td>99.988</td>
+      <td>99.997</td>
+      <td>60000.0</td>
+      <td>60000.0</td>
+    </tr>
+    <tr>
+      <th>2025-01-31</th>
+      <td>UNITED STATES TREAS SER G-2025          2.5000...</td>
+      <td>2.500</td>
+      <td>99.953</td>
+      <td>99.965</td>
+      <td>60000.0</td>
+      <td>60000.0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>2029-11-30</th>
+      <td>UNITED STATES TREAS SER AG-2029         4.1250...</td>
+      <td>4.125</td>
+      <td>98.910</td>
+      <td>98.914</td>
+      <td>100000.0</td>
+      <td>100000.0</td>
+    </tr>
+    <tr>
+      <th>2029-11-30</th>
+      <td>UNITED STATES TREAS SER S-2029          3.8750...</td>
+      <td>3.875</td>
+      <td>97.763</td>
+      <td>97.782</td>
+      <td>40000.0</td>
+      <td>40000.0</td>
+    </tr>
+    <tr>
+      <th>2029-12-31</th>
+      <td>UNITED STATES TREAS SER T-2029          3.8750...</td>
+      <td>3.875</td>
+      <td>97.734</td>
+      <td>97.738</td>
+      <td>65000.0</td>
+      <td>65000.0</td>
+    </tr>
+    <tr>
+      <th>2029-12-31</th>
+      <td>UNITED STATES TREAS SER AH-2029         4.3750...</td>
+      <td>4.375</td>
+      <td>99.988</td>
+      <td>99.989</td>
+      <td>7000.0</td>
+      <td>7000.0</td>
+    </tr>
+    <tr>
+      <th>2030-01-31</th>
+      <td>UNITED STATES TREAS SER G-2030          3.5000...</td>
+      <td>3.500</td>
+      <td>95.994</td>
+      <td>96.011</td>
+      <td>16000.0</td>
+      <td>16000.0</td>
+    </tr>
+  </tbody>
+</table>
+<p>304 rows × 6 columns</p>
+</div></div></div>
+</div>
+</section>
+<section id="create-transaction-prices">
+<h2>Create transaction prices<a class="headerlink" href="#create-transaction-prices" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">basic_concepts_fixed_income</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span><span class="n">accrued_interest</span><span class="p">)</span>
+<span class="n">bond_data</span><span class="p">[</span><span class="s1">&#39;Accrued&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">bond_data</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span>
+    <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">accrued_interest</span><span class="p">(</span>
+        <span class="n">maturity</span><span class="o">=</span><span class="n">x</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="c1"># Assuming index is maturity</span>
+        <span class="n">coupon</span><span class="o">=</span><span class="n">x</span><span class="p">[</span><span class="s1">&#39;Coupon&#39;</span><span class="p">],</span>
+        <span class="n">settlement</span><span class="o">=</span><span class="n">settlement</span><span class="p">,</span>
+        <span class="n">freq</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+        <span class="n">day_type</span><span class="o">=</span><span class="s1">&#39;Actual/Actual&#39;</span>
+    <span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span>
+<span class="p">)</span>
+<span class="n">bond_data</span><span class="p">[</span><span class="s1">&#39;Transaction Prices&#39;</span><span class="p">]</span><span class="o">=</span><span class="p">(</span><span class="n">bond_data</span><span class="p">[</span><span class="s1">&#39;Price Bid&#39;</span><span class="p">]</span><span class="o">+</span><span class="n">bond_data</span><span class="p">[</span><span class="s1">&#39;Price Ask&#39;</span><span class="p">])</span><span class="o">/</span><span class="mi">2</span>\
+<span class="o">+</span><span class="n">bond_data</span><span class="p">[</span><span class="s1">&#39;Accrued&#39;</span><span class="p">]</span>
+<span class="n">transaction_prices</span><span class="o">=</span><span class="n">bond_data</span><span class="p">[</span><span class="s1">&#39;Transaction Prices&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="n">bond_data</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Description</th>
+      <th>Coupon</th>
+      <th>Price Bid</th>
+      <th>Price Ask</th>
+      <th>Bid Size</th>
+      <th>Ask Size</th>
+      <th>Accrued</th>
+      <th>Transaction Prices</th>
+    </tr>
+    <tr>
+      <th>Maturity Date</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2025-01-28</th>
+      <td>UNITED STATES TREAS BILLS ZERO CPN       0.000...</td>
+      <td>0.000</td>
+      <td>99.929</td>
+      <td>99.930</td>
+      <td>100000.0</td>
+      <td>100000.0</td>
+      <td>0.000000</td>
+      <td>99.929500</td>
+    </tr>
+    <tr>
+      <th>2025-01-30</th>
+      <td>UNITED STATES TREAS BILLS ZERO CPN       0.000...</td>
+      <td>0.000</td>
+      <td>99.906</td>
+      <td>99.907</td>
+      <td>40000.0</td>
+      <td>40000.0</td>
+      <td>0.000000</td>
+      <td>99.906500</td>
+    </tr>
+    <tr>
+      <th>2025-01-31</th>
+      <td>UNITED STATES TREAS SER U-2025          1.3750...</td>
+      <td>1.375</td>
+      <td>99.921</td>
+      <td>99.934</td>
+      <td>60000.0</td>
+      <td>60000.0</td>
+      <td>0.650136</td>
+      <td>100.577636</td>
+    </tr>
+    <tr>
+      <th>2025-01-31</th>
+      <td>UNITED STATES TREAS SER AW-2025         4.1250...</td>
+      <td>4.125</td>
+      <td>99.988</td>
+      <td>99.997</td>
+      <td>60000.0</td>
+      <td>60000.0</td>
+      <td>1.950408</td>
+      <td>101.942908</td>
+    </tr>
+    <tr>
+      <th>2025-01-31</th>
+      <td>UNITED STATES TREAS SER G-2025          2.5000...</td>
+      <td>2.500</td>
+      <td>99.953</td>
+      <td>99.965</td>
+      <td>60000.0</td>
+      <td>60000.0</td>
+      <td>1.182065</td>
+      <td>101.141065</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>2029-11-30</th>
+      <td>UNITED STATES TREAS SER AG-2029         4.1250...</td>
+      <td>4.125</td>
+      <td>98.910</td>
+      <td>98.914</td>
+      <td>100000.0</td>
+      <td>100000.0</td>
+      <td>0.589286</td>
+      <td>99.501286</td>
+    </tr>
+    <tr>
+      <th>2029-11-30</th>
+      <td>UNITED STATES TREAS SER S-2029          3.8750...</td>
+      <td>3.875</td>
+      <td>97.763</td>
+      <td>97.782</td>
+      <td>40000.0</td>
+      <td>40000.0</td>
+      <td>0.553571</td>
+      <td>98.326071</td>
+    </tr>
+    <tr>
+      <th>2029-12-31</th>
+      <td>UNITED STATES TREAS SER T-2029          3.8750...</td>
+      <td>3.875</td>
+      <td>97.734</td>
+      <td>97.738</td>
+      <td>65000.0</td>
+      <td>65000.0</td>
+      <td>0.234203</td>
+      <td>97.970203</td>
+    </tr>
+    <tr>
+      <th>2029-12-31</th>
+      <td>UNITED STATES TREAS SER AH-2029         4.3750...</td>
+      <td>4.375</td>
+      <td>99.988</td>
+      <td>99.989</td>
+      <td>7000.0</td>
+      <td>7000.0</td>
+      <td>0.264423</td>
+      <td>100.252923</td>
+    </tr>
+    <tr>
+      <th>2030-01-31</th>
+      <td>UNITED STATES TREAS SER G-2030          3.5000...</td>
+      <td>3.500</td>
+      <td>95.994</td>
+      <td>96.011</td>
+      <td>16000.0</td>
+      <td>16000.0</td>
+      <td>1.654891</td>
+      <td>97.657391</td>
+    </tr>
+  </tbody>
+</table>
+<p>304 rows × 8 columns</p>
+</div></div></div>
+</div>
+</section>
+<section id="id2">
+<h2>Create payoff matrix<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">payoffs_304</span><span class="p">,</span><span class="n">column_dates_304</span><span class="o">=</span><span class="n">create_payoff_matrix</span><span class="p">(</span><span class="n">bond_data</span><span class="p">,</span><span class="n">settlement</span><span class="o">=</span><span class="n">settlement</span><span class="p">,</span><span class="n">freq</span><span class="o">=</span><span class="n">freq</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">payoffs_304</span><span class="p">,</span><span class="n">column_dates_304</span><span class="p">[:</span><span class="mi">5</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(array([[100.    ,   0.    ,   0.    , ...,   0.    ,   0.    ,   0.    ],
+        [  0.    , 100.    ,   0.    , ...,   0.    ,   0.    ,   0.    ],
+        [  0.    ,   0.    , 100.6875, ...,   0.    ,   0.    ,   0.    ],
+        ...,
+        [  0.    ,   0.    ,   0.    , ...,   0.    , 101.9375,   0.    ],
+        [  0.    ,   0.    ,   0.    , ...,   0.    , 102.1875,   0.    ],
+        [  0.    ,   0.    ,   1.75  , ...,   0.    ,   0.    , 101.75  ]]),
+ [datetime.date(2025, 1, 28),
+  datetime.date(2025, 1, 30),
+  datetime.date(2025, 1, 31),
+  datetime.date(2025, 2, 4),
+  datetime.date(2025, 2, 6)])
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="estimate-zero-prices-with-lstsq">
+<h2>Estimate zero prices with <font color='green'>lstsq</font><a class="headerlink" href="#estimate-zero-prices-with-lstsq" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">zero_prices_304</span><span class="p">,</span><span class="n">ss2_304</span><span class="p">,</span><span class="n">rank_304</span><span class="p">,</span><span class="n">colInfo_304</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">lstsq</span><span class="p">(</span><span class="n">payoffs_304</span><span class="p">,</span><span class="n">transaction_prices</span><span class="p">)</span>
+<span class="n">summary_304</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;Average Sum Squared Errors&#39;</span><span class="p">:</span><span class="n">ss2_304</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">bond_data</span><span class="p">),</span>
+             <span class="s1">&#39;Payoff Rank&#39;</span><span class="p">:</span><span class="n">rank_304</span><span class="p">,</span>
+             <span class="s1">&#39;Column Max Info&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">colInfo_304</span><span class="p">),</span>
+             <span class="s1">&#39;Column Min Info&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">colInfo_304</span><span class="p">)}</span>
+<span class="c1"># Then a DataFrame</span>
+<span class="n">df_summary_304</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">summary_304</span><span class="p">,</span><span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Summary Statistics&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">T</span>
+<span class="n">display</span><span class="p">(</span><span class="n">df_summary_304</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_42550/1747160826.py:1: FutureWarning: `rcond` parameter will change to the default of machine precision times ``max(M, N)`` where M and N are the input matrix dimensions.
+To use the future default and silence this warning we advise to pass `rcond=None`, to keep using the old, explicitly pass `rcond=-1`.
+  zero_prices_304,ss2_304,rank_304,colInfo_304=np.linalg.lstsq(payoffs_304,transaction_prices)
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Summary Statistics</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Average Sum Squared Errors</th>
+      <td>0.011753</td>
+    </tr>
+    <tr>
+      <th>Payoff Rank</th>
+      <td>149.000000</td>
+    </tr>
+    <tr>
+      <th>Column Max Info</th>
+      <td>267.431046</td>
+    </tr>
+    <tr>
+      <th>Column Min Info</th>
+      <td>100.000000</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="use-loc-to-create-a-dataframe-from-list-of-dates">
+<h2>Use <font color='green'>loc</font> to create a Dataframe from list of dates<a class="headerlink" href="#use-loc-to-create-a-dataframe-from-list-of-dates" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">start_end_dates</span><span class="o">=</span><span class="p">[</span><span class="n">date</span><span class="p">(</span><span class="mi">2025</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">28</span><span class="p">),</span><span class="n">date</span><span class="p">(</span><span class="mi">2026</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span>
+                 <span class="n">date</span><span class="p">(</span><span class="mi">2027</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span><span class="n">date</span><span class="p">(</span><span class="mi">2028</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">31</span><span class="p">),</span>
+                 <span class="n">date</span><span class="p">(</span><span class="mi">2030</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">31</span><span class="p">)]</span>
+<span class="n">df_zero_prices</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;Zero Prices: 304&#39;</span><span class="p">:</span><span class="n">zero_prices_304</span><span class="p">},</span>
+                            <span class="n">index</span><span class="o">=</span><span class="n">column_dates_304</span><span class="p">)</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">start_end_dates</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="calculate-annualized-forward-rates">
+<h2>Calculate annualized forward rates<a class="headerlink" href="#calculate-annualized-forward-rates" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Use forward fomula of Chapter One: <span class="math notranslate nohighlight">\(\large\frac{ln(P(t)) -ln(P(t+\Delta t))}{\Delta t}\)</span></p></li>
+<li><p>Annaualize forward rates by dividing 365.25 by the difference in number of days between index values (date of zero prices).</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">forward_rates</span><span class="o">=-</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">df_zero_prices</span><span class="p">[</span><span class="s1">&#39;Zero Prices: 304&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">diff</span><span class="p">()</span>
+<span class="n">df_zero_prices</span><span class="p">[</span><span class="s1">&#39;Annualized Forward Rates&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">forward_rates</span><span class="o">*</span><span class="mf">365.25</span><span class="o">/</span><span class="n">df_zero_prices</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">diff</span><span class="p">()</span><span class="o">.</span><span class="n">days</span>
+<span class="n">df_zero_prices</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_42550</span><span class="o">/</span><span class="mf">4179522106.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">forward_rates</span><span class="o">=-</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">df_zero_prices</span><span class="p">[</span><span class="s1">&#39;Zero Prices: 304&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">diff</span><span class="p">()</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">df_zero_prices</span><span class="p">[</span><span class="s1">&#39;Annualized Forward Rates&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">forward_rates</span><span class="o">*</span><span class="mf">365.25</span><span class="o">/</span><span class="n">df_zero_prices</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">diff</span><span class="p">()</span><span class="o">.</span><span class="n">days</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">df_zero_prices</span>
+
+<span class="ne">AttributeError</span>: &#39;Index&#39; object has no attribute &#39;diff&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "PatrickJHess/Hints-Results",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Chapter_Four_Hints.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Chapter Four Hints</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Chapter Four Results</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#application-find-the-rank-of-non-square-two-dimensional-array"><font color="green">Application: Find the rank of non-square two-dimensional array</font></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-numpy">Import numPy</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-two-dimensional-array">Create two-dimensional array</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-rank-with-matrix-rank">Calculate rank with <font color="green">matrix_rank</font></a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#application-determine-unique-payment-dates-for-four-bonds"><font color="green">Application: Determine unique payment dates for four bonds</font></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-date-and-functions-from-custom-module">Import date and functions from custom module</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#assign-the-settlement-date-and-freq-create-the-maturity-dates-and-coupon-iterables">Assign the settlement date and freq. Create the maturity dates and coupon iterables.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-payment-data-list-of-arrays">Create <font color="green">payment_data</font> list of arrays</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#application-determine-the-payoff-matrix-for-four-bonds"><font color="green">Application: Determine the payoff matrix for four bonds</font></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-pandas">Import Pandas</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-create-payoff-matrix-from-basic-concepts-fixed-income">Import <font color="green">create_payoff_matrix</font> from <em>basic_concepts_fixed_income</em></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-payoff-dataframe-with-annual-coupons-and-maturities-of-the-four-bonds">Create payoff DataFrame with annual coupons and maturities of the four bonds</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-payoff-matrix-with-create-payoff-matrix">Create payoff matrix with <font color="green">create_payoff_matrix</font></a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#application-is-the-payoff-matrix-full-column-rank"><font color="green">Application: Is the payoff matrix full column rank?</font></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#change-annual-coupon-of-the-july-31-st-2027-bond-from-0-to-1">Change annual coupon of the July 31<span class="math notranslate nohighlight">\(^{st}\)</span> 2027 bond from 0 to 1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-new-list-of-payment-dates-and-amounts">Calculate new list of payment dates and amounts</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#determine-eight-unique-dates">Determine eight unique dates</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#application-determine-the-payoff-matrix-for-the-first-twenty-bonds-in-bond-data-datafame"><font color="green">Application: Determine the payoff matrix for the first twenty bonds in bond_data DataFame</font></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dowload-excel-workbook">Dowload excel workbook</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-payoff-matrix">Create payoff matrix</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-payoff-dict-dictionary-and-dataframe">Create payoff_dict dictionary and DataFrame</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#chapter-exercise"><span style="text-align: left; color:green; font-family: 'Franklin Gothic Medium', sans-serif; margin-top: 1.0em; margin-bottom: 0em; font-style: italic;">Chapter Exercise</span></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Dowload Excel workbook</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-transaction-prices">Create transaction prices</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Create payoff matrix</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#estimate-zero-prices-with-lstsq">Estimate zero prices with <font color="green">lstsq</font></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#use-loc-to-create-a-dataframe-from-list-of-dates">Use <font color="green">loc</font> to create a Dataframe from list of dates</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-annualized-forward-rates">Calculate annualized forward rates</a></li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Financial Python
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025 by Arbitrage Partners..
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
