@@ -1608,7 +1608,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_7209/3914354401.py:5: FutureWarning: `rcond` parameter will change to the default of machine precision times ``max(M, N)`` where M and N are the input matrix dimensions.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_14797/3914354401.py:5: FutureWarning: `rcond` parameter will change to the default of machine precision times ``max(M, N)`` where M and N are the input matrix dimensions.
 To use the future default and silence this warning we advise to pass `rcond=None`, to keep using the old, explicitly pass `rcond=-1`.
   zero_prices_20,ss2_20,rank_20,colInfo__20=np.linalg.lstsq(payoff_matrix_20[0],transaction_prices)
 </pre></div>
@@ -2211,7 +2211,7 @@ To use the future default and silence this warning we advise to pass `rcond=None
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_7209/1747160826.py:1: FutureWarning: `rcond` parameter will change to the default of machine precision times ``max(M, N)`` where M and N are the input matrix dimensions.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_14797/1747160826.py:1: FutureWarning: `rcond` parameter will change to the default of machine precision times ``max(M, N)`` where M and N are the input matrix dimensions.
 To use the future default and silence this warning we advise to pass `rcond=None`, to keep using the old, explicitly pass `rcond=-1`.
   zero_prices_304,ss2_304,rank_304,colInfo_304=np.linalg.lstsq(payoffs_304,transaction_prices)
 </pre></div>
@@ -2281,24 +2281,66 @@ To use the future default and silence this warning we advise to pass `rcond=None
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">forward_rates</span><span class="o">=-</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">df_zero_prices</span><span class="p">[</span><span class="s1">&#39;Zero Prices: 304&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">diff</span><span class="p">()</span>
-<span class="n">df_zero_prices</span><span class="p">[</span><span class="s1">&#39;Annualized Forward Rates&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">forward_rates</span><span class="o">*</span><span class="mf">365.25</span><span class="o">/</span><span class="n">df_zero_prices</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">diff</span><span class="p">()</span><span class="o">.</span><span class="n">days</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">maturity_years</span><span class="o">=</span><span class="p">[(</span><span class="n">mat_date</span><span class="o">-</span><span class="n">settlement</span><span class="p">)</span><span class="o">.</span><span class="n">days</span><span class="o">/</span><span class="mf">365.25</span> <span class="k">for</span> <span class="n">mat_date</span> <span class="ow">in</span> <span class="n">df_zero_prices</span><span class="o">.</span><span class="n">index</span><span class="p">]</span>
+<span class="n">forward_rates</span><span class="o">=-</span><span class="n">np</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">df_zero_prices</span><span class="p">[</span><span class="s1">&#39;Zero Prices: 304&#39;</span><span class="p">]))</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">maturity_years</span><span class="p">)</span>
+<span class="n">forward_rates</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="n">forward_rates</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
+<span class="n">df_zero_prices</span><span class="p">[</span><span class="s1">&#39;Forward Rates&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">forward_rates</span>
 <span class="n">df_zero_prices</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_7209</span><span class="o">/</span><span class="mf">4179522106.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">forward_rates</span><span class="o">=-</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">df_zero_prices</span><span class="p">[</span><span class="s1">&#39;Zero Prices: 304&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">diff</span><span class="p">()</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">df_zero_prices</span><span class="p">[</span><span class="s1">&#39;Annualized Forward Rates&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">forward_rates</span><span class="o">*</span><span class="mf">365.25</span><span class="o">/</span><span class="n">df_zero_prices</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">diff</span><span class="p">()</span><span class="o">.</span><span class="n">days</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">df_zero_prices</span>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-<span class="ne">AttributeError</span>: &#39;Index&#39; object has no attribute &#39;diff&#39;
-</pre></div>
-</div>
-</div>
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Zero Prices: 304</th>
+      <th>Forward Rates</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2025-01-28</th>
+      <td>0.999295</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2026-02-02</th>
+      <td>0.957622</td>
+      <td>0.042050</td>
+    </tr>
+    <tr>
+      <th>2027-02-01</th>
+      <td>0.917992</td>
+      <td>0.042410</td>
+    </tr>
+    <tr>
+      <th>2028-01-31</th>
+      <td>0.879001</td>
+      <td>0.043551</td>
+    </tr>
+    <tr>
+      <th>2030-01-31</th>
+      <td>0.803448</td>
+      <td>0.044906</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 </section>
 </section>
