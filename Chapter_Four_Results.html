@@ -208,7 +208,9 @@
 
 
 
+
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Chapter Four Results</a></li>
+
 
 
 
@@ -507,6 +509,11 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dowload-excel-workbook">Dowload excel workbook</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-payoff-matrix">Create payoff matrix</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-payoff-dict-dictionary-and-dataframe">Create payoff_dict dictionary and DataFrame</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#application-estimate-the-term-structure-with-the-first-twenty-bonds"><font color="green">Application: Estimate the term structure with the first twenty bonds</font></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-transaction-prices">Calculate transaction prices</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#estimate-term-structure-with-linalg-function-lstsq">Estimate term structure with linalg function <font color="green">lstsq</font></a></li>
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#chapter-exercise"><span style="text-align: left; color:green; font-family: 'Franklin Gothic Medium', sans-serif; margin-top: 1.0em; margin-bottom: 0em; font-style: italic;">Chapter Exercise</span></a><ul class="visible nav section-nav flex-column">
@@ -1263,6 +1270,491 @@ document.write(`
 </div>
 </section>
 </section>
+<section id="application-estimate-the-term-structure-with-the-first-twenty-bonds">
+<h1><font color='green'>Application: Estimate the term structure with the first twenty bonds</font><a class="headerlink" href="#application-estimate-the-term-structure-with-the-first-twenty-bonds" title="Link to this heading">#</a></h1>
+<ol class="arabic simple">
+<li><p>if you haven’t already created the payoff matrix, see the hints from the previous applicztion.</p></li>
+<li><p>Create transaction prices of the bonds with the Pandas <font color='green'>apply</font> method.</p></li>
+<li><p>Calculate the estimated zero prices with the linalg function  <font color='green'>lstsq</font>.</p></li>
+</ol>
+<section id="calculate-transaction-prices">
+<h2>Calculate transaction prices<a class="headerlink" href="#calculate-transaction-prices" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">basic_concepts_fixed_income</span><span class="w"> </span><span class="kn">import</span><span class="p">(</span><span class="n">accrued_interest</span><span class="p">)</span>
+<span class="c1"># apply the accrued_interest function to the DataFrame to populate a new column &#39;Accrued&#39;</span>
+<span class="n">bond_data_20</span><span class="p">[</span><span class="s1">&#39;Accrued&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">bond_data_20</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span>
+    <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">accrued_interest</span><span class="p">(</span>
+        <span class="n">maturity</span><span class="o">=</span><span class="n">x</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="c1"># Assuming index is maturity</span>
+        <span class="n">coupon</span><span class="o">=</span><span class="n">x</span><span class="p">[</span><span class="s1">&#39;Coupon&#39;</span><span class="p">],</span>
+        <span class="n">settlement</span><span class="o">=</span><span class="n">settlement</span><span class="p">,</span>
+        <span class="n">freq</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+        <span class="n">day_type</span><span class="o">=</span><span class="s1">&#39;Actual/Actual&#39;</span>
+    <span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span>
+<span class="p">)</span>
+
+<span class="c1"># The new column &#39;Transaction Prices&#39; equals accrued interest plus the Bid/Ask average</span>
+<span class="n">bond_data_20</span><span class="p">[</span><span class="s1">&#39;Transaction Prices&#39;</span><span class="p">]</span><span class="o">=</span><span class="p">(</span><span class="n">bond_data_20</span><span class="p">[</span><span class="s1">&#39;Price Bid&#39;</span><span class="p">]</span><span class="o">+</span><span class="n">bond_data_20</span><span class="p">[</span><span class="s1">&#39;Price Ask&#39;</span><span class="p">])</span><span class="o">/</span><span class="mi">2</span>\
+<span class="o">+</span><span class="n">bond_data_20</span><span class="p">[</span><span class="s1">&#39;Accrued&#39;</span><span class="p">]</span>
+<span class="n">bond_data_20</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Description</th>
+      <th>Coupon</th>
+      <th>Price Bid</th>
+      <th>Price Ask</th>
+      <th>Bid Size</th>
+      <th>Ask Size</th>
+      <th>Accrued</th>
+      <th>Transaction Prices</th>
+    </tr>
+    <tr>
+      <th>Maturity Date</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2025-01-28</th>
+      <td>UNITED STATES TREAS BILLS ZERO CPN       0.000...</td>
+      <td>0.000</td>
+      <td>99.929</td>
+      <td>99.930</td>
+      <td>100000.0</td>
+      <td>100000.0</td>
+      <td>0.000000</td>
+      <td>99.929500</td>
+    </tr>
+    <tr>
+      <th>2025-01-30</th>
+      <td>UNITED STATES TREAS BILLS ZERO CPN       0.000...</td>
+      <td>0.000</td>
+      <td>99.906</td>
+      <td>99.907</td>
+      <td>40000.0</td>
+      <td>40000.0</td>
+      <td>0.000000</td>
+      <td>99.906500</td>
+    </tr>
+    <tr>
+      <th>2025-01-31</th>
+      <td>UNITED STATES TREAS SER U-2025          1.3750...</td>
+      <td>1.375</td>
+      <td>99.921</td>
+      <td>99.934</td>
+      <td>60000.0</td>
+      <td>60000.0</td>
+      <td>0.650136</td>
+      <td>100.577636</td>
+    </tr>
+    <tr>
+      <th>2025-01-31</th>
+      <td>UNITED STATES TREAS SER AW-2025         4.1250...</td>
+      <td>4.125</td>
+      <td>99.988</td>
+      <td>99.997</td>
+      <td>60000.0</td>
+      <td>60000.0</td>
+      <td>1.950408</td>
+      <td>101.942908</td>
+    </tr>
+    <tr>
+      <th>2025-01-31</th>
+      <td>UNITED STATES TREAS SER G-2025          2.5000...</td>
+      <td>2.500</td>
+      <td>99.953</td>
+      <td>99.965</td>
+      <td>60000.0</td>
+      <td>60000.0</td>
+      <td>1.182065</td>
+      <td>101.141065</td>
+    </tr>
+    <tr>
+      <th>2025-02-04</th>
+      <td>UNITED STATES TREAS BILLS ZERO CPN       0.000...</td>
+      <td>0.000</td>
+      <td>99.847</td>
+      <td>99.848</td>
+      <td>10000.0</td>
+      <td>10000.0</td>
+      <td>0.000000</td>
+      <td>99.847500</td>
+    </tr>
+    <tr>
+      <th>2025-02-06</th>
+      <td>UNITED STATES TREAS BILLS ZERO CPN       0.000...</td>
+      <td>0.000</td>
+      <td>99.823</td>
+      <td>99.825</td>
+      <td>100000.0</td>
+      <td>100000.0</td>
+      <td>0.000000</td>
+      <td>99.824000</td>
+    </tr>
+    <tr>
+      <th>2025-02-11</th>
+      <td>UNITED STATES TREAS BILLS ZERO CPN       0.000...</td>
+      <td>0.000</td>
+      <td>99.765</td>
+      <td>99.766</td>
+      <td>100000.0</td>
+      <td>100000.0</td>
+      <td>0.000000</td>
+      <td>99.765500</td>
+    </tr>
+    <tr>
+      <th>2025-02-13</th>
+      <td>UNITED STATES TREAS BILLS ZERO CPN       0.000...</td>
+      <td>0.000</td>
+      <td>99.740</td>
+      <td>99.742</td>
+      <td>15000.0</td>
+      <td>15000.0</td>
+      <td>0.000000</td>
+      <td>99.741000</td>
+    </tr>
+    <tr>
+      <th>2025-02-15</th>
+      <td>U S TREAS SEC       STRIPPED INT PMT     0.000...</td>
+      <td>0.000</td>
+      <td>99.730</td>
+      <td>99.751</td>
+      <td>5000.0</td>
+      <td>5000.0</td>
+      <td>0.000000</td>
+      <td>99.740500</td>
+    </tr>
+    <tr>
+      <th>2025-02-15</th>
+      <td>UNITED STATES TREAS BD STRIPP ZERO CPN   0.000...</td>
+      <td>0.000</td>
+      <td>99.594</td>
+      <td>99.935</td>
+      <td>9000.0</td>
+      <td>9000.0</td>
+      <td>0.000000</td>
+      <td>99.764500</td>
+    </tr>
+    <tr>
+      <th>2025-02-15</th>
+      <td>UNITED STATES TREAS SER AK-2025         1.5000...</td>
+      <td>1.500</td>
+      <td>99.800</td>
+      <td>99.809</td>
+      <td>60000.0</td>
+      <td>60000.0</td>
+      <td>0.648098</td>
+      <td>100.452598</td>
+    </tr>
+    <tr>
+      <th>2025-02-15</th>
+      <td>UNITED STATES TREAS BDS 7.62500% 02/15/2025</td>
+      <td>7.625</td>
+      <td>100.275</td>
+      <td>100.696</td>
+      <td>5600.0</td>
+      <td>5600.0</td>
+      <td>3.294497</td>
+      <td>103.779997</td>
+    </tr>
+    <tr>
+      <th>2025-02-15</th>
+      <td>U S TREAS NT        STRIPPED PRIN PMT    0.000...</td>
+      <td>0.000</td>
+      <td>99.699</td>
+      <td>99.747</td>
+      <td>8000.0</td>
+      <td>8000.0</td>
+      <td>0.000000</td>
+      <td>99.723000</td>
+    </tr>
+    <tr>
+      <th>2025-02-15</th>
+      <td>UNITED STATES TREAS NTS NOTE            2.0000...</td>
+      <td>2.000</td>
+      <td>99.835</td>
+      <td>99.860</td>
+      <td>40000.0</td>
+      <td>40000.0</td>
+      <td>0.864130</td>
+      <td>100.711630</td>
+    </tr>
+    <tr>
+      <th>2025-02-18</th>
+      <td>UNITED STATES TREAS BILLS ZERO CPN       0.000...</td>
+      <td>0.000</td>
+      <td>99.682</td>
+      <td>99.683</td>
+      <td>99300.0</td>
+      <td>99300.0</td>
+      <td>0.000000</td>
+      <td>99.682500</td>
+    </tr>
+    <tr>
+      <th>2025-02-20</th>
+      <td>UNITED STATES TREAS BILLS ZERO CPN       0.000...</td>
+      <td>0.000</td>
+      <td>99.659</td>
+      <td>99.661</td>
+      <td>15000.0</td>
+      <td>15000.0</td>
+      <td>0.000000</td>
+      <td>99.660000</td>
+    </tr>
+    <tr>
+      <th>2025-02-25</th>
+      <td>UNITED STATES TREAS BILLS ZERO CPN       0.000...</td>
+      <td>0.000</td>
+      <td>99.600</td>
+      <td>99.604</td>
+      <td>10000.0</td>
+      <td>10000.0</td>
+      <td>0.000000</td>
+      <td>99.602000</td>
+    </tr>
+    <tr>
+      <th>2025-02-27</th>
+      <td>UNITED STATES TREAS BILLS ZERO CPN       0.000...</td>
+      <td>0.000</td>
+      <td>99.576</td>
+      <td>99.578</td>
+      <td>100000.0</td>
+      <td>100000.0</td>
+      <td>0.000000</td>
+      <td>99.577000</td>
+    </tr>
+    <tr>
+      <th>2025-02-28</th>
+      <td>UNITED STATES TREAS NOTE 1.12500% 02/28/2025</td>
+      <td>1.125</td>
+      <td>99.671</td>
+      <td>99.684</td>
+      <td>60000.0</td>
+      <td>60000.0</td>
+      <td>0.444406</td>
+      <td>100.121906</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="estimate-term-structure-with-linalg-function-lstsq">
+<h2>Estimate term structure with linalg function <font color='green'>lstsq</font><a class="headerlink" href="#estimate-term-structure-with-linalg-function-lstsq" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Calculate transaction prices</span>
+<span class="n">transaction_prices</span><span class="o">=</span><span class="n">bond_data_20</span><span class="p">[</span><span class="s1">&#39;Transaction Prices&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
+
+<span class="c1"># Estimate the present value factors with least squares</span>
+<span class="n">zero_prices_20</span><span class="p">,</span><span class="n">ss2_20</span><span class="p">,</span><span class="n">rank_20</span><span class="p">,</span><span class="n">colInfo__20</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">lstsq</span><span class="p">(</span><span class="n">payoff_matrix_20</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">transaction_prices</span><span class="p">)</span>
+
+<span class="c1"># Maturity of the bonds in years</span>
+<span class="n">maturity_years</span><span class="o">=</span><span class="p">[(</span><span class="n">mat_date</span><span class="o">-</span><span class="n">settlement</span><span class="p">)</span><span class="o">.</span><span class="n">days</span><span class="o">/</span><span class="mi">365</span> <span class="k">for</span> <span class="n">mat_date</span> <span class="ow">in</span> <span class="n">payoff_matrix_20</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span>
+
+<span class="c1"># Continuously compounded annualized spot rates</span>
+<span class="n">spot_rates_20</span><span class="o">=-</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">zero_prices_20</span><span class="p">)</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">maturity_years</span><span class="p">)</span>
+
+<span class="c1"># Continuously compounded annualized forward rates</span>
+<span class="n">forward_rates_20</span><span class="o">=-</span><span class="n">np</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">zero_prices_20</span><span class="p">))</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">maturity_years</span><span class="p">)</span>
+<span class="n">forward_rates_20</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="n">forward_rates_20</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
+
+<span class="c1"># Create a DataFrame of least squares present value estimates and display results</span>
+<span class="c1"># First a dictionary</span>
+<span class="n">bonds_20</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;Zero Pries: 20 Bonds&#39;</span><span class="p">:</span><span class="n">zero_prices_20</span><span class="p">,</span>
+          <span class="s1">&#39;Spot Rates: 20 Bonds&#39;</span><span class="p">:</span><span class="n">spot_rates_20</span><span class="p">,</span>
+          <span class="s1">&#39;Forward Rates: 20 Bonds&#39;</span><span class="p">:</span><span class="n">forward_rates_20</span><span class="p">}</span>
+<span class="c1"># Then a DataFrame</span>
+<span class="n">df_20</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">bonds_20</span><span class="p">,</span><span class="n">index</span><span class="o">=</span><span class="n">payoff_matrix_20</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">display</span><span class="p">(</span><span class="n">df_20</span><span class="p">)</span>
+
+<span class="c1"># Create a DataFrame of summary statistics and display results</span>
+<span class="c1"># First a dictionary</span>
+<span class="n">summary_20</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;Average Sum Squared Errors&#39;</span><span class="p">:</span><span class="n">ss2_20</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">bond_data_20</span><span class="p">),</span>
+             <span class="s1">&#39;Payoff Rank&#39;</span><span class="p">:</span><span class="n">rank_20</span><span class="p">,</span>
+             <span class="s1">&#39;Column Max Info&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">colInfo__20</span><span class="p">),</span>
+             <span class="s1">&#39;Column Min Info&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">colInfo__20</span><span class="p">)}</span>
+
+<span class="n">df_summary_20</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">summary_20</span><span class="p">,</span><span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Summary Statistics&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">T</span>
+<span class="n">display</span><span class="p">(</span><span class="n">df_summary_20</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_7209/3914354401.py:5: FutureWarning: `rcond` parameter will change to the default of machine precision times ``max(M, N)`` where M and N are the input matrix dimensions.
+To use the future default and silence this warning we advise to pass `rcond=None`, to keep using the old, explicitly pass `rcond=-1`.
+  zero_prices_20,ss2_20,rank_20,colInfo__20=np.linalg.lstsq(payoff_matrix_20[0],transaction_prices)
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Zero Pries: 20 Bonds</th>
+      <th>Spot Rates: 20 Bonds</th>
+      <th>Forward Rates: 20 Bonds</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2025-01-28</th>
+      <td>0.999295</td>
+      <td>0.036774</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2025-01-30</th>
+      <td>0.999065</td>
+      <td>0.037937</td>
+      <td>0.042009</td>
+    </tr>
+    <tr>
+      <th>2025-01-31</th>
+      <td>0.998887</td>
+      <td>0.040659</td>
+      <td>0.065156</td>
+    </tr>
+    <tr>
+      <th>2025-02-04</th>
+      <td>0.998475</td>
+      <td>0.039789</td>
+      <td>0.037615</td>
+    </tr>
+    <tr>
+      <th>2025-02-06</th>
+      <td>0.998240</td>
+      <td>0.040185</td>
+      <td>0.042958</td>
+    </tr>
+    <tr>
+      <th>2025-02-11</th>
+      <td>0.997655</td>
+      <td>0.040806</td>
+      <td>0.042793</td>
+    </tr>
+    <tr>
+      <th>2025-02-13</th>
+      <td>0.997410</td>
+      <td>0.041155</td>
+      <td>0.044823</td>
+    </tr>
+    <tr>
+      <th>2025-02-18</th>
+      <td>0.997590</td>
+      <td>0.031453</td>
+      <td>-0.013180</td>
+    </tr>
+    <tr>
+      <th>2025-02-20</th>
+      <td>0.996600</td>
+      <td>0.041437</td>
+      <td>0.181220</td>
+    </tr>
+    <tr>
+      <th>2025-02-25</th>
+      <td>0.996020</td>
+      <td>0.041589</td>
+      <td>0.042497</td>
+    </tr>
+    <tr>
+      <th>2025-02-27</th>
+      <td>0.995770</td>
+      <td>0.041817</td>
+      <td>0.045813</td>
+    </tr>
+    <tr>
+      <th>2025-02-28</th>
+      <td>0.995619</td>
+      <td>0.042176</td>
+      <td>0.055461</td>
+    </tr>
+  </tbody>
+</table>
+</div></div><div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Summary Statistics</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Average Sum Squared Errors</th>
+      <td>0.002998</td>
+    </tr>
+    <tr>
+      <th>Payoff Rank</th>
+      <td>12.000000</td>
+    </tr>
+    <tr>
+      <th>Column Max Info</th>
+      <td>266.699452</td>
+    </tr>
+    <tr>
+      <th>Column Min Info</th>
+      <td>100.000000</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+</section>
 <section id="chapter-exercise">
 <h1><span style="text-align: left; color:green; font-family: 'Franklin Gothic Medium', sans-serif; margin-top: 1.0em; margin-bottom: 0em; font-style: italic;">Chapter Exercise</span><a class="headerlink" href="#chapter-exercise" title="Link to this heading">#</a></h1>
 <p><span style="text-align: left; color:green; font-family: 'Franklin Gothic Medium', sans-serif; margin-top: 0; margin-bottom: 0.5em; font-style: italic;"><big>Using the term structure calculated with 304 bonds</big></font></span></p>
@@ -1719,7 +2211,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_42550/1747160826.py:1: FutureWarning: `rcond` parameter will change to the default of machine precision times ``max(M, N)`` where M and N are the input matrix dimensions.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_7209/1747160826.py:1: FutureWarning: `rcond` parameter will change to the default of machine precision times ``max(M, N)`` where M and N are the input matrix dimensions.
 To use the future default and silence this warning we advise to pass `rcond=None`, to keep using the old, explicitly pass `rcond=-1`.
   zero_prices_304,ss2_304,rank_304,colInfo_304=np.linalg.lstsq(payoffs_304,transaction_prices)
 </pre></div>
@@ -1798,7 +2290,7 @@ To use the future default and silence this warning we advise to pass `rcond=None
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_42550</span><span class="o">/</span><span class="mf">4179522106.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_7209</span><span class="o">/</span><span class="mf">4179522106.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">forward_rates</span><span class="o">=-</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">df_zero_prices</span><span class="p">[</span><span class="s1">&#39;Zero Prices: 304&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">diff</span><span class="p">()</span>
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">df_zero_prices</span><span class="p">[</span><span class="s1">&#39;Annualized Forward Rates&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">forward_rates</span><span class="o">*</span><span class="mf">365.25</span><span class="o">/</span><span class="n">df_zero_prices</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">diff</span><span class="p">()</span><span class="o">.</span><span class="n">days</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">df_zero_prices</span>
@@ -1896,6 +2388,11 @@ To use the future default and silence this warning we advise to pass `rcond=None
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dowload-excel-workbook">Dowload excel workbook</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-payoff-matrix">Create payoff matrix</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-payoff-dict-dictionary-and-dataframe">Create payoff_dict dictionary and DataFrame</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#application-estimate-the-term-structure-with-the-first-twenty-bonds"><font color="green">Application: Estimate the term structure with the first twenty bonds</font></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-transaction-prices">Calculate transaction prices</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#estimate-term-structure-with-linalg-function-lstsq">Estimate term structure with linalg function <font color="green">lstsq</font></a></li>
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#chapter-exercise"><span style="text-align: left; color:green; font-family: 'Franklin Gothic Medium', sans-serif; margin-top: 1.0em; margin-bottom: 0em; font-style: italic;">Chapter Exercise</span></a><ul class="visible nav section-nav flex-column">
