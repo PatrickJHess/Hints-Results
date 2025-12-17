@@ -209,7 +209,9 @@
 
 
 
+
 <li class="toctree-l1"><a class="reference internal" href="Chapter_Four_Results.html">Chapter Four Results</a></li>
+
 
 
 
@@ -484,6 +486,7 @@ document.write(`
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#application-determine-the-payoff-matrix-for-four-bonds"><font color="green">Application: Determine the payoff matrix for four bonds</font></a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#application-is-the-payoff-matrix-full-column-rank"><font color="green">Application: Is the payoff matrix full column rank?</font></a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#application-determine-the-payoff-matrix-for-the-first-twenty-bonds-in-bond-data-datafame"><font color="green">Application: Determine the payoff matrix for the first twenty bonds in bond_data DataFame</font></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#application-estimate-the-term-structure-with-the-first-twenty-bonds"><font color="green">Application: Estimate the term structure with the first twenty bonds</font></a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#chapter-exercise"><span style="text-align: left; color:green; font-family: 'Franklin Gothic Medium', sans-serif; margin-top: 1.0em; margin-bottom: 0em; font-style: italic;">Chapter Exercise</span></a></li>
 </ul>
 
@@ -607,6 +610,14 @@ document.write(`
 <li><p>Create a DataFrame from <font color='green'>payoff_dict</font></p></li>
 </ol>
 </section>
+<section id="application-estimate-the-term-structure-with-the-first-twenty-bonds">
+<h1><font color='green'>Application: Estimate the term structure with the first twenty bonds</font><a class="headerlink" href="#application-estimate-the-term-structure-with-the-first-twenty-bonds" title="Link to this heading">#</a></h1>
+<ol class="arabic simple">
+<li><p>if you haven’t already created the payoff matrix, see the hints from the previous applicztion.</p></li>
+<li><p>Create transaction prices of the bonds with the Pandas <font color='green'>apply</font> method.</p></li>
+<li><p>Calculate the estimated zero prices with the linalg function  <font color='green'>lstsq</font>.</p></li>
+</ol>
+</section>
 <section id="chapter-exercise">
 <h1><span style="text-align: left; color:green; font-family: 'Franklin Gothic Medium', sans-serif; margin-top: 1.0em; margin-bottom: 0em; font-style: italic;">Chapter Exercise</span><a class="headerlink" href="#chapter-exercise" title="Link to this heading">#</a></h1>
 <p><span style="text-align: left; color:green; font-family: 'Franklin Gothic Medium', sans-serif; margin-top: 0; margin-bottom: 0.5em; font-style: italic;"><big>Using the term structure calculated with 304 bonds</big></font></span></p>
@@ -716,6 +727,7 @@ document.write(`
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#application-determine-the-payoff-matrix-for-four-bonds"><font color="green">Application: Determine the payoff matrix for four bonds</font></a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#application-is-the-payoff-matrix-full-column-rank"><font color="green">Application: Is the payoff matrix full column rank?</font></a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#application-determine-the-payoff-matrix-for-the-first-twenty-bonds-in-bond-data-datafame"><font color="green">Application: Determine the payoff matrix for the first twenty bonds in bond_data DataFame</font></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#application-estimate-the-term-structure-with-the-first-twenty-bonds"><font color="green">Application: Estimate the term structure with the first twenty bonds</font></a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#chapter-exercise"><span style="text-align: left; color:green; font-family: 'Franklin Gothic Medium', sans-serif; margin-top: 1.0em; margin-bottom: 0em; font-style: italic;">Chapter Exercise</span></a></li>
 </ul>
 
