@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -188,17 +188,48 @@
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Chapter One Hints And Results</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Chapter_One_Hints.html">Chapter One Hints</a></li>
+
+
+
+
+
 <li class="toctree-l1"><a class="reference internal" href="Chapter_One_Results.html">Chapter One Expected Results</a></li>
+
+
+
+
+
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Chapter Two Hints And Results</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Chapter_Two_Hints.html">Chapter Two Hints</a></li>
+
+
+
+
+
+
+
+
 <li class="toctree-l1"><a class="reference internal" href="Chapter_Two_Results.html">Chapter Two Expected Results</a></li>
+
+
+
+
+
+
+
+
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Chapter Three Hints And Results</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Chapter_Three_Hints.html">Chapter Three Hints</a></li>
+
+
+
+
 <li class="toctree-l1"><a class="reference internal" href="Chapter_Three_Results.html">Chapter Three Results</a></li>
+
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Chapter Four Hints And Results</span></p>
 <ul class="current nav bd-sidenav">
@@ -216,6 +247,15 @@
 
 
 
+
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Chapter Five Hints And Results</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Chapter_Five_Hints.html">Chapter Five Hints</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="Chapter_Five_Results.html">Chapter Five Results</a></li>
 
 
 </ul>
@@ -576,6 +616,13 @@ document.write(`
 </section>
 <section id="application-is-the-payoff-matrix-full-column-rank">
 <h1><font color='green'>Application: Is the payoff matrix full column rank?</font><a class="headerlink" href="#application-is-the-payoff-matrix-full-column-rank" title="Link to this heading">#</a></h1>
+<div style="background-color:LightGray;
+    border-left: 12px solid green;
+    font-family: 'Garamond', serif;
+    font-size: 17px;
+    line-height: 1.5;
+    padding: 15px">
+<br>
 <p>Settlement date January 21<span class="math notranslate nohighlight">\(^{st}\)</span> 2025 and semi-annual coupons.</p>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
@@ -601,26 +648,47 @@ document.write(`
 </div>
 <br>
 <p>Notice that the July 31<span class="math notranslate nohighlight">\(^{st}\)</span> 2027 bond is now a coupon bond with five payment dates.  Confirm this with the <font color='green'>unique_pay_dates</font>.  The rank is the minimum of the number of columns or rows.  Four bonds is not enough to estimate eight zero prices.</p>
-</section>
+</div></section>
 <section id="application-determine-the-payoff-matrix-for-the-first-twenty-bonds-in-bond-data-datafame">
 <h1><font color='green'>Application: Determine the payoff matrix for the first twenty bonds in bond_data DataFame</font><a class="headerlink" href="#application-determine-the-payoff-matrix-for-the-first-twenty-bonds-in-bond-data-datafame" title="Link to this heading">#</a></h1>
+<div style="background-color:LightGray;
+    border-left: 12px solid green;
+    font-family: 'Garamond', serif;
+    font-size: 17px;
+    line-height: 1.5;
+    padding: 15px">
+<br>
 <ol class="arabic simple">
 <li><p>Download the Excel workbook from DropBox and create a DataFrame from first twenty rows.</p></li>
 <li><p>Use <font color='green'>create_payoff_matrix</font> function to create <font color='green'>payoff_dict</font> dictionary from zipped dates and transposed columns.</p></li>
 <li><p>Create a DataFrame from <font color='green'>payoff_dict</font></p></li>
 </ol>
-</section>
+</div></section>
 <section id="application-estimate-the-term-structure-with-the-first-twenty-bonds">
 <h1><font color='green'>Application: Estimate the term structure with the first twenty bonds</font><a class="headerlink" href="#application-estimate-the-term-structure-with-the-first-twenty-bonds" title="Link to this heading">#</a></h1>
+<div style="background-color:LightGray;
+    border-left: 12px solid green;
+    font-family: 'Garamond', serif;
+    font-size: 17px;
+    line-height: 1.5;
+    padding: 15px">
+<br>
 <ol class="arabic simple">
 <li><p>if you haven’t already created the payoff matrix, see the hints from the previous applicztion.</p></li>
 <li><p>Create transaction prices of the bonds with the Pandas <font color='green'>apply</font> method.</p></li>
 <li><p>Calculate the estimated zero prices with the linalg function  <font color='green'>lstsq</font>.</p></li>
 </ol>
-</section>
+</div></section>
 <section id="chapter-exercise">
 <h1><span style="text-align: left; color:green; font-family: 'Franklin Gothic Medium', sans-serif; margin-top: 1.0em; margin-bottom: 0em; font-style: italic;">Chapter Exercise</span><a class="headerlink" href="#chapter-exercise" title="Link to this heading">#</a></h1>
 <p><span style="text-align: left; color:green; font-family: 'Franklin Gothic Medium', sans-serif; margin-top: 0; margin-bottom: 0.5em; font-style: italic;"><big>Using the term structure calculated with 304 bonds</big></font></span></p>
+<div style="background-color:LightGray;
+    border-left: 12px solid green;
+    font-family: 'Garamond', serif;
+    font-size: 17px;
+    line-height: 1.5;
+    padding: 15px">
+<br>
 <p>Calculate the forward rates for the following dates.</p>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
@@ -647,6 +715,14 @@ document.write(`
 </tbody>
 </table>
 </div>
+<div>
+<div style="background-color:LightGray;
+    border-left: 12px solid green;
+    font-family: 'Garamond', serif;
+    font-size: 17px;
+    line-height: 1.5;
+    padding: 15px">
+<br>
 <ol class="arabic simple">
 <li><p>Download Excel workbook from Dropbox</p></li>
 <li><p>Create the transaction prices with <font color='green'>accrued_interest</font> function</p></li>
@@ -655,7 +731,7 @@ document.write(`
 <li><p>Create a list of unique dates sequential lists from the start and end dates.</p></li>
 <li><p>Locate the zero prices for the unique dates and calculate forward rates as the negative of the difference in the natural log of zero prices.</p></li>
 </ol>
-</section>
+</div></section>
 
     <script type="text/x-thebe-config">
     {
