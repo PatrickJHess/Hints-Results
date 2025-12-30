@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -62,6 +62,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'Chapter_Four_Results';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Chapter Five Hints" href="Chapter_Five_Hints.html" />
     <link rel="prev" title="Chapter Four Hints" href="Chapter_Four_Hints.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -187,17 +188,48 @@
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Chapter One Hints And Results</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Chapter_One_Hints.html">Chapter One Hints</a></li>
+
+
+
+
+
 <li class="toctree-l1"><a class="reference internal" href="Chapter_One_Results.html">Chapter One Expected Results</a></li>
+
+
+
+
+
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Chapter Two Hints And Results</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Chapter_Two_Hints.html">Chapter Two Hints</a></li>
+
+
+
+
+
+
+
+
 <li class="toctree-l1"><a class="reference internal" href="Chapter_Two_Results.html">Chapter Two Expected Results</a></li>
+
+
+
+
+
+
+
+
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Chapter Three Hints And Results</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Chapter_Three_Hints.html">Chapter Three Hints</a></li>
+
+
+
+
 <li class="toctree-l1"><a class="reference internal" href="Chapter_Three_Results.html">Chapter Three Results</a></li>
+
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Chapter Four Hints And Results</span></p>
 <ul class="current nav bd-sidenav">
@@ -215,6 +247,15 @@
 
 
 
+
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Chapter Five Hints And Results</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Chapter_Five_Hints.html">Chapter Five Hints</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="Chapter_Five_Results.html">Chapter Five Results</a></li>
 
 
 </ul>
@@ -805,6 +846,13 @@ document.write(`
 </section>
 <section id="application-is-the-payoff-matrix-full-column-rank">
 <h1><font color='green'>Application: Is the payoff matrix full column rank?</font><a class="headerlink" href="#application-is-the-payoff-matrix-full-column-rank" title="Link to this heading">#</a></h1>
+<div style="background-color:LightGray;
+    border-left: 12px solid green;
+    font-family: 'Garamond', serif;
+    font-size: 17px;
+    line-height: 1.5;
+    padding: 15px">
+<br>
 <p>Settlement date January 21<span class="math notranslate nohighlight">\(^{st}\)</span> 2025 and semi-annual coupons.</p>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
@@ -830,7 +878,7 @@ document.write(`
 </div>
 <br>
 <p>Notice that the July 31<span class="math notranslate nohighlight">\(^{st}\)</span> 2027 bond is now a coupon bond with five payment dates.  Confirm this with the <font color='green'>unique_pay_dates</font>.  The rank is the minimum of the number of columns or rows.  Four bonds is not enough to estimate eight zero prices.</p>
-<section id="change-annual-coupon-of-the-july-31-st-2027-bond-from-0-to-1">
+</div><section id="change-annual-coupon-of-the-july-31-st-2027-bond-from-0-to-1">
 <h2>Change annual coupon of the July 31<span class="math notranslate nohighlight">\(^{st}\)</span> 2027 bond from 0 to 1<a class="headerlink" href="#change-annual-coupon-of-the-july-31-st-2027-bond-from-0-to-1" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -877,12 +925,19 @@ document.write(`
 </section>
 <section id="application-determine-the-payoff-matrix-for-the-first-twenty-bonds-in-bond-data-datafame">
 <h1><font color='green'>Application: Determine the payoff matrix for the first twenty bonds in bond_data DataFame</font><a class="headerlink" href="#application-determine-the-payoff-matrix-for-the-first-twenty-bonds-in-bond-data-datafame" title="Link to this heading">#</a></h1>
+<div style="background-color:LightGray;
+    border-left: 12px solid green;
+    font-family: 'Garamond', serif;
+    font-size: 17px;
+    line-height: 1.5;
+    padding: 15px">
+<br>
 <ol class="arabic simple">
 <li><p>Download the Excel workbook from DropBox and create a DataFrame from first twenty rows.</p></li>
 <li><p>Use <font color='green'>create_payoff_matrix</font> function to create <font color='green'>payoff_dict</font> dictionary from zipped dates and transposed columns.</p></li>
 <li><p>Create a DataFrame from <font color='green'>payoff_dict</font></p></li>
 </ol>
-<section id="dowload-excel-workbook">
+</div><section id="dowload-excel-workbook">
 <h2>Dowload excel workbook<a class="headerlink" href="#dowload-excel-workbook" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1272,12 +1327,19 @@ document.write(`
 </section>
 <section id="application-estimate-the-term-structure-with-the-first-twenty-bonds">
 <h1><font color='green'>Application: Estimate the term structure with the first twenty bonds</font><a class="headerlink" href="#application-estimate-the-term-structure-with-the-first-twenty-bonds" title="Link to this heading">#</a></h1>
+<div style="background-color:LightGray;
+    border-left: 12px solid green;
+    font-family: 'Garamond', serif;
+    font-size: 17px;
+    line-height: 1.5;
+    padding: 15px">
+<br>
 <ol class="arabic simple">
 <li><p>if you haven’t already created the payoff matrix, see the hints from the previous applicztion.</p></li>
 <li><p>Create transaction prices of the bonds with the Pandas <font color='green'>apply</font> method.</p></li>
 <li><p>Calculate the estimated zero prices with the linalg function  <font color='green'>lstsq</font>.</p></li>
 </ol>
-<section id="calculate-transaction-prices">
+</div><section id="calculate-transaction-prices">
 <h2>Calculate transaction prices<a class="headerlink" href="#calculate-transaction-prices" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1758,6 +1820,13 @@ To use the future default and silence this warning we advise to pass `rcond=None
 <section id="chapter-exercise">
 <h1><span style="text-align: left; color:green; font-family: 'Franklin Gothic Medium', sans-serif; margin-top: 1.0em; margin-bottom: 0em; font-style: italic;">Chapter Exercise</span><a class="headerlink" href="#chapter-exercise" title="Link to this heading">#</a></h1>
 <p><span style="text-align: left; color:green; font-family: 'Franklin Gothic Medium', sans-serif; margin-top: 0; margin-bottom: 0.5em; font-style: italic;"><big>Using the term structure calculated with 304 bonds</big></font></span></p>
+<div style="background-color:LightGray;
+    border-left: 12px solid green;
+    font-family: 'Garamond', serif;
+    font-size: 17px;
+    line-height: 1.5;
+    padding: 15px">
+<br>
 <p>Calculate the forward rates for the following dates.</p>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
@@ -1784,6 +1853,13 @@ To use the future default and silence this warning we advise to pass `rcond=None
 </tbody>
 </table>
 </div>
+<div style="background-color:LightGray;
+    border-left: 12px solid green;
+    font-family: 'Garamond', serif;
+    font-size: 17px;
+    line-height: 1.5;
+    padding: 15px">
+<br>
 <ol class="arabic simple">
 <li><p>Download Excel workbook from Dropbox</p></li>
 <li><p>Create the transaction prices with <font color='green'>accrued_interest</font> function</p></li>
@@ -2383,6 +2459,15 @@ To use the future default and silence this warning we advise to pass `rcond=None
         <p class="prev-next-subtitle">previous</p>
         <p class="prev-next-title">Chapter Four Hints</p>
       </div>
+    </a>
+    <a class="right-next"
+       href="Chapter_Five_Hints.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Chapter Five Hints</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>

@@ -25,4 +25,9 @@ parts:
     chapters:
     - file: Chapter_Four_Hints
     - file: Chapter_Four_Results
+  - caption: Chapter Five Hints And Results 
+    chapters:
+    - file: Chapter_Five_Hints
+    - file: Chapter_Five_Results
+
  
