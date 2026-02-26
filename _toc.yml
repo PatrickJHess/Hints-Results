@@ -33,4 +33,8 @@ parts:
     chapters:
     - file: Chapter_Six_Hints
     - file: Chapter_Six_Results
+  - caption: Chapter Seven Hints And Results 
+    chapters:
+    - file: Chapter_Seven_Hints
+    - file: Chapter_Seven_Results
  
