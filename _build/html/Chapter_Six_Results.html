@@ -1,0 +1,2711 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Chapter Six Results &#8212; Hints &amp; Results</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Chapter_Six_Results';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Chapter Six Hints" href="Chapter_Six_Hints.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/Small_Logo.svg" class="logo__image only-light" alt="Hints & Results - Home"/>
+    <script>document.write(`<img src="_static/Small_Logo.svg" class="logo__image only-dark" alt="Hints & Results - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Financial Python
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Interacting%20With%20Jupyter%20Books.html">Working With Jupyter Books</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Chapter One Hints And Results</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Chapter_One_Hints.html">Chapter One Hints</a></li>
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="Chapter_One_Results.html">Chapter One Expected Results</a></li>
+
+
+
+
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Chapter Two Hints And Results</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Chapter_Two_Hints.html">Chapter Two Hints</a></li>
+
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="Chapter_Two_Results.html">Chapter Two Expected Results</a></li>
+
+
+
+
+
+
+
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Chapter Three Hints And Results</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Chapter_Three_Hints.html">Chapter Three Hints</a></li>
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="Chapter_Three_Results.html">Chapter Three Results</a></li>
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Chapter Four Hints And Results</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Chapter_Four_Hints.html">Chapter Four Hints</a></li>
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="Chapter_Four_Results.html">Chapter Four Results</a></li>
+
+
+
+
+
+
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Chapter Five Hints And Results</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Chapter_Five_Hints.html">Chapter Five Hints</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="Chapter_Five_Results.html">Chapter Five Results</a></li>
+
+
+
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Chapter Six Hints And Results</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Chapter_Six_Hints.html">Chapter Six Hints</a></li>
+
+
+
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Chapter Six Results</a></li>
+
+
+
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/PatrickJHess/Hints-Results/master?urlpath=tree/Chapter_Six_Results.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Binder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Binder logo" src="_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/PatrickJHess/Hints-Results/blob/master/Chapter_Six_Results.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/PatrickJHess/Hints-Results" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/PatrickJHess/Hints-Results/issues/new?title=Issue%20on%20page%20%2FChapter_Six_Results.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Chapter_Six_Results.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Chapter Six Results</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Chapter Six Results</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#application-make-the-initial-guess-7-and-calculate-two-new-guesses-for-the-following-bonds"><font color="green">Application: Make the initial guess 7% and calculate two new guesses for the following bonds:</font></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#application-for-january-31-st-2030-example-update-guess-from-5-and-recalculate-present-value-with-updated-guess"><font color="green">Application: For January 31<span class="math notranslate nohighlight">\(^{st}\)</span> 2030 example update guess from 5% and recalculate present value with updated guess</font></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#required-modules">Required modules</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculating-present-value-and-derivatives-the-bond-pv-function">Calculating present value and derivatives: the <font color="green">bond_pv</font> function</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#download-bond-data">Download bond data</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#estimating-the-spot-rates-for-the-149-dates">Estimating the spot rates for the 149 dates</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#chapter-exercise"><span style="text-align: left; color:green; font-family: 'Franklin Gothic Medium', sans-serif; margin-top: 1.0em; margin-bottom: 0em; font-style: italic;">Chapter Exercise</span></a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="chapter-six-results">
+<h1>Chapter Six Results<a class="headerlink" href="#chapter-six-results" title="Link to this heading">#</a></h1>
+</section>
+<section id="application-make-the-initial-guess-7-and-calculate-two-new-guesses-for-the-following-bonds">
+<h1><font color='green'>Application: Make the initial guess 7% and calculate two new guesses for the following bonds:</font><a class="headerlink" href="#application-make-the-initial-guess-7-and-calculate-two-new-guesses-for-the-following-bonds" title="Link to this heading">#</a></h1>
+<div style="
+    border-left: 12px solid green;
+    line-height: 1.5;
+    padding: 15px">
+<br>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Maturity</p></th>
+<th class="head"><p>Coupon</p></th>
+<th class="head"><p>Spot Rate</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>   Six Months</p></td>
+<td><p>   0</p></td>
+<td><p> 4%</p></td>
+</tr>
+<tr class="row-odd"><td><p>   One Year</p></td>
+<td><p>   0</p></td>
+<td><p> 5%</p></td>
+</tr>
+<tr class="row-even"><td><p>   One Year</p></td>
+<td><p>   5</p></td>
+<td><p> </p></td>
+</tr>
+<tr class="row-odd"><td><p><br></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<ol class="arabic simple">
+<li><p><strong>Calculate bond prices at spot rates</strong></p>
+<ul class="simple">
+<li><p>Import Numpy for continuous compounding function np.exp()</p></li>
+<li><p>Calculate present value factors: 0.5 years and 1.0 years at spot rates</p></li>
+<li><p>Bond prices equal sum of cash flow present values</p></li>
+</ul>
+</li>
+<li><p><strong>Calculate bond prices and first derivatives at first guess rate = 7%</strong></p></li>
+<li><p><strong>Update prices and values with two more guesses</strong></p></li>
+</ol>
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="k">except</span><span class="p">:</span>
+    <span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>numpy
+    <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># actual spot rates = .04, .05</span>
+<span class="c1"># present value factors</span>
+<span class="n">pv_6mo</span><span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="mf">.04</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">pv_12mo</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="mf">.05</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">pv_6mo</span> <span class="p">,</span><span class="n">pv_12mo</span> <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.9801986733067553 0.951229424500714
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># bond cash flows intialized as tuples</span>
+<span class="n">cf_6mo_zero</span><span class="o">=</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">cf_12mo_zero</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">cf_12mo_coupon5</span><span class="o">=</span><span class="p">(</span><span class="mf">2.5</span><span class="p">,</span><span class="mf">102.5</span><span class="p">)</span>
+<span class="c1"># bond value equals sum of cash flow present values</span>
+<span class="n">bond_value_6mo_zero</span><span class="o">=</span><span class="n">pv_6mo</span><span class="o">*</span><span class="n">cf_6mo_zero</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="n">pv_12mo</span><span class="o">*</span><span class="n">cf_6mo_zero</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">bond_value_12mo_zero</span><span class="o">=</span><span class="n">pv_6mo</span><span class="o">*</span><span class="n">cf_12mo_zero</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="n">pv_12mo</span><span class="o">*</span><span class="n">cf_12mo_zero</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">bond_value_12mo_coupon5</span><span class="o">=</span><span class="n">pv_6mo</span><span class="o">*</span><span class="n">cf_12mo_coupon5</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="n">pv_12mo</span><span class="o">*</span><span class="n">cf_12mo_coupon5</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">bond_prices</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">bond_value_6mo_zero</span><span class="p">,</span><span class="n">bond_value_12mo_zero</span><span class="p">,</span><span class="n">bond_value_12mo_coupon5</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Bond Prices = &#39;</span><span class="p">,</span><span class="n">bond_prices</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Bond Prices =  [98.01986733 95.12294245 99.95151269]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># solving for yield to maturity</span>
+<span class="c1"># initial rate guess for each bond = 7%</span>
+<span class="n">guess</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">.07</span><span class="p">,</span><span class="mf">.07</span><span class="p">,</span><span class="mf">.07</span><span class="p">])</span>
+<span class="c1"># subsequent guesses need to remove comment sign from next statement</span>
+<span class="n">guess</span><span class="o">=</span><span class="n">guess_new</span>
+<span class="c1"># present value factors</span>
+<span class="n">pv_6mo</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">guess</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">pv_12mo</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">guess</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">pv_coupon</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">guess</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+
+<span class="n">bond_value_6mo_zero</span><span class="o">=</span><span class="n">pv_6mo</span><span class="o">*</span><span class="n">cf_6mo_zero</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="n">pv_6mo</span><span class="o">*</span><span class="n">cf_6mo_zero</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">bond_value_12mo_zero</span><span class="o">=</span><span class="n">pv_12mo</span><span class="o">*</span><span class="n">cf_12mo_zero</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="n">pv_12mo</span><span class="o">*</span><span class="n">cf_12mo_zero</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">bond_value_12mo_coupon5</span><span class="o">=</span><span class="n">pv_coupon</span><span class="o">*</span><span class="n">cf_12mo_coupon5</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="n">pv_coupon</span><span class="o">*</span><span class="n">cf_12mo_coupon5</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">bond_values</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">bond_value_6mo_zero</span><span class="p">,</span><span class="n">bond_value_12mo_zero</span><span class="p">,</span><span class="n">bond_value_12mo_coupon5</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Bond Value Guesses = &#39;</span><span class="p">,</span><span class="n">bond_values</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_31816</span><span class="o">/</span><span class="mf">3130764043.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">guess</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">.07</span><span class="p">,</span><span class="mf">.07</span><span class="p">,</span><span class="mf">.07</span><span class="p">])</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="c1"># subsequent guesses need to remove comment sign from next statement</span>
+<span class="ne">----&gt; </span><span class="mi">5</span> <span class="n">guess</span><span class="o">=</span><span class="n">guess_new</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="c1"># present value factors</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="n">pv_6mo</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">guess</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;guess_new&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># price errors equal actual bond price - guess value</span>
+<span class="n">errors</span><span class="o">=</span><span class="n">bond_prices</span><span class="o">-</span><span class="n">bond_values</span>
+<span class="n">errors</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([-0.01108321, -0.01915398, -0.04684359])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># first derivative at guess rate</span>
+<span class="c1"># first derivative equals negative  sum of cash flow present values</span>
+<span class="c1"># weighted by year (0.5 or 1.0)</span>
+
+<span class="n">derivative_6mo_zero</span><span class="o">=</span>    <span class="o">-</span><span class="p">(</span><span class="n">pv_6mo</span><span class="o">*</span><span class="n">cf_6mo_zero</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="mf">.5</span> <span class="o">+</span>    <span class="n">pv_12mo</span><span class="o">*</span><span class="n">cf_6mo_zero</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="mf">1.0</span><span class="p">)</span>
+<span class="n">derivative_12mo_zero</span><span class="o">=</span>   <span class="o">-</span><span class="p">(</span><span class="n">pv_12mo</span><span class="o">*</span><span class="n">cf_12mo_zero</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="mf">0.5</span> <span class="o">+</span>   <span class="n">pv_12mo</span><span class="o">*</span><span class="n">cf_12mo_zero</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">derivative_12mo_coupon5</span><span class="o">=-</span><span class="p">(</span><span class="n">pv_coupon</span><span class="o">*</span><span class="n">cf_12mo_coupon5</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="mf">0.5</span> <span class="o">+</span> <span class="n">pv_coupon</span><span class="o">*</span><span class="n">cf_12mo_coupon5</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="mf">1.0</span><span class="p">)</span>
+<span class="n">bond_derivatives</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">derivative_6mo_zero</span><span class="p">,</span><span class="n">derivative_12mo_zero</span><span class="p">,</span><span class="n">derivative_12mo_coupon5</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Derivative Values = &#39;</span><span class="p">,</span><span class="n">bond_derivatives</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Derivative Values =  [-49.01547527 -95.14209643 -98.80789966]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># errors are scaled by derivative values to find increment to guess</span>
+<span class="n">delta_guess</span><span class="o">=</span><span class="n">errors</span><span class="o">/</span><span class="n">bond_derivatives</span>
+<span class="n">delta_guess</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0.00022612, 0.00020132, 0.00047409])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">guess_new</span><span class="o">=</span><span class="n">guess</span><span class="o">+</span><span class="n">delta_guess</span>
+<span class="n">guess_new</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0.03999999, 0.04999998, 0.04928069])
+</pre></div>
+</div>
+</div>
+</div>
+<p>Go back to “solving for yield to maturity” code cell and remove comment sign (#) from:
+guess=guess_new
+Rerun code cells to see new bond values, errors, derivatives and new rate guesses</p>
+<p><strong>First guess of 7% gives:</strong></p>
+<ul class="simple">
+<li><p>delta_guess = array([-0.03022613, -0.02020134, -0.0211934 ])</p></li>
+<li><p>guess-new =   array([0.03977387, 0.04979866, 0.0488066 ])</p></li>
+</ul>
+<p><strong>Second guess of [0.03977387, 0.04979866, 0.0488066 ] gives:</strong></p>
+<ul class="simple">
+<li><p>delta_guess = array([0.00022612, 0.00020132, 0.00047409]))</p></li>
+<li><p>guess-new =   array([0.03999999, 0.04999998, 0.04928069])</p></li>
+</ul>
+<p>Yields to maturity are discovered after two rounds of
+4.0%, 5.0% and 4.92% for the three bonds.</p>
+</section>
+<section id="application-for-january-31-st-2030-example-update-guess-from-5-and-recalculate-present-value-with-updated-guess">
+<h1><font color='green'>Application: For January 31<span class="math notranslate nohighlight">\(^{st}\)</span> 2030 example update guess from 5% and recalculate present value with updated guess</font><a class="headerlink" href="#application-for-january-31-st-2030-example-update-guess-from-5-and-recalculate-present-value-with-updated-guess" title="Link to this heading">#</a></h1>
+<br>
+Use the present value calculated with spot rates as the target value.
+<br>
+<div style="
+    border-left: 12px solid green;
+    line-height: 1.5;
+    padding: 15px">
+<br>
+<ol class="arabic simple">
+<li><p><strong>Import Required Modules:</strong></p>
+<ul class="simple">
+<li><p>Built-in modules</p></li>
+<li><p>Pandas (install if necessary)</p></li>
+<li><p>Custom modules:</p>
+<ul>
+<li><p><font color='green'>accrued_interest</font></p></li>
+<li><p><font color='green'>create_payoff_matrix</font></p></li>
+<li><p><font color='green'>bond_pay_data</font></p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Add user defined functions:</strong></p>
+<ul class="simple">
+<li><p><font color='green'>bond_pv</font></p></li>
+</ul>
+</li>
+<li><p><strong>Download Data:</strong></p>
+<ul class="simple">
+<li><p>Retrieve the <font color='green'>bond_data</font> file from DropBox.</p></li>
+</ul>
+</li>
+<li><p><strong>Perform Calculations:</strong></p>
+<ul class="simple">
+<li><p>Using 5% as first guess. execute <font color='green'>bond_pv</font> for present value and derivative values</p></li>
+<li><p>Update price and values with one more guess</p></li>
+</ul>
+</li>
+</ol>
+</div><section id="required-modules">
+<h2>Required modules<a class="headerlink" href="#required-modules" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import OS to interact with local computer operating system</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">types</span><span class="w"> </span><span class="kn">import</span> <span class="n">ModuleType</span>
+<span class="c1"># Import the datetime and date classes from the datetime module</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">datetime</span><span class="w"> </span><span class="kn">import</span> <span class="n">datetime</span><span class="p">,</span> <span class="n">date</span>
+
+<span class="c1"># Import the Pandas library for data manipulation and analysis, aliased as pd.</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="k">except</span><span class="p">:</span>
+    <span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>pandas
+    <span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+
+<span class="c1"># Import the NumPy library for data manipulation and analysis, aliased as np.</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="k">except</span><span class="p">:</span>
+    <span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>numpy
+    <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define the URL of the Python module to be downloaded from Dropbox.</span>
+<span class="c1"># The &#39;dl=1&#39; parameter in the URL forces a direct download of the file content.</span>
+<span class="n">url</span><span class="o">=</span> <span class="s1">&#39;https://www.dropbox.com/scl/fi/4y5hjxlfphh1ngvbgo77q/</span><span class="se">\</span>
+<span class="s1">module_-basic_concepts_fixed_income.py?rlkey=6oxi7mgka42veaat79hcv8boz&amp;st=87sztshr&amp;dl=1&#39;</span>
+<span class="n">module_name</span><span class="o">=</span><span class="s1">&#39;basic_concepts_fixed_income&#39;</span>
+<span class="c1"># Send an HTTP GET request to the URL and store the server&#39;s response.</span>
+<span class="k">try</span><span class="p">:</span>
+  <span class="n">response</span><span class="o">=</span><span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+  <span class="c1"># Raise an exception for bad status codes (like 404 Not Found)</span>
+  <span class="n">response</span><span class="o">.</span><span class="n">raise_for_status</span><span class="p">()</span>
+  <span class="n">module</span><span class="o">=</span> <span class="n">ModuleType</span><span class="p">(</span><span class="n">module_name</span><span class="p">)</span>
+  <span class="c1">#Code contained in response.text executed</span>
+  <span class="n">exec</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="n">module</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">)</span>
+  <span class="c1"># Module added to sys</span>
+  <span class="n">sys</span><span class="o">.</span><span class="n">modules</span><span class="p">[</span><span class="n">module_name</span><span class="p">]</span><span class="o">=</span><span class="n">module</span>
+<span class="k">except</span> <span class="n">requests</span><span class="o">.</span><span class="n">exceptions</span><span class="o">.</span><span class="n">RequestException</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;❌ Error: Could not fetch module from URL. </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;❌ Error: Failed to execute or import the module. </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Now that &#39;basic_concepts_fixed_income&#39; exists in the notebook, import the specific functions</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">basic_concepts_fixed_income</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span><span class="n">accrued_interest</span><span class="p">,</span>
+                                         <span class="n">create_payoff_matrix</span><span class="p">,</span>
+                                         <span class="n">bond_pay_data</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="calculating-present-value-and-derivatives-the-bond-pv-function">
+<h2>Calculating present value and derivatives: the <font color='green'>bond_pv</font> function<a class="headerlink" href="#calculating-present-value-and-derivatives-the-bond-pv-function" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">bond_pv</span><span class="p">(</span><span class="n">rates</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">data_dict</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">settlement</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">  </span><span class="sd">&#39;&#39;&#39;Calculates a bond&#39;s present value, and its first and second derivatives.</span>
+
+<span class="sd">  This function prices a bond by discounting its future cash flows using a</span>
+<span class="sd">  provided set of continuously compounded interest rates. It also computes the</span>
+<span class="sd">  first and second derivatives of the present value with respect to the rates,</span>
+<span class="sd">  which are fundamental inputs for calculating risk measures like dollar duration</span>
+<span class="sd">  and convexity.</span>
+
+<span class="sd">  The time to payment is calculated using an Actual/365.25 day-count convention.</span>
+<span class="sd">  If the provided array of rates is shorter than the number of payments, the</span>
+<span class="sd">  last rate is used to extrapolate for all subsequent payments.</span>
+
+<span class="sd">  Args:</span>
+<span class="sd">      rates (float or np.ndarray): The continuously compounded discount rate or an</span>
+<span class="sd">          array of rates. If a single float is provided, it&#39;s applied to all</span>
+<span class="sd">          cash flows.</span>
+<span class="sd">      data_dict (dict): A dictionary that must contain the bond&#39;s payment data.</span>
+<span class="sd">          It can optionally specify the settlement date.</span>
+<span class="sd">          - &#39;pay_data&#39; (tuple): A required tuple of two NumPy arrays:</span>
+<span class="sd">            (payment_dates, payment_amounts).</span>
+<span class="sd">          - &#39;settlement&#39; (datetime.date): An optional valuation date.</span>
+<span class="sd">      settlement (datetime.date, optional): The valuation date. This argument is</span>
+<span class="sd">          used if a settlement date is not found in `data_dict`. It defaults</span>
+<span class="sd">          to the current system date if not provided elsewhere.</span>
+
+<span class="sd">  Returns:</span>
+<span class="sd">      tuple: A tuple of three floats:</span>
+<span class="sd">      - Present Value: The bond&#39;s price,.</span>
+<span class="sd">      - First Derivative: The derivative of PV with respect to rates. This is related</span>
+<span class="sd">        to the bond&#39;s dollar duration.</span>
+<span class="sd">      - Second Derivative: The second derivative of PV with respect to rates.</span>
+<span class="sd">        This is related to the bond&#39;s dollar convexity.</span>
+
+<span class="sd">  Raises:</span>
+<span class="sd">      TypeError: If &#39;pay_data&#39; is not a tuple of two NumPy arrays or if</span>
+<span class="sd">                 &#39;rates&#39; is not numeric.</span>
+<span class="sd">      ValueError: If the dates and payments arrays within &#39;pay_data&#39; are not</span>
+<span class="sd">                  the same size.</span>
+<span class="sd">  &#39;&#39;&#39;</span>
+  <span class="c1"># Import necessary libraries</span>
+  <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+  <span class="kn">from</span><span class="w"> </span><span class="nn">datetime</span><span class="w"> </span><span class="kn">import</span> <span class="n">date</span>
+
+  <span class="c1"># if settlement in dictionary otherwise value passed is no settlement None</span>
+  <span class="n">settlement</span><span class="o">=</span><span class="n">data_dict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;settlement&#39;</span><span class="p">,</span><span class="n">settlement</span><span class="p">)</span>
+  <span class="c1"># settlement date is today if it&#39;s not provided</span>
+  <span class="k">if</span> <span class="n">settlement</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">settlement</span><span class="o">=</span><span class="n">date</span><span class="o">.</span><span class="n">today</span><span class="p">()</span>
+  <span class="n">pay_data</span><span class="o">=</span><span class="n">data_dict</span><span class="p">[</span><span class="s1">&#39;pay_data&#39;</span><span class="p">]</span>
+
+<span class="c1"># Validate the structure and types within pay_data</span>
+  <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">pay_data</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">)</span> <span class="ow">or</span> <span class="nb">len</span><span class="p">(</span><span class="n">pay_data</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">2</span><span class="p">:</span>
+      <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;&#39;pay_data&#39; must be a tuple of (dates_array, payments_array).&quot;</span><span class="p">)</span>
+  <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="nb">isinstance</span><span class="p">(</span><span class="n">pay_data</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">pay_data</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)):</span>
+      <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Both items in &#39;pay_data&#39; must be NumPy arrays.&quot;</span><span class="p">)</span>
+  <span class="k">if</span> <span class="n">pay_data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">size</span> <span class="o">!=</span> <span class="n">pay_data</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">size</span><span class="p">:</span>
+      <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Dates and payments arrays in &#39;pay_data&#39; must have the same size.&quot;</span><span class="p">)</span>
+  <span class="c1"># --- Input Validation ---</span>
+    <span class="c1"># Convert rates to a NumPy array and validate</span>
+  <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">rates</span><span class="p">,</span> <span class="s1">&#39;__iter__&#39;</span><span class="p">):</span>
+      <span class="n">rates</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">rates</span><span class="p">])</span>
+  <span class="k">else</span><span class="p">:</span>
+      <span class="n">rates</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">rates</span><span class="p">)</span>
+
+  <span class="k">if</span> <span class="ow">not</span> <span class="n">np</span><span class="o">.</span><span class="n">issubdtype</span><span class="p">(</span><span class="n">rates</span><span class="o">.</span><span class="n">dtype</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">number</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;&#39;rates&#39; must contain only numeric data.&quot;</span><span class="p">)</span>
+
+  <span class="c1"># Calculate the time to each payment in years from the settlement date</span>
+  <span class="c1"># Convert dates to NumPy datetime64, float difference convert to years</span>
+  <span class="n">pay_dates</span><span class="o">=</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">pay_data</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;datetime64[D]&#39;</span><span class="p">)</span>
+             <span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">datetime64</span><span class="p">(</span><span class="n">settlement</span><span class="p">))</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span><span class="o">/</span><span class="mf">365.25</span>
+
+  <span class="c1"># Ensure there is a discount rate for every payment date</span>
+  <span class="k">if</span> <span class="n">rates</span><span class="o">.</span><span class="n">size</span><span class="o">&lt;</span><span class="n">pay_dates</span><span class="o">.</span><span class="n">size</span><span class="p">:</span>
+  <span class="c1">#If single rate create an array of that single rate</span>
+    <span class="k">if</span> <span class="n">rates</span><span class="o">.</span><span class="n">size</span><span class="o">==</span><span class="mi">1</span><span class="p">:</span>
+      <span class="n">rates</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">full</span><span class="p">(</span><span class="n">pay_dates</span><span class="o">.</span><span class="n">size</span><span class="p">,</span><span class="n">rates</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+   <span class="c1">#If more than one but less then size of pay dates</span>
+    <span class="k">else</span><span class="p">:</span>
+      <span class="n">rates</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">rates</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">full</span><span class="p">(</span><span class="n">pay_dates</span><span class="o">.</span><span class="n">size</span><span class="o">-</span><span class="n">rates</span><span class="o">.</span><span class="n">size</span><span class="p">,</span><span class="n">rates</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]))</span>
+
+  <span class="c1">#Calculate pv of each payment and sum to get value</span>
+  <span class="n">pv_payments</span><span class="o">=</span><span class="n">pay_data</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">rates</span><span class="o">*</span><span class="n">pay_dates</span><span class="p">)</span>
+  <span class="n">value</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">pv_payments</span><span class="p">)</span>
+
+  <span class="c1">#Derivatives for each payment</span>
+  <span class="n">derivatives_array</span><span class="o">=-</span><span class="n">pay_dates</span><span class="o">*</span><span class="n">pv_payments</span>
+
+  <span class="c1">#First derivative</span>
+  <span class="n">first_derivative</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">derivatives_array</span><span class="p">)</span>
+
+  <span class="c1">#Second derivative</span>
+  <span class="n">second_derivative</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="o">-</span><span class="n">pay_dates</span><span class="o">*</span><span class="n">derivatives_array</span><span class="p">)</span>
+  <span class="k">return</span> <span class="n">value</span><span class="p">,</span><span class="n">first_derivative</span><span class="p">,</span><span class="n">second_derivative</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="download-bond-data">
+<h2>Download bond data<a class="headerlink" href="#download-bond-data" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#The full file path.</span>
+<span class="n">url</span><span class="o">=</span><span class="s1">&#39;https://www.dropbox.com/scl/fi/lgnaj41bt8o9sv5a63rr1/</span><span class="se">\</span>
+<span class="s1">bond_data_jan21_2025.xlsx?rlkey=twjzkcqo0g2ahvot78518ti4x&amp;st=ihc5feog&amp;dl=1&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Attempting to load data from: </span><span class="si">{</span><span class="n">url</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1">#Load the data from Excel, using the first column as the index.</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">bond_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="s1">&#39;Maturity Date&#39;</span><span class="p">,</span><span class="n">sheet_name</span><span class="o">=</span><span class="s1">&#39;Fidelity Data&#39;</span><span class="p">)</span>
+
+    <span class="c1"># Display the first and last 5 rows of the loaded DataFrame to verify it worked.</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">bond_data</span><span class="p">)</span>
+
+<span class="k">except</span> <span class="ne">FileNotFoundError</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">ERROR: File not found.&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Please check that the &#39;folder&#39; and &#39;file&#39; variables are spelled correctly&#39;</span><span class="se">\</span>
+<span class="s2">&#39; and that the file exists in that location.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Attempting to load data from: https://www.dropbox.com/scl/fi/lgnaj41bt8o9sv5a63rr1/bond_data_jan21_2025.xlsx?rlkey=twjzkcqo0g2ahvot78518ti4x&amp;st=ihc5feog&amp;dl=1
+</pre></div>
+</div>
+<div class="output text_html">
+  <div id="df-395f5641-7e60-4c24-bec6-6f983184ffe1" class="colab-df-container">
+    <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Description</th>
+      <th>Coupon</th>
+      <th>Price Bid</th>
+      <th>Price Ask</th>
+      <th>Bid Size</th>
+      <th>Ask Size</th>
+    </tr>
+    <tr>
+      <th>Maturity Date</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2025-01-28</th>
+      <td>UNITED STATES TREAS BILLS ZERO CPN       0.000...</td>
+      <td>0.000</td>
+      <td>99.929</td>
+      <td>99.930</td>
+      <td>100000</td>
+      <td>100000</td>
+    </tr>
+    <tr>
+      <th>2025-01-30</th>
+      <td>UNITED STATES TREAS BILLS ZERO CPN       0.000...</td>
+      <td>0.000</td>
+      <td>99.906</td>
+      <td>99.907</td>
+      <td>40000</td>
+      <td>40000</td>
+    </tr>
+    <tr>
+      <th>2025-01-31</th>
+      <td>UNITED STATES TREAS SER U-2025          1.3750...</td>
+      <td>1.375</td>
+      <td>99.921</td>
+      <td>99.934</td>
+      <td>60000</td>
+      <td>60000</td>
+    </tr>
+    <tr>
+      <th>2025-01-31</th>
+      <td>UNITED STATES TREAS SER AW-2025         4.1250...</td>
+      <td>4.125</td>
+      <td>99.988</td>
+      <td>99.997</td>
+      <td>60000</td>
+      <td>60000</td>
+    </tr>
+    <tr>
+      <th>2025-01-31</th>
+      <td>UNITED STATES TREAS SER G-2025          2.5000...</td>
+      <td>2.500</td>
+      <td>99.953</td>
+      <td>99.965</td>
+      <td>60000</td>
+      <td>60000</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>2029-11-30</th>
+      <td>UNITED STATES TREAS SER AG-2029         4.1250...</td>
+      <td>4.125</td>
+      <td>98.910</td>
+      <td>98.914</td>
+      <td>100000</td>
+      <td>100000</td>
+    </tr>
+    <tr>
+      <th>2029-11-30</th>
+      <td>UNITED STATES TREAS SER S-2029          3.8750...</td>
+      <td>3.875</td>
+      <td>97.763</td>
+      <td>97.782</td>
+      <td>40000</td>
+      <td>40000</td>
+    </tr>
+    <tr>
+      <th>2029-12-31</th>
+      <td>UNITED STATES TREAS SER T-2029          3.8750...</td>
+      <td>3.875</td>
+      <td>97.734</td>
+      <td>97.738</td>
+      <td>65000</td>
+      <td>65000</td>
+    </tr>
+    <tr>
+      <th>2029-12-31</th>
+      <td>UNITED STATES TREAS SER AH-2029         4.3750...</td>
+      <td>4.375</td>
+      <td>99.988</td>
+      <td>99.989</td>
+      <td>7000</td>
+      <td>7000</td>
+    </tr>
+    <tr>
+      <th>2030-01-31</th>
+      <td>UNITED STATES TREAS SER G-2030          3.5000...</td>
+      <td>3.500</td>
+      <td>95.994</td>
+      <td>96.011</td>
+      <td>16000</td>
+      <td>16000</td>
+    </tr>
+  </tbody>
+</table>
+<p>304 rows × 6 columns</p>
+</div>
+    <div class="colab-df-buttons">
+
+  <div class="colab-df-container">
+    <button class="colab-df-convert" onclick="convertToInteractive('df-395f5641-7e60-4c24-bec6-6f983184ffe1')"
+            title="Convert this dataframe to an interactive table."
+            style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960">
+    <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"/>
+  </svg>
+    </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    .colab-df-buttons div {
+      margin-bottom: 4px;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+    <script>
+      const buttonEl =
+        document.querySelector('#df-395f5641-7e60-4c24-bec6-6f983184ffe1 button.colab-df-convert');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      async function convertToInteractive(key) {
+        const element = document.querySelector('#df-395f5641-7e60-4c24-bec6-6f983184ffe1');
+        const dataTable =
+          await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                    [key], {});
+        if (!dataTable) return;
+
+        const docLinkHtml = 'Like what you see? Visit the ' +
+          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+          + ' to learn more about interactive tables.';
+        element.innerHTML = '';
+        dataTable['output_type'] = 'display_data';
+        await google.colab.output.renderOutput(dataTable, element);
+        const docLink = document.createElement('div');
+        docLink.innerHTML = docLinkHtml;
+        element.appendChild(docLink);
+      }
+    </script>
+  </div>
+
+
+  <div id="id_5dd82ff3-62d5-43ac-94db-b9955453159e">
+    <style>
+      .colab-df-generate {
+        background-color: #E8F0FE;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        display: none;
+        fill: #1967D2;
+        height: 32px;
+        padding: 0 0 0 0;
+        width: 32px;
+      }
+
+      .colab-df-generate:hover {
+        background-color: #E2EBFA;
+        box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+        fill: #174EA6;
+      }
+
+      [theme=dark] .colab-df-generate {
+        background-color: #3B4455;
+        fill: #D2E3FC;
+      }
+
+      [theme=dark] .colab-df-generate:hover {
+        background-color: #434B5C;
+        box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+        filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+        fill: #FFFFFF;
+      }
+    </style>
+    <button class="colab-df-generate" onclick="generateWithVariable('bond_data')"
+            title="Generate code using this dataframe."
+            style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M7,19H8.4L18.45,9,17,7.55,7,17.6ZM5,21V16.75L18.45,3.32a2,2,0,0,1,2.83,0l1.4,1.43a1.91,1.91,0,0,1,.58,1.4,1.91,1.91,0,0,1-.58,1.4L9.25,21ZM18.45,9,17,7.55Zm-12,3A5.31,5.31,0,0,0,4.9,8.1,5.31,5.31,0,0,0,1,6.5,5.31,5.31,0,0,0,4.9,4.9,5.31,5.31,0,0,0,6.5,1,5.31,5.31,0,0,0,8.1,4.9,5.31,5.31,0,0,0,12,6.5,5.46,5.46,0,0,0,6.5,12Z"/>
+  </svg>
+    </button>
+    <script>
+      (() => {
+      const buttonEl =
+        document.querySelector('#id_5dd82ff3-62d5-43ac-94db-b9955453159e button.colab-df-generate');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      buttonEl.onclick = () => {
+        google.colab.notebook.generateWithVariable('bond_data');
+      }
+      })();
+    </script>
+  </div>
+
+    </div>
+  </div>
+</div></div>
+</div>
+</section>
+</section>
+<section id="estimating-the-spot-rates-for-the-149-dates">
+<h1>Estimating the spot rates for the 149 dates<a class="headerlink" href="#estimating-the-spot-rates-for-the-149-dates" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">settlement</span><span class="o">=</span><span class="n">date</span><span class="p">(</span><span class="mi">2025</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">21</span><span class="p">)</span>
+<span class="c1"># apply the accrued_interest function to the DataFrame</span>
+<span class="n">bond_data</span><span class="p">[</span><span class="s1">&#39;Accrued&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">bond_data</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span>
+    <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">accrued_interest</span><span class="p">(</span>
+        <span class="n">maturity</span><span class="o">=</span><span class="n">x</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="c1"># Assuming index is maturity</span>
+        <span class="n">coupon</span><span class="o">=</span><span class="n">x</span><span class="p">[</span><span class="s1">&#39;Coupon&#39;</span><span class="p">],</span>
+        <span class="n">settlement</span><span class="o">=</span><span class="n">settlement</span><span class="p">,</span>
+        <span class="n">freq</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+        <span class="n">day_type</span><span class="o">=</span><span class="s1">&#39;Actual/Actual&#39;</span>
+    <span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span>
+<span class="p">)</span>
+
+<span class="c1"># Calculate transaction prices</span>
+<span class="n">transaction_prices</span><span class="o">=</span><span class="p">((</span><span class="n">bond_data</span><span class="p">[</span><span class="s1">&#39;Price Bid&#39;</span><span class="p">]</span><span class="o">+</span><span class="n">bond_data</span><span class="p">[</span><span class="s1">&#39;Price Ask&#39;</span><span class="p">])</span><span class="o">/</span><span class="mi">2</span><span class="o">+</span>
+                    <span class="n">bond_data</span><span class="p">[</span><span class="s1">&#39;Accrued&#39;</span><span class="p">])</span>
+
+<span class="c1"># Create payoff matrix</span>
+<span class="n">payoffs</span><span class="p">,</span><span class="n">column_dates</span><span class="o">=</span><span class="n">create_payoff_matrix</span><span class="p">(</span><span class="n">bond_data</span><span class="p">,</span><span class="n">settlement</span><span class="o">=</span><span class="n">settlement</span><span class="p">,</span><span class="n">freq</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="c1"># Estimate the present value factors with least squares function of linalg module</span>
+<span class="n">zero_prices</span><span class="p">,</span><span class="n">ss2</span><span class="p">,</span><span class="n">rank</span><span class="p">,</span><span class="n">colInfo</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">lstsq</span><span class="p">(</span><span class="n">payoffs</span><span class="p">,</span><span class="n">transaction_prices</span><span class="p">)</span>
+
+<span class="c1"># Vectorize calculation of maturity in years with NumPy</span>
+<span class="c1"># Maturity of the bonds in years..convert date object to NumPy datetime64</span>
+<span class="n">maturity_years</span><span class="o">=</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">column_dates</span><span class="p">,</span><span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;datetime64[D]&#39;</span><span class="p">)</span><span class="o">-</span>
+                <span class="n">np</span><span class="o">.</span><span class="n">datetime64</span><span class="p">(</span><span class="n">settlement</span><span class="p">))</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span><span class="o">/</span><span class="mf">365.25</span>
+
+<span class="c1"># Continuously compounded annualized spot rates</span>
+<span class="c1"># name assigned string &#39;Spot Rates&#39;</span>
+<span class="n">spot_rates</span><span class="o">=-</span><span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">zero_prices</span><span class="p">)</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">maturity_years</span><span class="p">),</span>
+                      <span class="n">index</span><span class="o">=</span><span class="n">column_dates</span><span class="p">,</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;Spot Rates&#39;</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">spot_rates</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Spot Rates</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2025-01-28</th>
+      <td>0.036799</td>
+    </tr>
+    <tr>
+      <th>2025-01-30</th>
+      <td>0.037963</td>
+    </tr>
+    <tr>
+      <th>2025-01-31</th>
+      <td>0.040711</td>
+    </tr>
+    <tr>
+      <th>2025-02-04</th>
+      <td>0.039817</td>
+    </tr>
+    <tr>
+      <th>2025-02-06</th>
+      <td>0.040213</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>2029-10-31</th>
+      <td>0.043390</td>
+    </tr>
+    <tr>
+      <th>2029-11-15</th>
+      <td>0.043874</td>
+    </tr>
+    <tr>
+      <th>2029-11-30</th>
+      <td>0.043402</td>
+    </tr>
+    <tr>
+      <th>2029-12-31</th>
+      <td>0.043400</td>
+    </tr>
+    <tr>
+      <th>2030-01-31</th>
+      <td>0.043536</td>
+    </tr>
+  </tbody>
+</table>
+<p>149 rows × 1 columns</p>
+</div><br><label><b>dtype:</b> float64</label></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Get characteristics from bond_data DataFrame (last row of DataFrame)</span>
+<span class="n">ustreasury_2030_1_31</span><span class="o">=</span><span class="n">bond_data</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="c1"># Assign values</span>
+<span class="c1"># maturity last value of index, coupon from  column name, settlement 1/21/2025</span>
+<span class="n">maturity</span><span class="o">=</span><span class="n">bond_data</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">coupon</span><span class="o">=</span> <span class="n">ustreasury_2030_1_31</span><span class="p">[</span><span class="s1">&#39;Coupon&#39;</span><span class="p">]</span>
+<span class="n">settlement</span><span class="o">=</span><span class="n">date</span><span class="p">(</span><span class="mi">2025</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">21</span><span class="p">)</span>
+
+<span class="c1"># Get pay dates and amounts for the bond</span>
+<span class="n">pay_data</span><span class="o">=</span><span class="n">bond_pay_data</span><span class="p">(</span><span class="n">maturity</span><span class="p">,</span><span class="n">coupon</span><span class="p">,</span><span class="n">settlement</span><span class="o">=</span><span class="n">settlement</span><span class="p">,</span><span class="n">freq</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="c1"># data dictionary</span>
+<span class="n">data_dict</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;settlement&#39;</span><span class="p">:</span><span class="n">settlement</span><span class="p">,</span><span class="s1">&#39;pay_data&#39;</span><span class="p">:</span><span class="n">pay_data</span><span class="p">}</span>
+
+<span class="n">data_dict</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;settlement&#39;: datetime.date(2025, 1, 21),
+ &#39;pay_data&#39;: (array([datetime.date(2025, 1, 31), datetime.date(2025, 7, 31),
+         datetime.date(2026, 2, 2), datetime.date(2026, 7, 31),
+         datetime.date(2027, 2, 1), datetime.date(2027, 8, 2),
+         datetime.date(2028, 1, 31), datetime.date(2028, 7, 31),
+         datetime.date(2029, 1, 31), datetime.date(2029, 7, 31),
+         datetime.date(2030, 1, 31)], dtype=object),
+  array([  1.75,   1.75,   1.75,   1.75,   1.75,   1.75,   1.75,   1.75,
+           1.75,   1.75, 101.75]))}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># results for yield to maturity</span>
+<span class="n">guess</span><span class="o">=</span><span class="mf">.05</span>
+<span class="n">ytm_5</span><span class="o">=</span><span class="n">bond_pv</span><span class="p">(</span><span class="n">guess</span><span class="p">,</span><span class="n">data_dict</span><span class="o">=</span><span class="n">data_dict</span><span class="p">)</span>
+<span class="c1"># results from estimated spot rates</span>
+<span class="n">term_structure</span><span class="o">=</span><span class="n">bond_pv</span><span class="p">(</span><span class="n">spot_rates</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">pay_data</span><span class="p">[</span><span class="mi">0</span><span class="p">]],</span><span class="n">data_dict</span><span class="o">=</span><span class="n">data_dict</span><span class="p">)</span>
+
+<span class="c1"># create DataFrame of results</span>
+<span class="n">results_dict</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;5% Yield To Maturity&#39;</span><span class="p">:</span><span class="n">ytm_5</span><span class="p">,</span><span class="s1">&#39;Spot Rates&#39;</span><span class="p">:</span><span class="n">term_structure</span><span class="p">}</span>
+<span class="n">display</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">results_dict</span><span class="p">,</span><span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Values&#39;</span><span class="p">,</span><span class="s1">&#39;1st Derivatives&#39;</span><span class="p">,</span><span class="s1">&#39;2nd Derivatives&#39;</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-a0d3143e-7960-4e35-8e57-bb91f4c8efad" class="colab-df-container">
+    <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>5% Yield To Maturity</th>
+      <th>Spot Rates</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Values</th>
+      <td>94.795194</td>
+      <td>97.657391</td>
+    </tr>
+    <tr>
+      <th>1st Derivatives</th>
+      <td>-431.824569</td>
+      <td>-445.720259</td>
+    </tr>
+    <tr>
+      <th>2nd Derivatives</th>
+      <td>2105.714184</td>
+      <td>2174.386187</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+    <div class="colab-df-buttons">
+
+  <div class="colab-df-container">
+    <button class="colab-df-convert" onclick="convertToInteractive('df-a0d3143e-7960-4e35-8e57-bb91f4c8efad')"
+            title="Convert this dataframe to an interactive table."
+            style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960">
+    <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"/>
+  </svg>
+    </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    .colab-df-buttons div {
+      margin-bottom: 4px;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+    <script>
+      const buttonEl =
+        document.querySelector('#df-a0d3143e-7960-4e35-8e57-bb91f4c8efad button.colab-df-convert');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      async function convertToInteractive(key) {
+        const element = document.querySelector('#df-a0d3143e-7960-4e35-8e57-bb91f4c8efad');
+        const dataTable =
+          await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                    [key], {});
+        if (!dataTable) return;
+
+        const docLinkHtml = 'Like what you see? Visit the ' +
+          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+          + ' to learn more about interactive tables.';
+        element.innerHTML = '';
+        dataTable['output_type'] = 'display_data';
+        await google.colab.output.renderOutput(dataTable, element);
+        const docLink = document.createElement('div');
+        docLink.innerHTML = docLinkHtml;
+        element.appendChild(docLink);
+      }
+    </script>
+  </div>
+
+
+    </div>
+  </div>
+</div></div>
+</div>
+<p>The bond_pv function returns the necessary inputs to calculate the next guess to solve for the yield to maturity:</p>
+<ul class="simple">
+<li><p>The market price of the bond = the present value of cash flows based on spot rates (97.66).</p></li>
+<li><p>The value of the cash flows based on the initial guess of 5.0%</p></li>
+<li><p>The first derivative of the bond value function, evaluated at 5.0%.</p></li>
+</ul>
+<p>The updated guess equals the previous guess plus the pricing error (bond price - previous guess) divided by the derivative.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># pricing error</span>
+<span class="n">error</span><span class="o">=</span><span class="n">term_structure</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">-</span><span class="n">ytm_5</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="c1"># error is scaled by derivative value to find increment to guess</span>
+<span class="n">bond_derivative</span><span class="o">=</span><span class="n">term_structure</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">delta_guess</span><span class="o">=</span><span class="n">error</span><span class="o">/</span><span class="n">bond_derivative</span>
+<span class="n">guess_new</span><span class="o">=</span><span class="n">guess</span><span class="o">+</span><span class="n">delta_guess</span>
+<span class="c1">#revised guess is lower</span>
+<span class="n">guess_new</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(0.04357848973553153)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># results for yield to maturity with revised guess</span>
+<span class="n">guess</span><span class="o">=</span><span class="n">guess_new</span>
+<span class="n">ytm_new</span><span class="o">=</span><span class="n">bond_pv</span><span class="p">(</span><span class="n">guess</span><span class="p">,</span><span class="n">data_dict</span><span class="o">=</span><span class="n">data_dict</span><span class="p">)</span>
+
+<span class="c1"># create DataFrame of results</span>
+<span class="n">results_dict</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;5% Yield To Maturity&#39;</span><span class="p">:</span><span class="n">ytm_new</span><span class="p">,</span><span class="s1">&#39;Spot Rates&#39;</span><span class="p">:</span><span class="n">term_structure</span><span class="p">}</span>
+<span class="n">display</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">results_dict</span><span class="p">,</span><span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Values&#39;</span><span class="p">,</span><span class="s1">&#39;1st Derivatives&#39;</span><span class="p">,</span><span class="s1">&#39;2nd Derivatives&#39;</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-32bcb396-daed-4091-9f8f-47d1571f65e3" class="colab-df-container">
+    <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>5% Yield To Maturity</th>
+      <th>Spot Rates</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Values</th>
+      <td>97.612039</td>
+      <td>97.657391</td>
+    </tr>
+    <tr>
+      <th>1st Derivatives</th>
+      <td>-445.563702</td>
+      <td>-445.720259</td>
+    </tr>
+    <tr>
+      <th>2nd Derivatives</th>
+      <td>2173.745903</td>
+      <td>2174.386187</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+    <div class="colab-df-buttons">
+
+  <div class="colab-df-container">
+    <button class="colab-df-convert" onclick="convertToInteractive('df-32bcb396-daed-4091-9f8f-47d1571f65e3')"
+            title="Convert this dataframe to an interactive table."
+            style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960">
+    <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"/>
+  </svg>
+    </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    .colab-df-buttons div {
+      margin-bottom: 4px;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+    <script>
+      const buttonEl =
+        document.querySelector('#df-32bcb396-daed-4091-9f8f-47d1571f65e3 button.colab-df-convert');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      async function convertToInteractive(key) {
+        const element = document.querySelector('#df-32bcb396-daed-4091-9f8f-47d1571f65e3');
+        const dataTable =
+          await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                    [key], {});
+        if (!dataTable) return;
+
+        const docLinkHtml = 'Like what you see? Visit the ' +
+          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+          + ' to learn more about interactive tables.';
+        element.innerHTML = '';
+        dataTable['output_type'] = 'display_data';
+        await google.colab.output.renderOutput(dataTable, element);
+        const docLink = document.createElement('div');
+        docLink.innerHTML = docLinkHtml;
+        element.appendChild(docLink);
+      }
+    </script>
+  </div>
+
+
+    </div>
+  </div>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># The revised yield to maturity guess results in a pricing error of less than 0.05%.</span>
+<span class="c1"># If error is judged as acceptable, yield to maturity equals 4.35%</span>
+<span class="n">error</span><span class="o">=</span><span class="n">term_structure</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">-</span><span class="n">ytm_new</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">error_pcnt</span><span class="o">=</span><span class="n">error</span><span class="o">/</span><span class="n">term_structure</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="mi">100</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">error_pcnt</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.04644000261129602
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="chapter-exercise">
+<h1><span style="text-align: left; color:green; font-family: 'Franklin Gothic Medium', sans-serif; margin-top: 1.0em; margin-bottom: 0em; font-style: italic;">Chapter Exercise</span><a class="headerlink" href="#chapter-exercise" title="Link to this heading">#</a></h1>
+<div style="background-color:LightGray;
+    border-left: 12px solid green;
+    font-family: 'Garamond', serif;
+    font-size: 17px;
+    line-height: 1.5;
+    padding: 15px">
+<br>
+<p>Calculate the yield to maturity for the following bonds:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Maturity</p></th>
+<th class="head"><p>Coupon</p></th>
+<th class="head"><p>Clean Price</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>   June 30<span class="math notranslate nohighlight">\(^{st}\)</span> 2035</p></td>
+<td><p>     4.375</p></td>
+<td><p>     $100</p></td>
+</tr>
+<tr class="row-odd"><td><p>   October 31<span class="math notranslate nohighlight">\(^{th}\)</span> 2050</p></td>
+<td><p>     4.125</p></td>
+<td><p>     $95</p></td>
+</tr>
+<tr class="row-even"><td><p>   January 31<span class="math notranslate nohighlight">\(^{th}\)</span> 2040</p></td>
+<td><p>     1.500</p></td>
+<td><p>     $65</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Assume that the settlement date is January 31<span class="math notranslate nohighlight">\(^{st}\)</span> 2026</p>
+</div><div style="
+    border-left: 12px solid green;
+    line-height: 1.5;
+    padding: 15px">
+<br>
+<ol class="arabic simple">
+<li><p><strong>Import Required Modules:</strong></p>
+<ul class="simple">
+<li><p>Built-in modules</p></li>
+<li><p>Pandas (install if necessary)</p></li>
+<li><p>Custom modules:</p>
+<ul>
+<li><p><font color='green'>accrued_interest</font></p></li>
+<li><p><font color='green'>create_payoff_matrix</font></p></li>
+<li><p><font color='green'>bond_pay_data</font></p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Add user defined functions:</strong></p>
+<ul class="simple">
+<li><p><font color='green'>bond_pv</font></p></li>
+<li><p><font color='green'>single_newton_raphson</font></p></li>
+<li><p><font color='green'>calc_ytm</font></p></li>
+</ul>
+</li>
+<li><p><strong>Create DataFrame for Bond Data:</strong></p>
+<ul class="simple">
+<li><p>Create dictionary for bond data</p></li>
+<li><p>Convert dictionary to DataFrame with maturity dates as index</p></li>
+</ul>
+</li>
+<li><p><strong>Perform Calculations:</strong></p>
+<ul class="simple">
+<li><p>Add accrued interest to DataFrame</p></li>
+<li><p>Call calc_ytm</p></li>
+</ul>
+</li>
+</ol>
+</div><p>Required modules imported for January 31<span class="math notranslate nohighlight">\(^{st}\)</span> 2030 Application
+User defined function <font color='green'>bond_pv</font> added for January 31<span class="math notranslate nohighlight">\(^{st}\)</span> 2030 Application
+User defined functions <font color='green'>single_newton_raphson</font> and <font color='green'>calc_ytm</font> are added below.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">single_newton_raphson</span><span class="p">(</span><span class="n">target_value</span><span class="p">,</span> <span class="n">function</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">num_attempts</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span>
+                          <span class="n">guess</span><span class="o">=</span><span class="mf">0.0001</span><span class="p">,</span> <span class="n">tolerance</span><span class="o">=</span><span class="mf">1e-5</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Finds a root of a function using the Newton-Raphson method.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        target_value (float): The target value we want the function to return.</span>
+<span class="sd">        function (callable): A function that takes a guess and optional data,</span>
+<span class="sd">                             and returns a tuple (value, derivative).</span>
+<span class="sd">        data (any, optional): Additional data to pass to the function.</span>
+<span class="sd">        num_attempts (int): Maximum number of iterations.</span>
+<span class="sd">        guess (float): Initial guess for the root.</span>
+<span class="sd">        tolerance (float): The desired precision of the result.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        tuple: (number_of_guesses, final_guess, final_value)</span>
+<span class="sd">        str: An error message if no solution is found.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">function</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+      <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;function must be specified&quot;</span><span class="p">)</span>
+    <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+    <span class="n">num_guesses</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="k">for</span> <span class="n">num_guesses</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_attempts</span><span class="p">):</span>
+       <span class="c1">#Ignore second derivative</span>
+       <span class="n">value</span><span class="p">,</span> <span class="n">derivative</span><span class="p">,</span><span class="o">*</span><span class="n">other</span> <span class="o">=</span> <span class="n">function</span><span class="p">(</span><span class="n">guess</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+
+        <span class="c1"># Calculate how far off we are from the target</span>
+       <span class="n">error</span> <span class="o">=</span> <span class="n">value</span> <span class="o">-</span> <span class="n">target_value</span>
+
+        <span class="c1"># Check for convergence</span>
+       <span class="k">if</span> <span class="nb">abs</span><span class="p">(</span><span class="n">error</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">tolerance</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">num_guesses</span><span class="p">,</span> <span class="n">guess</span><span class="p">,</span> <span class="n">value</span>
+
+        <span class="c1"># Avoid division by zero</span>
+       <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">isclose</span><span class="p">(</span><span class="n">derivative</span><span class="p">,</span> <span class="mi">0</span><span class="p">):</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;No solution found: derivative is zero.&quot;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">num_guesses</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">guess</span><span class="p">,</span> <span class="n">value</span>
+
+        <span class="c1"># Newton-Raphson update step</span>
+        <span class="c1"># We use value - target_value (the error) as f(x)</span>
+        <span class="c1"># The standard formula is x_n+1 = x_n - f(x_n)/f&#39;(x_n)</span>
+       <span class="n">guess</span> <span class="o">=</span> <span class="n">guess</span> <span class="o">-</span> <span class="n">error</span> <span class="o">/</span> <span class="n">derivative</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;No solution found after </span><span class="si">{}</span><span class="s2"> attempts.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">num_attempts</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">num_guesses</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">guess</span><span class="p">,</span> <span class="n">value</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">calc_ytm</span><span class="p">(</span><span class="n">price</span><span class="p">,</span><span class="n">maturity</span><span class="p">,</span><span class="n">coupon</span><span class="p">,</span><span class="n">guess</span><span class="o">=</span><span class="mf">0.01</span><span class="p">,</span><span class="n">settlement</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">num_attempts</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span><span class="n">freq</span><span class="o">=</span><span class="mi">2</span><span class="p">):</span>
+<span class="w">  </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">  Calculates the Yield to Maturity (YTM) for a bond.</span>
+
+<span class="sd">  YTM is the total annualized return an investor can expect if they hold the bond</span>
+<span class="sd">  until it matures. This function finds the discount rate that equates the</span>
+<span class="sd">  present value of the bond&#39;s future cash flows to its current market price</span>
+<span class="sd">  using the Newton-Raphson numerical method.</span>
+
+<span class="sd">  Args:</span>
+<span class="sd">    price (float): The current market price of the bond.</span>
+<span class="sd">    maturity (date): The bond&#39;s maturity date.</span>
+<span class="sd">    coupon (float): The annual coupon rate of the bond (e.g., 0.05 for 5%).</span>
+<span class="sd">    guess (float, optional): An initial guess for the YTM. Defaults to 0.01 (1%).</span>
+<span class="sd">                           A good guess can speed up the calculation.</span>
+<span class="sd">    settlement (date, optional): The date the bond is purchased.</span>
+<span class="sd">                                 Defaults to the current date.</span>
+
+<span class="sd">  Returns:</span>
+<span class="sd">    float: The calculated Yield to Maturity (YTM) of the bond.</span>
+
+<span class="sd">  Raises:</span>
+<span class="sd">      TypeError: If &#39;price&#39; is not a number</span>
+<span class="sd">  &quot;&quot;&quot;</span>
+  <span class="kn">from</span><span class="w"> </span><span class="nn">datetime</span><span class="w"> </span><span class="kn">import</span> <span class="n">date</span>
+  <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+
+  <span class="c1"># If the initial guess is not a number (NaN), reset it to a default value.</span>
+  <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">guess</span><span class="p">):</span>
+    <span class="n">guess</span><span class="o">=</span><span class="nb">max</span><span class="p">(</span><span class="mf">0.01</span><span class="p">,</span><span class="n">coupon</span><span class="o">/</span><span class="mi">100</span><span class="p">)</span>
+
+  <span class="c1"># Validated price is number</span>
+  <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">price</span><span class="p">):</span>
+    <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;Price must be a number&#39;</span><span class="p">)</span>
+
+  <span class="c1"># If no settlement date is provided, use today&#39;s date.</span>
+  <span class="k">if</span> <span class="n">settlement</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">settlement</span><span class="o">=</span><span class="n">date</span><span class="o">.</span><span class="n">today</span><span class="p">()</span>
+  <span class="c1"># Call bond_pay_data() to get the schedule of all future payments</span>
+  <span class="n">pay_data</span><span class="o">=</span><span class="n">bond_pay_data</span><span class="p">(</span><span class="n">maturity</span><span class="p">,</span><span class="n">coupon</span><span class="p">,</span><span class="n">settlement</span><span class="o">=</span><span class="n">settlement</span><span class="p">,</span><span class="n">freq</span><span class="o">=</span><span class="n">freq</span><span class="p">)</span>
+
+  <span class="c1"># Create a dictionary to pass necessary data to the bond_pv function</span>
+  <span class="n">data_dict</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;settlement&#39;</span><span class="p">:</span><span class="n">settlement</span><span class="p">,</span><span class="s1">&#39;pay_data&#39;</span><span class="p">:</span><span class="n">pay_data</span><span class="p">}</span>
+
+  <span class="c1">#Newton-Raphson technique passes data to bond_pv to update estimates</span>
+  <span class="n">number_iterations</span><span class="p">,</span><span class="n">final_result</span><span class="p">,</span><span class="n">final_value</span><span class="o">=</span><span class="n">single_newton_raphson</span><span class="p">(</span><span class="n">price</span><span class="p">,</span>
+                                                                  <span class="n">function</span><span class="o">=</span><span class="n">bond_pv</span><span class="p">,</span>
+                                                                  <span class="n">data</span><span class="o">=</span><span class="n">data_dict</span><span class="p">,</span>
+                                                                  <span class="n">guess</span><span class="o">=</span><span class="n">guess</span><span class="p">)</span>
+
+  <span class="c1">#Failure to converge causes alert, but final shows value at maximum tries</span>
+  <span class="k">return</span> <span class="n">final_result</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p><strong>Create DataFrame for Bond Data:</strong></p>
+<ul class="simple">
+<li><p>Create dictionary for bond data</p></li>
+<li><p>Convert dictionary to DataFrame (<font color='green'>bond3_data</font>) with maturity dates as index</p></li>
+</ul>
+</li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define bond data as a dictionary</span>
+<span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;Maturity&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">date</span><span class="p">(</span><span class="mi">2035</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">30</span><span class="p">),</span> <span class="n">date</span><span class="p">(</span><span class="mi">2050</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">31</span><span class="p">),</span> <span class="n">date</span><span class="p">(</span><span class="mi">2040</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">31</span><span class="p">)],</span>
+    <span class="s1">&#39;Coupon&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mf">4.375</span><span class="p">,</span> <span class="mf">4.125</span><span class="p">,</span> <span class="mf">1.500</span><span class="p">],</span>
+    <span class="s1">&#39;Clean Price&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">95</span><span class="p">,</span> <span class="mi">65</span><span class="p">]</span>
+<span class="p">}</span>
+
+<span class="c1"># Create DataFrame with maturity as index</span>
+<span class="n">bond3_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="n">bond3_data</span><span class="o">=</span><span class="n">bond3_data</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;Maturity&#39;</span><span class="p">)</span>
+<span class="n">bond3_data</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-9f7d8fd5-9917-4444-8956-128106959091" class="colab-df-container">
+    <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Coupon</th>
+      <th>Clean Price</th>
+    </tr>
+    <tr>
+      <th>Maturity</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2035-06-30</th>
+      <td>4.375</td>
+      <td>100</td>
+    </tr>
+    <tr>
+      <th>2050-10-31</th>
+      <td>4.125</td>
+      <td>95</td>
+    </tr>
+    <tr>
+      <th>2040-01-31</th>
+      <td>1.500</td>
+      <td>65</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+    <div class="colab-df-buttons">
+
+  <div class="colab-df-container">
+    <button class="colab-df-convert" onclick="convertToInteractive('df-9f7d8fd5-9917-4444-8956-128106959091')"
+            title="Convert this dataframe to an interactive table."
+            style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960">
+    <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"/>
+  </svg>
+    </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    .colab-df-buttons div {
+      margin-bottom: 4px;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+    <script>
+      const buttonEl =
+        document.querySelector('#df-9f7d8fd5-9917-4444-8956-128106959091 button.colab-df-convert');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      async function convertToInteractive(key) {
+        const element = document.querySelector('#df-9f7d8fd5-9917-4444-8956-128106959091');
+        const dataTable =
+          await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                    [key], {});
+        if (!dataTable) return;
+
+        const docLinkHtml = 'Like what you see? Visit the ' +
+          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+          + ' to learn more about interactive tables.';
+        element.innerHTML = '';
+        dataTable['output_type'] = 'display_data';
+        await google.colab.output.renderOutput(dataTable, element);
+        const docLink = document.createElement('div');
+        docLink.innerHTML = docLinkHtml;
+        element.appendChild(docLink);
+      }
+    </script>
+  </div>
+
+
+  <div id="id_1bec974b-c417-428a-a03c-15a544a8a832">
+    <style>
+      .colab-df-generate {
+        background-color: #E8F0FE;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        display: none;
+        fill: #1967D2;
+        height: 32px;
+        padding: 0 0 0 0;
+        width: 32px;
+      }
+
+      .colab-df-generate:hover {
+        background-color: #E2EBFA;
+        box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+        fill: #174EA6;
+      }
+
+      [theme=dark] .colab-df-generate {
+        background-color: #3B4455;
+        fill: #D2E3FC;
+      }
+
+      [theme=dark] .colab-df-generate:hover {
+        background-color: #434B5C;
+        box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+        filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+        fill: #FFFFFF;
+      }
+    </style>
+    <button class="colab-df-generate" onclick="generateWithVariable('bond3_data')"
+            title="Generate code using this dataframe."
+            style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M7,19H8.4L18.45,9,17,7.55,7,17.6ZM5,21V16.75L18.45,3.32a2,2,0,0,1,2.83,0l1.4,1.43a1.91,1.91,0,0,1,.58,1.4,1.91,1.91,0,0,1-.58,1.4L9.25,21ZM18.45,9,17,7.55Zm-12,3A5.31,5.31,0,0,0,4.9,8.1,5.31,5.31,0,0,0,1,6.5,5.31,5.31,0,0,0,4.9,4.9,5.31,5.31,0,0,0,6.5,1,5.31,5.31,0,0,0,8.1,4.9,5.31,5.31,0,0,0,12,6.5,5.46,5.46,0,0,0,6.5,12Z"/>
+  </svg>
+    </button>
+    <script>
+      (() => {
+      const buttonEl =
+        document.querySelector('#id_1bec974b-c417-428a-a03c-15a544a8a832 button.colab-df-generate');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      buttonEl.onclick = () => {
+        google.colab.notebook.generateWithVariable('bond3_data');
+      }
+      })();
+    </script>
+  </div>
+
+    </div>
+  </div>
+</div></div>
+</div>
+<ol class="arabic simple" start="4">
+<li><p><strong>Perform Calculations:</strong></p>
+<ul class="simple">
+<li><p>Add accrued interest to DataFrame</p></li>
+<li><p>Call <font color='green'>calc_ytm</font></p></li>
+</ul>
+</li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># settlement date is Jan 31, 2026</span>
+<span class="n">settlement</span><span class="o">=</span><span class="n">date</span><span class="p">(</span><span class="mi">2026</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">31</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># apply the accrued_interest function to the DataFrame</span>
+<span class="n">bond3_data</span><span class="p">[</span><span class="s1">&#39;Accrued&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">bond_data</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span>
+    <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">accrued_interest</span><span class="p">(</span>
+        <span class="n">maturity</span><span class="o">=</span><span class="n">x</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="c1"># Assuming index is maturity</span>
+        <span class="n">coupon</span><span class="o">=</span><span class="n">x</span><span class="p">[</span><span class="s1">&#39;Coupon&#39;</span><span class="p">],</span>
+        <span class="n">settlement</span><span class="o">=</span><span class="n">settlement</span><span class="p">,</span>
+        <span class="n">freq</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+        <span class="n">day_type</span><span class="o">=</span><span class="s1">&#39;Actual/Actual&#39;</span>
+    <span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span>
+<span class="p">)</span>
+<span class="n">bond3_data</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-0442b25d-9a46-49d3-93ff-c6599b631b27" class="colab-df-container">
+    <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Coupon</th>
+      <th>Clean Price</th>
+      <th>Accrued</th>
+    </tr>
+    <tr>
+      <th>Maturity</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2035-06-30</th>
+      <td>4.375</td>
+      <td>100</td>
+      <td>0.374655</td>
+    </tr>
+    <tr>
+      <th>2050-10-31</th>
+      <td>4.125</td>
+      <td>95</td>
+      <td>1.053915</td>
+    </tr>
+    <tr>
+      <th>2040-01-31</th>
+      <td>1.500</td>
+      <td>65</td>
+      <td>0.000000</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+    <div class="colab-df-buttons">
+
+  <div class="colab-df-container">
+    <button class="colab-df-convert" onclick="convertToInteractive('df-0442b25d-9a46-49d3-93ff-c6599b631b27')"
+            title="Convert this dataframe to an interactive table."
+            style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960">
+    <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"/>
+  </svg>
+    </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    .colab-df-buttons div {
+      margin-bottom: 4px;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+    <script>
+      const buttonEl =
+        document.querySelector('#df-0442b25d-9a46-49d3-93ff-c6599b631b27 button.colab-df-convert');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      async function convertToInteractive(key) {
+        const element = document.querySelector('#df-0442b25d-9a46-49d3-93ff-c6599b631b27');
+        const dataTable =
+          await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                    [key], {});
+        if (!dataTable) return;
+
+        const docLinkHtml = 'Like what you see? Visit the ' +
+          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+          + ' to learn more about interactive tables.';
+        element.innerHTML = '';
+        dataTable['output_type'] = 'display_data';
+        await google.colab.output.renderOutput(dataTable, element);
+        const docLink = document.createElement('div');
+        docLink.innerHTML = docLinkHtml;
+        element.appendChild(docLink);
+      }
+    </script>
+  </div>
+
+
+  <div id="id_bc3931b9-b5f4-4875-8b54-26f4a81c0b1e">
+    <style>
+      .colab-df-generate {
+        background-color: #E8F0FE;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        display: none;
+        fill: #1967D2;
+        height: 32px;
+        padding: 0 0 0 0;
+        width: 32px;
+      }
+
+      .colab-df-generate:hover {
+        background-color: #E2EBFA;
+        box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+        fill: #174EA6;
+      }
+
+      [theme=dark] .colab-df-generate {
+        background-color: #3B4455;
+        fill: #D2E3FC;
+      }
+
+      [theme=dark] .colab-df-generate:hover {
+        background-color: #434B5C;
+        box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+        filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+        fill: #FFFFFF;
+      }
+    </style>
+    <button class="colab-df-generate" onclick="generateWithVariable('bond3_data')"
+            title="Generate code using this dataframe."
+            style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M7,19H8.4L18.45,9,17,7.55,7,17.6ZM5,21V16.75L18.45,3.32a2,2,0,0,1,2.83,0l1.4,1.43a1.91,1.91,0,0,1,.58,1.4,1.91,1.91,0,0,1-.58,1.4L9.25,21ZM18.45,9,17,7.55Zm-12,3A5.31,5.31,0,0,0,4.9,8.1,5.31,5.31,0,0,0,1,6.5,5.31,5.31,0,0,0,4.9,4.9,5.31,5.31,0,0,0,6.5,1,5.31,5.31,0,0,0,8.1,4.9,5.31,5.31,0,0,0,12,6.5,5.46,5.46,0,0,0,6.5,12Z"/>
+  </svg>
+    </button>
+    <script>
+      (() => {
+      const buttonEl =
+        document.querySelector('#id_bc3931b9-b5f4-4875-8b54-26f4a81c0b1e button.colab-df-generate');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      buttonEl.onclick = () => {
+        google.colab.notebook.generateWithVariable('bond3_data');
+      }
+      })();
+    </script>
+  </div>
+
+    </div>
+  </div>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># apply calc_ytm function to the DataFrame</span>
+
+<span class="n">bond3_data</span><span class="p">[</span><span class="s1">&#39;Yield To Maturity&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">bond3_data</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span>
+    <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">calc_ytm</span><span class="p">(</span>
+        <span class="n">maturity</span><span class="o">=</span><span class="n">x</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="c1"># assuming index is maturity</span>
+<span class="c1"># convert clean price to dirty by adding accrued interest</span>
+        <span class="n">price</span><span class="o">=</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="s1">&#39;Clean Price&#39;</span><span class="p">]</span><span class="o">+</span><span class="n">x</span><span class="p">[</span><span class="s1">&#39;Accrued&#39;</span><span class="p">]),</span>
+        <span class="n">coupon</span><span class="o">=</span><span class="n">x</span><span class="p">[</span><span class="s1">&#39;Coupon&#39;</span><span class="p">],</span>
+        <span class="n">guess</span><span class="o">=</span><span class="n">x</span><span class="p">[</span><span class="s1">&#39;Coupon&#39;</span><span class="p">]</span><span class="o">/</span><span class="mi">100</span><span class="p">,</span> <span class="c1"># convert coupon to decimal</span>
+        <span class="n">settlement</span><span class="o">=</span><span class="n">settlement</span><span class="p">,</span>
+        <span class="n">freq</span><span class="o">=</span><span class="mi">2</span>
+    <span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span>
+<span class="p">)</span>
+<span class="n">bond3_data</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-fc137d9f-c5cd-4ee5-ae42-79498c63a72f" class="colab-df-container">
+    <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Coupon</th>
+      <th>Clean Price</th>
+      <th>Accrued</th>
+      <th>Yield To Maturity</th>
+    </tr>
+    <tr>
+      <th>Maturity</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2035-06-30</th>
+      <td>4.375</td>
+      <td>100</td>
+      <td>0.374655</td>
+      <td>0.043268</td>
+    </tr>
+    <tr>
+      <th>2050-10-31</th>
+      <td>4.125</td>
+      <td>95</td>
+      <td>1.053915</td>
+      <td>0.044105</td>
+    </tr>
+    <tr>
+      <th>2040-01-31</th>
+      <td>1.500</td>
+      <td>65</td>
+      <td>0.000000</td>
+      <td>0.049467</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+    <div class="colab-df-buttons">
+
+  <div class="colab-df-container">
+    <button class="colab-df-convert" onclick="convertToInteractive('df-fc137d9f-c5cd-4ee5-ae42-79498c63a72f')"
+            title="Convert this dataframe to an interactive table."
+            style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960">
+    <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"/>
+  </svg>
+    </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    .colab-df-buttons div {
+      margin-bottom: 4px;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+    <script>
+      const buttonEl =
+        document.querySelector('#df-fc137d9f-c5cd-4ee5-ae42-79498c63a72f button.colab-df-convert');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      async function convertToInteractive(key) {
+        const element = document.querySelector('#df-fc137d9f-c5cd-4ee5-ae42-79498c63a72f');
+        const dataTable =
+          await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                    [key], {});
+        if (!dataTable) return;
+
+        const docLinkHtml = 'Like what you see? Visit the ' +
+          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+          + ' to learn more about interactive tables.';
+        element.innerHTML = '';
+        dataTable['output_type'] = 'display_data';
+        await google.colab.output.renderOutput(dataTable, element);
+        const docLink = document.createElement('div');
+        docLink.innerHTML = docLinkHtml;
+        element.appendChild(docLink);
+      }
+    </script>
+  </div>
+
+
+  <div id="id_b96554eb-5664-41b1-ad96-a81aad89ad9d">
+    <style>
+      .colab-df-generate {
+        background-color: #E8F0FE;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        display: none;
+        fill: #1967D2;
+        height: 32px;
+        padding: 0 0 0 0;
+        width: 32px;
+      }
+
+      .colab-df-generate:hover {
+        background-color: #E2EBFA;
+        box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+        fill: #174EA6;
+      }
+
+      [theme=dark] .colab-df-generate {
+        background-color: #3B4455;
+        fill: #D2E3FC;
+      }
+
+      [theme=dark] .colab-df-generate:hover {
+        background-color: #434B5C;
+        box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+        filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+        fill: #FFFFFF;
+      }
+    </style>
+    <button class="colab-df-generate" onclick="generateWithVariable('bond3_data')"
+            title="Generate code using this dataframe."
+            style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M7,19H8.4L18.45,9,17,7.55,7,17.6ZM5,21V16.75L18.45,3.32a2,2,0,0,1,2.83,0l1.4,1.43a1.91,1.91,0,0,1,.58,1.4,1.91,1.91,0,0,1-.58,1.4L9.25,21ZM18.45,9,17,7.55Zm-12,3A5.31,5.31,0,0,0,4.9,8.1,5.31,5.31,0,0,0,1,6.5,5.31,5.31,0,0,0,4.9,4.9,5.31,5.31,0,0,0,6.5,1,5.31,5.31,0,0,0,8.1,4.9,5.31,5.31,0,0,0,12,6.5,5.46,5.46,0,0,0,6.5,12Z"/>
+  </svg>
+    </button>
+    <script>
+      (() => {
+      const buttonEl =
+        document.querySelector('#id_b96554eb-5664-41b1-ad96-a81aad89ad9d button.colab-df-generate');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      buttonEl.onclick = () => {
+        google.colab.notebook.generateWithVariable('bond3_data');
+      }
+      })();
+    </script>
+  </div>
+
+    </div>
+  </div>
+</div></div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "PatrickJHess/Hints-Results",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Chapter_Six_Hints.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Chapter Six Hints</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Chapter Six Results</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#application-make-the-initial-guess-7-and-calculate-two-new-guesses-for-the-following-bonds"><font color="green">Application: Make the initial guess 7% and calculate two new guesses for the following bonds:</font></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#application-for-january-31-st-2030-example-update-guess-from-5-and-recalculate-present-value-with-updated-guess"><font color="green">Application: For January 31<span class="math notranslate nohighlight">\(^{st}\)</span> 2030 example update guess from 5% and recalculate present value with updated guess</font></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#required-modules">Required modules</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculating-present-value-and-derivatives-the-bond-pv-function">Calculating present value and derivatives: the <font color="green">bond_pv</font> function</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#download-bond-data">Download bond data</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#estimating-the-spot-rates-for-the-149-dates">Estimating the spot rates for the 149 dates</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#chapter-exercise"><span style="text-align: left; color:green; font-family: 'Franklin Gothic Medium', sans-serif; margin-top: 1.0em; margin-bottom: 0em; font-style: italic;">Chapter Exercise</span></a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Financial Python
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025 by Arbitrage Partners..
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
